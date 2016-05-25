@@ -204,10 +204,18 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p><strong>hexo</strong>是一款基于Node.js的静态博客框架:<a href="https://github.com/hexojs/hexo" target="_blank" rel="external">hexo github</a>  </p>
-<p>##安装nodejs<br>    brew install node</p>
-<p>##安装hexo<br>    npm install -g hexo<br>    hexo init <folder><br>    npm install</folder></p>
-<p>##hexo语法<br>    hexo new “postName” #新建文章<br>    hexo generate #生成静态页面至public目录<br>    hexo server #本地预览，默认4000端口<br>    hexo deploy ＃发布</p>
-<p>##配置<br>修改hexo根目录下的_config.yml文件,xxx为github的账户名称。  </p>
+<p>##安装nodejs</p>
+<pre><code>brew install node
+</code></pre><p>##安装hexo</p>
+<pre><code>npm install -g hexo
+hexo init &lt;folder&gt;
+npm install
+</code></pre><p>##hexo语法</p>
+<pre><code>hexo new &quot;postName&quot; #新建文章
+hexo generate #生成静态页面至public目录
+hexo server #本地预览，默认4000端口
+hexo deploy ＃发布
+</code></pre><p>##配置<br>修改hexo根目录下的_config.yml文件,xxx为github的账户名称。  </p>
 <pre><code>deploy:
   type: git
   repository: https://github.com/xxx/xxx.github.io.git
