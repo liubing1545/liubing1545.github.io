@@ -4,30 +4,27 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>使用virtualenv | Bad Seeds</title>
+  <title>pip freeze | Bad Seeds</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="虚拟环境非常有用。可以在系统的python解释器中避免包的混乱和版本的冲突。
-安装virtualenvsudo pip install virtualenv
-创建python虚拟环境在工程文件夹下创建python虚拟环境。创建虚拟环境后，当前文件夹中会出现一个子文件夹，名字为下述命令中指定的参数venv。  
-virtualenv venv     
-激活source venv/bin/activ">
+  <meta name="description" content="在本地python开发时，可以生成requirements.txt文件，用于记录所有依赖包及其精确的版本号。  
+pip freeze &amp;gt;requirements.txt
+可创建与本地完全一致的副本环境。  
+pip install -r requirements.txt">
 <meta property="og:type" content="article">
-<meta property="og:title" content="使用virtualenv">
-<meta property="og:url" content="http://liubing.com/2016/05/27/使用virtualenv/index.html">
+<meta property="og:title" content="pip freeze">
+<meta property="og:url" content="http://liubing.com/2016/05/31/pip-freeze/index.html">
 <meta property="og:site_name" content="Bad Seeds">
-<meta property="og:description" content="虚拟环境非常有用。可以在系统的python解释器中避免包的混乱和版本的冲突。
-安装virtualenvsudo pip install virtualenv
-创建python虚拟环境在工程文件夹下创建python虚拟环境。创建虚拟环境后，当前文件夹中会出现一个子文件夹，名字为下述命令中指定的参数venv。  
-virtualenv venv     
-激活source venv/bin/activ">
-<meta property="og:updated_time" content="2016-05-27T15:26:12.000Z">
+<meta property="og:description" content="在本地python开发时，可以生成requirements.txt文件，用于记录所有依赖包及其精确的版本号。  
+pip freeze &amp;gt;requirements.txt
+可创建与本地完全一致的副本环境。  
+pip install -r requirements.txt">
+<meta property="og:updated_time" content="2016-05-31T02:24:15.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="使用virtualenv">
-<meta name="twitter:description" content="虚拟环境非常有用。可以在系统的python解释器中避免包的混乱和版本的冲突。
-安装virtualenvsudo pip install virtualenv
-创建python虚拟环境在工程文件夹下创建python虚拟环境。创建虚拟环境后，当前文件夹中会出现一个子文件夹，名字为下述命令中指定的参数venv。  
-virtualenv venv     
-激活source venv/bin/activ">
+<meta name="twitter:title" content="pip freeze">
+<meta name="twitter:description" content="在本地python开发时，可以生成requirements.txt文件，用于记录所有依赖包及其精确的版本号。  
+pip freeze &amp;gt;requirements.txt
+可创建与本地完全一致的副本环境。  
+pip install -r requirements.txt">
   
     <link rel="alternative" href="/atom.xml" title="Bad Seeds" type="application/atom+xml">
   
@@ -188,11 +185,11 @@ virtualenv venv
 	</div>
 </nav>
 
-      <div class="body-wrap"><article id="post-使用virtualenv" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-pip-freeze" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/05/27/使用virtualenv/" class="article-date">
-  	<time datetime="2016-05-27T14:00:05.000Z" itemprop="datePublished">2016-05-27</time>
+      <a href="/2016/05/31/pip-freeze/" class="article-date">
+  	<time datetime="2016-05-31T02:15:40.000Z" itemprop="datePublished">2016-05-31</time>
 </a>
     </div>
   
@@ -205,7 +202,7 @@ virtualenv venv
         
   
     <h1 class="article-title" itemprop="name">
-      使用virtualenv
+      pip freeze
     </h1>
   
 
@@ -213,10 +210,6 @@ virtualenv venv
       
       <div class="article-info article-info-post">
         
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/">python</a></li></ul>
-	</div>
-
         
 
         <div class="clearfix"></div>
@@ -225,12 +218,10 @@ virtualenv venv
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>虚拟环境非常有用。可以在系统的python解释器中避免包的混乱和版本的冲突。</p>
-<h2 id="安装virtualenv"><a href="#安装virtualenv" class="headerlink" title="安装virtualenv"></a>安装virtualenv</h2><pre><code>sudo pip install virtualenv
-</code></pre><h2 id="创建python虚拟环境"><a href="#创建python虚拟环境" class="headerlink" title="创建python虚拟环境"></a>创建python虚拟环境</h2><p>在工程文件夹下创建python虚拟环境。创建虚拟环境后，当前文件夹中会出现一个子文件夹，名字为下述命令中指定的参数venv。  </p>
-<pre><code>virtualenv venv     
-</code></pre><h2 id="激活"><a href="#激活" class="headerlink" title="激活"></a>激活</h2><pre><code>source venv/bin/activate
-</code></pre><h2 id="退出"><a href="#退出" class="headerlink" title="退出"></a>退出</h2><pre><code>deactivate
+        <p>在本地python开发时，可以生成requirements.txt文件，用于记录所有依赖包及其精确的版本号。  </p>
+<pre><code>pip freeze &gt;requirements.txt
+</code></pre><p>可创建与本地完全一致的副本环境。  </p>
+<pre><code>pip install -r requirements.txt
 </code></pre>
       
     </div>
@@ -240,18 +231,9 @@ virtualenv venv
     
 <nav id="article-nav">
   
-    <a href="/2016/05/31/pip-freeze/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          pip freeze
-        
-      </div>
-    </a>
   
-  
-    <a href="/2016/05/22/mac下搭建hexo至github/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">mac下搭建hexo至github</div>
+    <a href="/2016/05/27/使用virtualenv/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">使用virtualenv</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -286,7 +268,7 @@ virtualenv venv
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="使用virtualenv" data-title="使用virtualenv" data-url="http://liubing.com/2016/05/27/使用virtualenv/"></div>
+	<div class="ds-thread" data-thread-key="pip-freeze" data-title="pip freeze" data-url="http://liubing.com/2016/05/31/pip-freeze/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
