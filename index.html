@@ -212,7 +212,15 @@ $ sudo npm install -g react-native-cli
 <pre><code>$ network getaddrinfo ENOTFOUND registry.npmjs.org registry.npmjs.org:443
 </code></pre><p>给npm设置proxy翻墙安装就成功了。</p>
 <pre><code>$ npm config set proxy http://address:8080
-</code></pre>
+</code></pre><p>初始化一个project</p>
+<pre><code>$ react-native init HelloWorld
+</code></pre><p>成功后，新new的project里，会建立好ios和android的初始工程。<br>运行IOS应用程序：</p>
+<pre><code>$ react-native run-ios
+</code></pre><p>运行Android应用程序：</p>
+<pre><code>$ react-native run-android
+</code></pre><p>IOS环境配置很快啊，只要网络没有问题，就很快可以run成功。<br>Android环境配了三天啊。。。各种坑，各种查资料，还好最后也run好了。</p>
+<p>开始实战吧。</p>
+
       
     </div>
     
@@ -268,7 +276,13 @@ $ sudo npm install -g react-native-cli
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>七牛有免费的配额可以使用，在测试开发时，将图片，视频流等多种媒体文件可以上传到七牛上。<br>传统来说</p>
+        <ul>
+<li>七牛有免费的配额可以使用，在测试开发时，将图片，视频流等多种媒体文件可以上传到七牛上。  </li>
+<li>其次，七牛可以绕过搭载应用的server，手机端或者pc端可以直接上传下载媒体资源至七牛云。只是在上传时，需要先向应用server要求访问七牛的token，拿到这个token后直接与七牛交互。  </li>
+<li>最后，七牛云支持cdn加速，即使对成熟的应用来说，也是不错的选择。 </li>
+</ul>
+<p><img src="http://developer.qiniu.com/article/developer/img/upload-with-callback.png" alt="七牛"></p>
+<p>下面讲解flask作为业务服务器，进行七牛云存储的过程。  </p>
 
       
     </div>

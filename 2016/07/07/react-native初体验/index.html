@@ -24,7 +24,7 @@ $ brew install flow
 $ sudo npm install -g react-native-cli
 结果报错如下
 $ network getaddrinfo ENOTFOUND registry.npmjs.org registry.npmjs.org:">
-<meta property="og:updated_time" content="2016-07-07T06:37:23.000Z">
+<meta property="og:updated_time" content="2016-07-10T12:40:48.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="react native初体验">
 <meta name="twitter:description" content="今天想体验一下react native
@@ -240,7 +240,15 @@ $ sudo npm install -g react-native-cli
 <pre><code>$ network getaddrinfo ENOTFOUND registry.npmjs.org registry.npmjs.org:443
 </code></pre><p>给npm设置proxy翻墙安装就成功了。</p>
 <pre><code>$ npm config set proxy http://address:8080
-</code></pre>
+</code></pre><p>初始化一个project</p>
+<pre><code>$ react-native init HelloWorld
+</code></pre><p>成功后，新new的project里，会建立好ios和android的初始工程。<br>运行IOS应用程序：</p>
+<pre><code>$ react-native run-ios
+</code></pre><p>运行Android应用程序：</p>
+<pre><code>$ react-native run-android
+</code></pre><p>IOS环境配置很快啊，只要网络没有问题，就很快可以run成功。<br>Android环境配了三天啊。。。各种坑，各种查资料，还好最后也run好了。</p>
+<p>开始实战吧。</p>
+
       
     </div>
     
