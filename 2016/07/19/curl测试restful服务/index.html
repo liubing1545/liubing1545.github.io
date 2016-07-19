@@ -4,17 +4,24 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>Tag: python | Bad Seeds</title>
+  <title>curl测试restful服务 | Bad Seeds</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Bad Seeds">
-<meta property="og:url" content="http://liubing.com/tags/python/index.html">
+  <meta name="description" content="利用curl，可以很方便的测试restful服务，发送HTTP GET，POST，PUT，DELETE请求。也可以改变HTTP header来指定特别条件。
+curl参数
+-X/–request [GET|POST|PUT|DELETE|…]  指定http request方式-H/–header                             设定request请求的header-i/–">
+<meta property="og:type" content="article">
+<meta property="og:title" content="curl测试restful服务">
+<meta property="og:url" content="http://liubing.com/2016/07/19/curl测试restful服务/index.html">
 <meta property="og:site_name" content="Bad Seeds">
-<meta property="og:description">
+<meta property="og:description" content="利用curl，可以很方便的测试restful服务，发送HTTP GET，POST，PUT，DELETE请求。也可以改变HTTP header来指定特别条件。
+curl参数
+-X/–request [GET|POST|PUT|DELETE|…]  指定http request方式-H/–header                             设定request请求的header-i/–">
+<meta property="og:updated_time" content="2016-07-19T08:26:24.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Bad Seeds">
-<meta name="twitter:description">
+<meta name="twitter:title" content="curl测试restful服务">
+<meta name="twitter:description" content="利用curl，可以很方便的测试restful服务，发送HTTP GET，POST，PUT，DELETE请求。也可以改变HTTP header来指定特别条件。
+curl参数
+-X/–request [GET|POST|PUT|DELETE|…]  指定http request方式-H/–header                             设定request请求的header-i/–">
   
     <link rel="alternative" href="/atom.xml" title="Bad Seeds" type="application/atom+xml">
   
@@ -175,84 +182,116 @@
 	</div>
 </nav>
 
-      <div class="body-wrap">
+      <div class="body-wrap"><article id="post-curl测试restful服务" class="article article-type-post" itemscope itemprop="blogPost">
   
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2016" class="archive-year">2016</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/05/31/pip-freeze/" class="archive-article-date">
-  	<time datetime="2016-05-31T02:15:40.000Z" itemprop="datePublished">5月 31</time>
+    <div class="article-meta">
+      <a href="/2016/07/19/curl测试restful服务/" class="article-date">
+  	<time datetime="2016-07-19T08:00:06.000Z" itemprop="datePublished">2016-07-19</time>
 </a>
-        </div>
-    	 
+    </div>
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/05/31/pip-freeze/">pip freeze</a>
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      curl测试restful服务
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+      </header>
+      
+      <div class="article-info article-info-post">
+        
 	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/">python</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/curl/">curl</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/restful/">restful</a></li></ul>
 	</div>
 
-          
+        
 
-        </div>
         <div class="clearfix"></div>
-    </header>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>利用curl，可以很方便的测试restful服务，发送HTTP GET，POST，PUT，DELETE请求。也可以改变HTTP header来指定特别条件。</p>
+<h3 id="curl参数"><a href="#curl参数" class="headerlink" title="curl参数"></a>curl参数</h3><blockquote>
+<p>-X/–request [GET|POST|PUT|DELETE|…]  指定http request方式<br>-H/–header                             设定request请求的header<br>-i/–include                            显示response响应的header<br>-d/–data                               设定request的参数<br>-v/–verbose                            输出更多的信息<br>-u/–user                               使用者账号，密码<br>-b/–cookie                             cookie</p>
+</blockquote>
+<h3 id="GET"><a href="#GET" class="headerlink" title="GET"></a>GET</h3><pre><code>$ curl -i http://localhost:5000/rest/api/v1.0/tasks
+</code></pre><h3 id="POST"><a href="#POST" class="headerlink" title="POST"></a>POST</h3><pre><code>$ curl -i -H &quot;Content-Type: application/json&quot; -X POST -d &apos;{&quot;title&quot;:&quot;learn python&quot;}&apos; http://localhost:5000/rest/api/v1.0/tasks  
+</code></pre><h3 id="PUT"><a href="#PUT" class="headerlink" title="PUT"></a>PUT</h3><pre><code>$ curl -i -H &quot;Content-Type: application/json&quot; -X PUT -d &apos;{&quot;title&quot;:&quot;learn nodejs&quot;}&apos; http://localhost:5000/rest/api/v1.0/tasks/2
+</code></pre><h3 id="DELETE"><a href="#DELETE" class="headerlink" title="DELETE"></a>DELETE</h3><pre><code>$ curl -i -X DELETE http://localhost:5000/rest/api/v1.0/tasks/1
+</code></pre>
+      
+    </div>
+    
   </div>
-</article>
   
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/05/27/使用virtualenv/" class="archive-article-date">
-  	<time datetime="2016-05-27T14:00:05.000Z" itemprop="datePublished">5月 27</time>
-</a>
-        </div>
-    	 
+<nav id="article-nav">
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/05/27/使用virtualenv/">使用virtualenv</a>
-    </h1>
   
+    <a href="/2016/07/18/centOS下配置Virtualenv-Flask-Gunicorn-Supervisor-Nginx/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">centOS下配置Virtualenv+Flask+Gunicorn+Supervisor+Nginx</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/">python</a></li></ul>
+  
+</article>
+
+
+<div class="share_jia">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">Share to: &nbsp; </span>
+		<a class="jiathis_button_facebook"></a> 
+    <a class="jiathis_button_twitter"></a>
+    <a class="jiathis_button_plus"></a> 
+    <a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
 	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
 
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
 
-    
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="curl测试restful服务" data-title="curl测试restful服务" data-url="http://liubing.com/2016/07/19/curl测试restful服务/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
 
 </div>
       <footer id="footer">
@@ -278,9 +317,9 @@
 		mathjax: true,
 		animate: true,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false
 	}
