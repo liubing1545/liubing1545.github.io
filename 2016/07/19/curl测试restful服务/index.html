@@ -16,7 +16,7 @@ curl参数
 <meta property="og:description" content="利用curl，可以很方便的测试restful服务，发送HTTP GET，POST，PUT，DELETE请求。也可以改变HTTP header来指定特别条件。
 curl参数
 -X/–request [GET|POST|PUT|DELETE|…]  指定http request方式-H/–header                             设定request请求的header-i/–">
-<meta property="og:updated_time" content="2016-07-19T08:26:24.000Z">
+<meta property="og:updated_time" content="2016-07-20T00:40:48.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="curl测试restful服务">
 <meta name="twitter:description" content="利用curl，可以很方便的测试restful服务，发送HTTP GET，POST，PUT，DELETE请求。也可以改变HTTP header来指定特别条件。
@@ -79,7 +79,7 @@ curl参数
 						<li>Tags</li>
 						
 						
-						<li>About</li>
+						<li>Über</li>
 						
 					</ul>
 				</div>
@@ -221,7 +221,7 @@ curl参数
       
         <p>利用curl，可以很方便的测试restful服务，发送HTTP GET，POST，PUT，DELETE请求。也可以改变HTTP header来指定特别条件。</p>
 <h3 id="curl参数"><a href="#curl参数" class="headerlink" title="curl参数"></a>curl参数</h3><blockquote>
-<p>-X/–request [GET|POST|PUT|DELETE|…]  指定http request方式<br>-H/–header                             设定request请求的header<br>-i/–include                            显示response响应的header<br>-d/–data                               设定request的参数<br>-v/–verbose                            输出更多的信息<br>-u/–user                               使用者账号，密码<br>-b/–cookie                             cookie</p>
+<p>-X/–request [GET|POST|PUT|DELETE|…]  <mark>指定http request方式</mark><br>-H/–header                             <mark>设定request请求的header</mark><br>-i/–include                            <mark>显示response响应的header</mark><br>-d/–data                               <mark>设定request的参数</mark><br>-v/–verbose                            <mark>输出更多的信息</mark><br>-u/–user                               <mark>使用者账号，密码</mark><br>-b/–cookie                             <mark>cookie</mark></p>
 </blockquote>
 <h3 id="GET"><a href="#GET" class="headerlink" title="GET"></a>GET</h3><pre><code>$ curl -i http://localhost:5000/rest/api/v1.0/tasks
 </code></pre><h3 id="POST"><a href="#POST" class="headerlink" title="POST"></a>POST</h3><pre><code>$ curl -i -H &quot;Content-Type: application/json&quot; -X POST -d &apos;{&quot;title&quot;:&quot;learn python&quot;}&apos; http://localhost:5000/rest/api/v1.0/tasks  
