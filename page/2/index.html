@@ -4,12 +4,12 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>Tag: Gunicorn | Bad Seeds</title>
+  <title>Bad Seeds</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Bad Seeds">
-<meta property="og:url" content="http://liubing.com/tags/Gunicorn/index.html">
+<meta property="og:url" content="http://liubing.com/page/2/index.html">
 <meta property="og:site_name" content="Bad Seeds">
 <meta property="og:description">
 <meta name="twitter:card" content="summary">
@@ -177,52 +177,80 @@
 
       <div class="body-wrap">
   
+    <article id="testhexo-mac下搭建hexo至github" class="article article-type-testhexo" itemscope itemprop="blogPost">
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2016" class="archive-year">2016</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/07/18/centOS下配置Virtualenv-Flask-Gunicorn-Supervisor-Nginx/" class="archive-article-date">
-  	<time datetime="2016-07-18T08:59:19.000Z" itemprop="datePublished">7月 18</time>
+    <div class="article-meta">
+      <a href="/2016/05/22/mac下搭建hexo至github/" class="article-date">
+  	<time datetime="2016-05-22T03:28:02.000Z" itemprop="datePublished">2016-05-22</time>
 </a>
-        </div>
-    	 
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
   
     <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/07/18/centOS下配置Virtualenv-Flask-Gunicorn-Supervisor-Nginx/">centOS下配置Virtualenv+Flask+Gunicorn+Supervisor+Nginx</a>
+      <a class="article-title" href="/2016/05/22/mac下搭建hexo至github/">mac下搭建hexo至github</a>
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Gunicorn/">Gunicorn</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Supervisor/">Supervisor</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Virtualenv/">Virtualenv</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/centOS/">centOS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/flask/">flask</a></li></ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
+      </header>
+      
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><strong>hexo</strong>是一款基于Node.js的静态博客框架:<a href="https://github.com/hexojs/hexo" target="_blank" rel="external">hexo github</a></p>
+<h2 id="安装nodejs"><a href="#安装nodejs" class="headerlink" title="安装nodejs"></a>安装nodejs</h2><pre><code>brew install node
+</code></pre><h2 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h2><pre><code>npm install -g hexo
+hexo init &lt;folder&gt;
+npm install
+</code></pre><h2 id="hexo语法"><a href="#hexo语法" class="headerlink" title="hexo语法"></a>hexo语法</h2><pre><code>hexo new &quot;postName&quot; #新建文章
+hexo generate #生成静态页面至public目录
+hexo server #本地预览，默认4000端口
+hexo deploy ＃发布
+</code></pre><h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><p>修改hexo根目录下的_config.yml文件,xxx为github的账户名称。  </p>
+<pre><code>deploy:
+  type: git
+  repository: https://github.com/xxx/xxx.github.io.git
+  branch: master
+</code></pre><p>在github创建xxx.github.io</p>
+<h2 id="安装主题"><a href="#安装主题" class="headerlink" title="安装主题"></a>安装主题</h2><p>个人比较喜欢<a href="https://github.com/litten/hexo-theme-yilia" target="_blank" rel="external">yilia github</a></p>
+<h2 id="发布"><a href="#发布" class="headerlink" title="发布"></a>发布</h2><pre><code>$ hexo d -g
+</code></pre>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+      
 
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+  
+    <nav id="page-nav">
+      <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
+    </nav>
+  
 </div>
       <footer id="footer">
   <div class="outer">
@@ -246,10 +274,10 @@
 		fancybox: true,
 		mathjax: true,
 		animate: true,
-		isHome: false,
+		isHome: true,
 		isPost: false,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false
 	}
