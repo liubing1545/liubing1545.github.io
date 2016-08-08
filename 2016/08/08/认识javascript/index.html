@@ -38,7 +38,7 @@ Boolean
 
 String  
 “$abc”，’$a">
-<meta property="og:updated_time" content="2016-08-08T11:46:40.000Z">
+<meta property="og:updated_time" content="2016-08-08T11:51:57.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="认识javascript">
 <meta name="twitter:description" content="javascript基础声明
@@ -112,7 +112,7 @@ String
 						<li>Tags</li>
 						
 						
-						<li>About</li>
+						<li>Über</li>
 						
 					</ul>
 				</div>
@@ -283,8 +283,7 @@ String
 }
 </code></pre><h2 id="一切都是对象"><a href="#一切都是对象" class="headerlink" title="一切都是对象"></a>一切都是对象</h2><p>类(函数)也是对象</p>
 <h2 id="创建对象"><a href="#创建对象" class="headerlink" title="创建对象"></a>创建对象</h2><pre><code>var p = new Person(&quot;张三&quot;)
-</code></pre><h2 id="闭包closure"><a href="#闭包closure" class="headerlink" title="闭包closure"></a>闭包closure</h2><ul>
-<li><p>函数内部可以直接读取全局变量。  </p>
+</code></pre><h2 id="闭包closure"><a href="#闭包closure" class="headerlink" title="闭包closure"></a>闭包closure</h2><p>函数内部可以直接读取全局变量。  </p>
 <pre><code>var n = 999;
 
 function f1() {
@@ -292,15 +291,13 @@ function f1() {
 }
 
 f1(); // 999
-</code></pre></li>
-<li><p>函数外部无法读取函数内的局部变量。  </p>
+</code></pre><p>函数外部无法读取函数内的局部变量。  </p>
 <pre><code>function f1() {
     var n = 999;
 }
 
 alert(n); // error
-</code></pre></li>
-<li><p>利用闭包，从函数外部读取函数内的局部变量。</p>
+</code></pre><p>利用闭包，从函数外部读取函数内的局部变量。</p>
 <pre><code>function f1() {
     var n = 999;
 
@@ -313,9 +310,7 @@ alert(n); // error
 
 var result = f1();
 result(); // 999
-</code></pre></li>
-</ul>
-<h2 id="作用域scope（上下文）"><a href="#作用域scope（上下文）" class="headerlink" title="作用域scope（上下文）"></a>作用域scope（上下文）</h2><p>上下文对象就是使用this指针，即被调用函数所处的环境。上下文对象在一个函数内部引用调用它的对象本身。  </p>
+</code></pre><h2 id="作用域scope（上下文）"><a href="#作用域scope（上下文）" class="headerlink" title="作用域scope（上下文）"></a>作用域scope（上下文）</h2><p>上下文对象就是使用this指针，即被调用函数所处的环境。上下文对象在一个函数内部引用调用它的对象本身。  </p>
 <pre><code>var someuser = {
     name: &apos;byvoid&apos;,
     func: function() {
