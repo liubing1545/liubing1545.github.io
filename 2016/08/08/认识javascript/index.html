@@ -4,24 +4,57 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>shell反向删除文件 | Bad Seeds</title>
+  <title>认识javascript | Bad Seeds</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="除了filename文件外，全部rm掉。
-$ shopt -s extglob
-$ rm -rf !(filename)">
+  <meta name="description" content="javascript基础声明
+声明变量不用var时，该变量为全局变量
+
+数据类型
+Number  
+
+整型常量(10进制\8进制\16进制)  十六进制以0x或0X开头, 例如: 0x8a八进制必须以0开头, 例如: 0123十进制的第一位不能是0(数字0除外), 例如: 123
+实型常量12.32, 193.98, 5E7, 4e5等
+
+
+Boolean
+
+String  
+“$abc”，’$a">
 <meta property="og:type" content="article">
-<meta property="og:title" content="shell反向删除文件">
-<meta property="og:url" content="http://liubing.com/2016/06/24/shell反向删除文件/index.html">
+<meta property="og:title" content="认识javascript">
+<meta property="og:url" content="http://liubing.com/2016/08/08/认识javascript/index.html">
 <meta property="og:site_name" content="Bad Seeds">
-<meta property="og:description" content="除了filename文件外，全部rm掉。
-$ shopt -s extglob
-$ rm -rf !(filename)">
-<meta property="og:updated_time" content="2016-06-24T09:17:58.000Z">
+<meta property="og:description" content="javascript基础声明
+声明变量不用var时，该变量为全局变量
+
+数据类型
+Number  
+
+整型常量(10进制\8进制\16进制)  十六进制以0x或0X开头, 例如: 0x8a八进制必须以0开头, 例如: 0123十进制的第一位不能是0(数字0除外), 例如: 123
+实型常量12.32, 193.98, 5E7, 4e5等
+
+
+Boolean
+
+String  
+“$abc”，’$a">
+<meta property="og:updated_time" content="2016-08-08T11:46:40.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="shell反向删除文件">
-<meta name="twitter:description" content="除了filename文件外，全部rm掉。
-$ shopt -s extglob
-$ rm -rf !(filename)">
+<meta name="twitter:title" content="认识javascript">
+<meta name="twitter:description" content="javascript基础声明
+声明变量不用var时，该变量为全局变量
+
+数据类型
+Number  
+
+整型常量(10进制\8进制\16进制)  十六进制以0x或0X开头, 例如: 0x8a八进制必须以0开头, 例如: 0123十进制的第一位不能是0(数字0除外), 例如: 123
+实型常量12.32, 193.98, 5E7, 4e5等
+
+
+Boolean
+
+String  
+“$abc”，’$a">
   
     <link rel="alternative" href="/atom.xml" title="Bad Seeds" type="application/atom+xml">
   
@@ -182,11 +215,11 @@ $ rm -rf !(filename)">
 	</div>
 </nav>
 
-      <div class="body-wrap"><article id="post-shell反向删除文件" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-认识javascript" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/06/24/shell反向删除文件/" class="article-date">
-  	<time datetime="2016-06-24T09:12:07.000Z" itemprop="datePublished">2016-06-24</time>
+      <a href="/2016/08/08/认识javascript/" class="article-date">
+  	<time datetime="2016-08-08T09:08:33.000Z" itemprop="datePublished">2016-08-08</time>
 </a>
     </div>
   
@@ -199,7 +232,7 @@ $ rm -rf !(filename)">
         
   
     <h1 class="article-title" itemprop="name">
-      shell反向删除文件
+      认识javascript
     </h1>
   
 
@@ -208,7 +241,7 @@ $ rm -rf !(filename)">
       <div class="article-info article-info-post">
         
 	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/">linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/shell/">shell</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js/">js</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/上下文/">上下文</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/作用域/">作用域</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/闭包/">闭包</a></li></ul>
 	</div>
 
         
@@ -219,9 +252,142 @@ $ rm -rf !(filename)">
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>除了filename文件外，全部rm掉。</p>
-<pre><code>$ shopt -s extglob
-$ rm -rf !(filename)
+        <h2 id="javascript基础"><a href="#javascript基础" class="headerlink" title="javascript基础"></a>javascript基础</h2><h4 id="声明"><a href="#声明" class="headerlink" title="声明"></a>声明</h4><ul>
+<li>声明变量不用var时，该变量为全局变量</li>
+</ul>
+<h4 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h4><ul>
+<li><p>Number  </p>
+<ul>
+<li><em>整型常量</em>(10进制\8进制\16进制)<br>  十六进制以0x或0X开头, 例如: 0x8a<br>八进制必须以0开头, 例如: 0123<br>十进制的第一位不能是0(数字0除外), 例如: 123</li>
+<li><em>实型常量</em><br>12.32, 193.98, 5E7, 4e5等</li>
+</ul>
+</li>
+<li><p>Boolean</p>
+</li>
+<li>String  <ul>
+<li>“$abc”，’$abc’<br>双引号会搜索引号内的内容是否含有变量，有则输出其值，没有则输出原有内容<br>单引号则不会检测内容，因此效率更高</li>
+<li>特殊字符，需要以反斜杠()后跟一个普通字符来表示<br>例如: \r, \n, \t, \b, \’</li>
+</ul>
+</li>
+<li>null常量</li>
+<li>undefined常量</li>
+<li>特殊数值<br>NaN, Infinity(无穷大), isNaN(), isFinite()</li>
+</ul>
+<h4 id="逻辑运算符"><a href="#逻辑运算符" class="headerlink" title="逻辑运算符"></a>逻辑运算符</h4><ul>
+<li>&amp;&amp; 逻辑与</li>
+<li>|| 逻辑或</li>
+<li>! 逻辑非</li>
+</ul>
+<h2 id="定义一个类"><a href="#定义一个类" class="headerlink" title="定义一个类"></a>定义一个类</h2><pre><code>function Person(name) {
+    this.name = name;
+}
+</code></pre><h2 id="一切都是对象"><a href="#一切都是对象" class="headerlink" title="一切都是对象"></a>一切都是对象</h2><p>类(函数)也是对象</p>
+<h2 id="创建对象"><a href="#创建对象" class="headerlink" title="创建对象"></a>创建对象</h2><pre><code>var p = new Person(&quot;张三&quot;)
+</code></pre><h2 id="闭包closure"><a href="#闭包closure" class="headerlink" title="闭包closure"></a>闭包closure</h2><ul>
+<li><p>函数内部可以直接读取全局变量。  </p>
+<pre><code>var n = 999;
+
+function f1() {
+    alert(n);
+}
+
+f1(); // 999
+</code></pre></li>
+<li><p>函数外部无法读取函数内的局部变量。  </p>
+<pre><code>function f1() {
+    var n = 999;
+}
+
+alert(n); // error
+</code></pre></li>
+<li><p>利用闭包，从函数外部读取函数内的局部变量。</p>
+<pre><code>function f1() {
+    var n = 999;
+
+    function f2() {
+        alert(n);
+    }
+
+    return f2;
+}
+
+var result = f1();
+result(); // 999
+</code></pre></li>
+</ul>
+<h2 id="作用域scope（上下文）"><a href="#作用域scope（上下文）" class="headerlink" title="作用域scope（上下文）"></a>作用域scope（上下文）</h2><p>上下文对象就是使用this指针，即被调用函数所处的环境。上下文对象在一个函数内部引用调用它的对象本身。  </p>
+<pre><code>var someuser = {
+    name: &apos;byvoid&apos;,
+    func: function() {
+        console.log(this.name);
+    }
+};
+
+var foo = {
+    name: &apos;foobar&apos;
+};
+
+someuser.func(); // byvoid
+
+foo.func = someuser.func;
+foo.func(); // foobar
+
+name = &apos;global&apos;;
+func = someuser.func;
+func(); // globar
+</code></pre><h2 id="prototype"><a href="#prototype" class="headerlink" title="prototype"></a>prototype</h2><p>利用prototype可以扩展js类。  </p>
+<pre><code>Number.prototype.add = function(v) {
+    return this + v;
+}    
+
+var d = 6;
+d.add(8).add(9); // d = 6 + 8 + 9
+</code></pre><p>扩展自定义的类。</p>
+<pre><code>function Person(name) {
+    this.name = name;
+}
+
+Person.prototype.sayHello = function() {
+    alert(this.name);
+}
+
+var p = new Person(&quot;zhangsan&quot;);
+p.sayHello();
+</code></pre><h2 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h2><p>classB继承classA</p>
+<pre><code>function classA(name) {
+    this.name = name;
+    this.sayHello = function() {
+        alert(this.name);
+    }
+}
+</code></pre><p>方法1</p>
+<pre><code>function classB(name) {
+    this.tempMethod = classA;
+    this.tempMethod(name);
+}
+</code></pre><p>方法2</p>
+<pre><code>function classB(name) {
+    classA.call(this, name);
+}
+</code></pre><p>方法3</p>
+<pre><code>function classB(name) {
+    classA.apply(this, [name]);
+}
+</code></pre><p>调用classB</p>
+<pre><code>var b = new classB(&quot;lisa&quot;);
+b.sayHello();
+</code></pre><h2 id="可变参数"><a href="#可变参数" class="headerlink" title="可变参数"></a>可变参数</h2><p>在js的世界里，内置属性arguments可以接收可辨参数。</p>
+<pre><code>function sum() {
+    var s = 0;
+    for(var i = 0; i &lt; arguments.length; i++) {
+        s+ = arguments[i];
+    }
+
+    return s;
+}
+
+alert(sum(1,4,5));
+alert(sum(12,15,19,21,51));
 </code></pre>
       
     </div>
@@ -231,18 +397,9 @@ $ rm -rf !(filename)
     
 <nav id="article-nav">
   
-    <a href="/2016/06/24/js七牛上传实践/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          js七牛上传实践
-        
-      </div>
-    </a>
   
-  
-    <a href="/2016/06/17/flask-exthook-ExtDeprecationWarning警告的消除/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">flask.exthook.ExtDeprecationWarning警告的消除</div>
+    <a href="/2016/08/08/react-native与webapi交互/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">react native与webapi交互</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -277,7 +434,7 @@ $ rm -rf !(filename)
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="shell反向删除文件" data-title="shell反向删除文件" data-url="http://liubing.com/2016/06/24/shell反向删除文件/"></div>
+	<div class="ds-thread" data-thread-key="认识javascript" data-title="认识javascript" data-url="http://liubing.com/2016/08/08/认识javascript/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
