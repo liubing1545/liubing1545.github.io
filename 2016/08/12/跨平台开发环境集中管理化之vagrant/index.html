@@ -4,24 +4,24 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>shell反向删除文件 | Bad Seeds</title>
+  <title>开发团队跨平台开发环境集中管理化之vagrant | Bad Seeds</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="除了filename文件外，全部rm掉。
-$ shopt -s extglob
-$ rm -rf !(filename)">
+  <meta name="description" content="vagrant是一款用来构建虚拟开发环境的工具，非常适合各类开发语言的web应用，因统一安装本地开发环境浪费的人力成本及时间成本，以及不可避免的“work on my machine”错误，将永久告别～  
+安装virtualbox及vagrantvagrant对virtualbox支持的非常好。但不匹配的版本，加载box会发生或多或少的问题。    
+我的工作环境的软件版本是：vagrant 1">
 <meta property="og:type" content="article">
-<meta property="og:title" content="shell反向删除文件">
-<meta property="og:url" content="http://liubing.com/2016/06/24/shell反向删除文件/index.html">
+<meta property="og:title" content="开发团队跨平台开发环境集中管理化之vagrant">
+<meta property="og:url" content="http://liubing.com/2016/08/12/跨平台开发环境集中管理化之vagrant/index.html">
 <meta property="og:site_name" content="Bad Seeds">
-<meta property="og:description" content="除了filename文件外，全部rm掉。
-$ shopt -s extglob
-$ rm -rf !(filename)">
-<meta property="og:updated_time" content="2016-06-24T09:17:58.000Z">
+<meta property="og:description" content="vagrant是一款用来构建虚拟开发环境的工具，非常适合各类开发语言的web应用，因统一安装本地开发环境浪费的人力成本及时间成本，以及不可避免的“work on my machine”错误，将永久告别～  
+安装virtualbox及vagrantvagrant对virtualbox支持的非常好。但不匹配的版本，加载box会发生或多或少的问题。    
+我的工作环境的软件版本是：vagrant 1">
+<meta property="og:updated_time" content="2016-08-12T06:57:26.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="shell反向删除文件">
-<meta name="twitter:description" content="除了filename文件外，全部rm掉。
-$ shopt -s extglob
-$ rm -rf !(filename)">
+<meta name="twitter:title" content="开发团队跨平台开发环境集中管理化之vagrant">
+<meta name="twitter:description" content="vagrant是一款用来构建虚拟开发环境的工具，非常适合各类开发语言的web应用，因统一安装本地开发环境浪费的人力成本及时间成本，以及不可避免的“work on my machine”错误，将永久告别～  
+安装virtualbox及vagrantvagrant对virtualbox支持的非常好。但不匹配的版本，加载box会发生或多或少的问题。    
+我的工作环境的软件版本是：vagrant 1">
   
     <link rel="alternative" href="/atom.xml" title="Bad Seeds" type="application/atom+xml">
   
@@ -182,11 +182,11 @@ $ rm -rf !(filename)">
 	</div>
 </nav>
 
-      <div class="body-wrap"><article id="post-shell反向删除文件" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-跨平台开发环境集中管理化之vagrant" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/06/24/shell反向删除文件/" class="article-date">
-  	<time datetime="2016-06-24T09:12:07.000Z" itemprop="datePublished">2016-06-24</time>
+      <a href="/2016/08/12/跨平台开发环境集中管理化之vagrant/" class="article-date">
+  	<time datetime="2016-08-12T01:58:01.000Z" itemprop="datePublished">2016-08-12</time>
 </a>
     </div>
   
@@ -199,7 +199,7 @@ $ rm -rf !(filename)">
         
   
     <h1 class="article-title" itemprop="name">
-      shell反向删除文件
+      开发团队跨平台开发环境集中管理化之vagrant
     </h1>
   
 
@@ -208,7 +208,7 @@ $ rm -rf !(filename)">
       <div class="article-info article-info-post">
         
 	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/">linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/shell/">shell</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/vagrant/">vagrant</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/跨平台/">跨平台</a></li></ul>
 	</div>
 
         
@@ -219,9 +219,43 @@ $ rm -rf !(filename)">
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>除了filename文件外，全部rm掉。</p>
-<pre><code>$ shopt -s extglob
-$ rm -rf !(filename)
+        <p><strong>vagrant</strong>是一款用来构建虚拟开发环境的工具，非常适合各类开发语言的web应用，因统一安装本地开发环境浪费的人力成本及时间成本，以及不可避免的“work on my machine”错误，将永久告别～  </p>
+<h2 id="安装virtualbox及vagrant"><a href="#安装virtualbox及vagrant" class="headerlink" title="安装virtualbox及vagrant"></a>安装virtualbox及vagrant</h2><p>vagrant对virtualbox支持的非常好。但不匹配的版本，加载box会发生或多或少的问题。    </p>
+<p>我的工作环境的软件版本是：<br>vagrant 1.6.3<br>virtualbox 4.2.12-84980</p>
+<h2 id="添加镜像"><a href="#添加镜像" class="headerlink" title="添加镜像"></a>添加镜像</h2><p>安装好后运行以下命令可以添加vagrant官方的box镜像。  </p>
+<pre><code>$ vagrant box add hashicorp/precise64
+</code></pre><p>这是一个标准的64bit的ubuntu系统。<br>如果要下载其他系统的镜像，可以在这里下载:<a href="https://atlas.hashicorp.com/boxes/search" target="_blank" rel="external">https://atlas.hashicorp.com/boxes/search</a>   </p>
+<h2 id="初始化开发环境"><a href="#初始化开发环境" class="headerlink" title="初始化开发环境"></a>初始化开发环境</h2><p>切换到box文件所在目录，加载box文件及初始化 </p>
+<pre><code>$ cd ~/dev 
+$ vagrant box add test test.box 
+$ vagrant init test
+$ vagrant up
+</code></pre><h2 id="ssh登录"><a href="#ssh登录" class="headerlink" title="ssh登录"></a>ssh登录</h2><p>mac下ssh登录，虚拟机目录 /vagrant 就是宿主机的 ~/dev  </p>
+<pre><code>$ vagrant ssh
+$ cd /vagrant
+</code></pre><p><strong>windows用户注意:</strong> windows终端需要使用ssh客户端，比如putty等。</p>
+<h2 id="其他设置"><a href="#其他设置" class="headerlink" title="其他设置"></a>其他设置</h2><p>vagrant 初始化成功后，会在初始化的目录里生成一个 vagrantfile 的配置文件，可以修改配置文件进行个性化的定制。  </p>
+<p>vagrant 默认是使用端口映射的方式将虚拟机的端口映射本地从而实现类似 <a href="http://localhost:80" target="_blank" rel="external">http://localhost:80</a> 这种访问方式。<br>相比之下，host-only模式显得非常方便。打开 vagrantfile，将下面的注释去掉，便可以访问192.168.33.10机器上的服务了。 </p>
+<pre><code>config.vm.network &quot;private_network&quot;, ip:&quot;192.168.33.10&quot;
+</code></pre><h2 id="打包分发"><a href="#打包分发" class="headerlink" title="打包分发"></a>打包分发</h2><p>当配置好开发环境后，退出并关闭虚拟机。对开发环境进行打包。</p>
+<pre><code>$ vagrant package
+</code></pre><p>打包后，就会在当前目录下生成一个 package.box 的文件。可以分发这个文件给其他开发者。</p>
+<h2 id="集成预安装"><a href="#集成预安装" class="headerlink" title="集成预安装"></a>集成预安装</h2><p>vagrant 还提供预安装定制，打开 vagrantfile, 可以放开这些在文件末尾处有被注释的代码：</p>
+<pre><code>config.vm.provision &quot;shell&quot;, inline: &lt;&lt;-SHELL
+    apt-get update
+    apt-get install -y apache2
+SHELL
+</code></pre><p>可以把需要安装的软件应用全部写在里面，在初次 vagrant up 的时候，虚拟机会预先执行这些命令。  </p>
+<p>如果不是初次运行，但又修改了这些命令。则可以进行重载vagrant。  </p>
+<pre><code>$ vagrant reload --provision
+</code></pre><p>也可以把这些配置写在shell脚本里面，让vagrant加载运行这些脚本。因此整个团队可以维护一个 vagrantfile 或者 shell 脚本，把这个文件放在github上，还可以监控它的版本，多么简单和容易啊！哈哈</p>
+<h2 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h2><pre><code>$ vagrant init  # 初始化
+$ vagrant up  # 启动
+$ vagrant halt  # 关闭
+$ vagrant reload  # 重启
+$ vagrant ssh  # ssh
+$ vagrant status  # 查看状态
+$ vagrant destroy  # 销毁
 </code></pre>
       
     </div>
@@ -231,18 +265,9 @@ $ rm -rf !(filename)
     
 <nav id="article-nav">
   
-    <a href="/2016/06/24/js七牛上传实践/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          js七牛上传实践
-        
-      </div>
-    </a>
   
-  
-    <a href="/2016/06/17/flask-exthook-ExtDeprecationWarning警告的消除/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">flask.exthook.ExtDeprecationWarning警告的消除</div>
+    <a href="/2016/08/11/flask-migrate数据库迁移/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">flask-migrate数据库迁移</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -277,7 +302,7 @@ $ rm -rf !(filename)
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="shell反向删除文件" data-title="shell反向删除文件" data-url="http://liubing.com/2016/06/24/shell反向删除文件/"></div>
+	<div class="ds-thread" data-thread-key="跨平台开发环境集中管理化之vagrant" data-title="开发团队跨平台开发环境集中管理化之vagrant" data-url="http://liubing.com/2016/08/12/跨平台开发环境集中管理化之vagrant/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
