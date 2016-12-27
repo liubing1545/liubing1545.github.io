@@ -4,24 +4,27 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>shell反向删除文件 | Bad Seeds</title>
+  <title>搭建gitbucket的docker环境 | Bad Seeds</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="除了filename文件外，全部rm掉。
-$ shopt -s extglob
-$ rm -rf !(filename)">
+  <meta name="description" content="为了更方便简洁的部署各种服务器应用，我在社内环境安装了docker。从社内直连github有时极不稳定。社内团队协同开发，搭建本地的git仓库，我选择搭建gitbucket。  
+$ docker search gitbucket
+虽然没有docker官方放出的gitbucket镜像，但从列表里选stars最多也算靠谱点儿吧。  
+$ docker pull f99aq8ove/gitbucket">
 <meta property="og:type" content="article">
-<meta property="og:title" content="shell反向删除文件">
-<meta property="og:url" content="http://liubing.com/2016/06/24/shell反向删除文件/index.html">
+<meta property="og:title" content="搭建gitbucket的docker环境">
+<meta property="og:url" content="http://liubing.com/2016/12/27/搭建gitbucket的docker环境/index.html">
 <meta property="og:site_name" content="Bad Seeds">
-<meta property="og:description" content="除了filename文件外，全部rm掉。
-$ shopt -s extglob
-$ rm -rf !(filename)">
-<meta property="og:updated_time" content="2016-06-24T09:17:58.000Z">
+<meta property="og:description" content="为了更方便简洁的部署各种服务器应用，我在社内环境安装了docker。从社内直连github有时极不稳定。社内团队协同开发，搭建本地的git仓库，我选择搭建gitbucket。  
+$ docker search gitbucket
+虽然没有docker官方放出的gitbucket镜像，但从列表里选stars最多也算靠谱点儿吧。  
+$ docker pull f99aq8ove/gitbucket">
+<meta property="og:updated_time" content="2016-12-27T08:14:21.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="shell反向删除文件">
-<meta name="twitter:description" content="除了filename文件外，全部rm掉。
-$ shopt -s extglob
-$ rm -rf !(filename)">
+<meta name="twitter:title" content="搭建gitbucket的docker环境">
+<meta name="twitter:description" content="为了更方便简洁的部署各种服务器应用，我在社内环境安装了docker。从社内直连github有时极不稳定。社内团队协同开发，搭建本地的git仓库，我选择搭建gitbucket。  
+$ docker search gitbucket
+虽然没有docker官方放出的gitbucket镜像，但从列表里选stars最多也算靠谱点儿吧。  
+$ docker pull f99aq8ove/gitbucket">
   
     <link rel="alternative" href="/atom.xml" title="Bad Seeds" type="application/atom+xml">
   
@@ -182,11 +185,11 @@ $ rm -rf !(filename)">
 	</div>
 </nav>
 
-      <div class="body-wrap"><article id="post-shell反向删除文件" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-搭建gitbucket的docker环境" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/06/24/shell反向删除文件/" class="article-date">
-  	<time datetime="2016-06-24T09:12:07.000Z" itemprop="datePublished">2016-06-24</time>
+      <a href="/2016/12/27/搭建gitbucket的docker环境/" class="article-date">
+  	<time datetime="2016-12-27T05:49:09.000Z" itemprop="datePublished">2016-12-27</time>
 </a>
     </div>
   
@@ -199,7 +202,7 @@ $ rm -rf !(filename)">
         
   
     <h1 class="article-title" itemprop="name">
-      shell反向删除文件
+      搭建gitbucket的docker环境
     </h1>
   
 
@@ -208,7 +211,7 @@ $ rm -rf !(filename)">
       <div class="article-info article-info-post">
         
 	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/">linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/shell/">shell</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/docker/">docker</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git/">git</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/gitbucket/">gitbucket</a></li></ul>
 	</div>
 
         
@@ -219,10 +222,38 @@ $ rm -rf !(filename)">
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>除了filename文件外，全部rm掉。</p>
-<pre><code>$ shopt -s extglob
-$ rm -rf !(filename)
-</code></pre>
+        <p>为了更方便简洁的部署各种服务器应用，我在社内环境安装了docker。<br>从社内直连github有时极不稳定。社内团队协同开发，搭建本地的git仓库，我选择搭建gitbucket。  </p>
+<pre><code>$ docker search gitbucket
+</code></pre><p>虽然没有docker官方放出的gitbucket镜像，但从列表里选stars最多也算靠谱点儿吧。  </p>
+<pre><code>$ docker pull f99aq8ove/gitbucket
+</code></pre><p>github也不网络稳定啊。。。下载两次都失败，寻找国内的镜像找到了daocloud。去daocloud官网去注册一下，然后配置docker加速器。  </p>
+<pre><code>$ curl -sSL https://get.daocloud.io/daotools/set_mirror.sh | sh -s http://5706b345.m.daocloud.io
+</code></pre><p>该脚本可以将 –registry-mirror 加入到你的docker配置文件 /etc/default/docker 中。</p>
+<p>配置好了之后，再次docker pull。成功！<br>启动镜像。  </p>
+<pre><code>$ docker run -d -p 8080:8080 -p 29418:29418 -v ${PWD}/gitbucket-data:/gitbucket f99aq8ove/gitbucket
+</code></pre><p>配置了映射端口8080是gitbucket的网页入口，映射端口29418是ssh的端口。<br>正常启动后，通过网页打开，显示正常。<br>创建用户组，创建新的repository。<br>在客户端local创建开发环境。  </p>
+<pre><code>$ mkdir xxxdir
+$ cd xxxdir
+$ touch README.md
+$ git add .
+$ git commit -m &quot;first commit&quot;
+$ git remote add origin [URL]
+$ git push origin master
+</code></pre><p>在进行push的时候，失败了，报错如下。  </p>
+<pre><code>fatal: unable to access &apos;http://xxx.git/&apos;: The requested URL returned error: 503
+</code></pre><p>查了一下，有可能是在gitbucket服务器之前，设置了http代理所导致的。设置git http操作的debug。  </p>
+<pre><code>$ export GIT_CURL_VERBOSE = 1
+</code></pre><p>再次git push查看，的确有从http代理向gitbucket服务器发出的请求。但我不知道在哪里配置了http代理了。。。<br>使用git config命令查看配置文件  </p>
+<p>查看仓库级的config  </p>
+<pre><code>$ git config -local -l
+</code></pre><p>查看全局级的config</p>
+<pre><code>$ git config -global -l
+</code></pre><p>查看系统级的config</p>
+<pre><code>$ git config -system -l
+</code></pre><p>查看当前生效的配置</p>
+<pre><code>$ git config -l
+</code></pre><p>ok！将设置的http代理全部注释掉，git push成功啦！<br>社内gitbucket搭建成功！</p>
+
       
     </div>
     
@@ -231,18 +262,9 @@ $ rm -rf !(filename)
     
 <nav id="article-nav">
   
-    <a href="/2016/06/24/js七牛上传实践/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          js七牛上传实践
-        
-      </div>
-    </a>
   
-  
-    <a href="/2016/06/17/flask-exthook-ExtDeprecationWarning警告的消除/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">flask.exthook.ExtDeprecationWarning警告的消除</div>
+    <a href="/2016/11/23/git删除tag/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">git删除tag</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -277,7 +299,7 @@ $ rm -rf !(filename)
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="shell反向删除文件" data-title="shell反向删除文件" data-url="http://liubing.com/2016/06/24/shell反向删除文件/"></div>
+	<div class="ds-thread" data-thread-key="搭建gitbucket的docker环境" data-title="搭建gitbucket的docker环境" data-url="http://liubing.com/2016/12/27/搭建gitbucket的docker环境/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
