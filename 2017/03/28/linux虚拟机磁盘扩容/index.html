@@ -4,17 +4,24 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>Tag: 作用域 | Bad Seeds</title>
+  <title>linux虚拟机磁盘扩容 | Bad Seeds</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Bad Seeds">
-<meta property="og:url" content="http://liubing.com/tags/作用域/index.html">
+  <meta name="description" content="问题点安装了centos7的虚拟机，yum update时报错空间不足 No space left on device。
+VBoxManage modifyhd在宿主机上的安装virtualBox的根目录执行resize命令进行扩容:    
+C:\Program Files\Oracle\VirtualBox&amp;gt;VBoxManage modifyhd E:\dockerVM\dockerVM">
+<meta property="og:type" content="article">
+<meta property="og:title" content="linux虚拟机磁盘扩容">
+<meta property="og:url" content="http://liubing.com/2017/03/28/linux虚拟机磁盘扩容/index.html">
 <meta property="og:site_name" content="Bad Seeds">
-<meta property="og:description">
+<meta property="og:description" content="问题点安装了centos7的虚拟机，yum update时报错空间不足 No space left on device。
+VBoxManage modifyhd在宿主机上的安装virtualBox的根目录执行resize命令进行扩容:    
+C:\Program Files\Oracle\VirtualBox&amp;gt;VBoxManage modifyhd E:\dockerVM\dockerVM">
+<meta property="og:updated_time" content="2017-03-28T11:31:32.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Bad Seeds">
-<meta name="twitter:description">
+<meta name="twitter:title" content="linux虚拟机磁盘扩容">
+<meta name="twitter:description" content="问题点安装了centos7的虚拟机，yum update时报错空间不足 No space left on device。
+VBoxManage modifyhd在宿主机上的安装virtualBox的根目录执行resize命令进行扩容:    
+C:\Program Files\Oracle\VirtualBox&amp;gt;VBoxManage modifyhd E:\dockerVM\dockerVM">
   
     <link rel="alternative" href="/atom.xml" title="Bad Seeds" type="application/atom+xml">
   
@@ -175,53 +182,135 @@
 	</div>
 </nav>
 
-      <div class="body-wrap">
+      <div class="body-wrap"><article id="post-linux虚拟机磁盘扩容" class="article article-type-post" itemscope itemprop="blogPost">
   
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2016" class="archive-year">2016</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/08/08/认识javascript/" class="archive-article-date">
-  	<time datetime="2016-08-08T09:08:33.000Z" itemprop="datePublished">8月 8</time>
+    <div class="article-meta">
+      <a href="/2017/03/28/linux虚拟机磁盘扩容/" class="article-date">
+  	<time datetime="2017-03-28T10:04:05.000Z" itemprop="datePublished">2017-03-28</time>
 </a>
-        </div>
-    	 
+    </div>
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/08/08/认识javascript/">认识javascript</a>
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      linux虚拟机磁盘扩容
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+      </header>
+      
+      <div class="article-info article-info-post">
+        
 	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js/">js</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/上下文/">上下文</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/作用域/">作用域</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/闭包/">闭包</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/">linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/磁盘扩容/">磁盘扩容</a></li></ul>
 	</div>
 
-          
+        
 
-        </div>
         <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
+      </div>
+      
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="问题点"><a href="#问题点" class="headerlink" title="问题点"></a>问题点</h3><p>安装了centos7的虚拟机，yum update时报错空间不足 <strong>No space left on device</strong>。</p>
+<h3 id="VBoxManage-modifyhd"><a href="#VBoxManage-modifyhd" class="headerlink" title="VBoxManage modifyhd"></a>VBoxManage modifyhd</h3><p>在宿主机上的安装virtualBox的根目录执行resize命令进行扩容:    </p>
+<pre><code>C:\Program Files\Oracle\VirtualBox&gt;VBoxManage modifyhd E:\dockerVM\dockerVM.vdi --resize 35000
+</code></pre><h3 id="CentOS的LVM管理"><a href="#CentOS的LVM管理" class="headerlink" title="CentOS的LVM管理"></a>CentOS的LVM管理</h3><p>查看磁盘状况</p>
+<pre><code>$ fdisk -l /dev/sda
+</code></pre><p>将空余磁盘创建为SDA3</p>
+<pre><code>$ fdisk /dev/sda
+n {new partition}
+p {primary partition}
+3 {partition number}
+
+t {change partition id}
+3 {partition number}
+8e {linux LVM partition}
+w
+</code></pre><p>重启虚拟机</p>
+<pre><code>$reboot
+</code></pre><p>查看当前Volume group</p>
+<pre><code>$ vgdisplay
+</code></pre><p>创建/dev/sda3，根据VG Name:[centos]，扩展LVM的逻辑卷</p>
+<pre><code>$ lvscan
+$ pvcreate /dev/sda3
+$ vgextend /dev/centos/root /dev/sda3
+</code></pre><p>调整逻辑卷文件系统的大小</p>
+<pre><code>$ xfs_growfs /dev/centos/root
+$df -h
+</code></pre><p>OK了！</p>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2016/12/27/搭建gitbucket的docker环境/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">搭建gitbucket的docker环境</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share_jia">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">Share to: &nbsp; </span>
+		<a class="jiathis_button_facebook"></a> 
+    <a class="jiathis_button_twitter"></a>
+    <a class="jiathis_button_plus"></a> 
+    <a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="linux虚拟机磁盘扩容" data-title="linux虚拟机磁盘扩容" data-url="http://liubing.com/2017/03/28/linux虚拟机磁盘扩容/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
 
 </div>
       <footer id="footer">
@@ -247,9 +336,9 @@
 		mathjax: true,
 		animate: true,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false
 	}
