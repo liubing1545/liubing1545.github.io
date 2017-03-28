@@ -4,42 +4,27 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>git删除tag | Bad Seeds</title>
+  <title>docker容器启动iptables报错 | Bad Seeds</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="同事在git上误打了tag，并且只删除了本地的tag，没有删除origin上的tag。管理员账户登录了git仓库的web页面，找到了这个tag但还是没有办法删掉。ok！只有命令行开搞！  
-配置ssh config
-删除tag
-主要命令ssh-agent
-eval `ssh-agent`
-ssh-add $git_rsa
-git tag -d $tag_name
-git push origin :">
+  <meta name="description" content="错误信息1docker0: iptables: No chain/target/match by that name
+重启docker1service docker restart
+列出iptables的所有规则1iptables -L
+可以看到iptables里面多出了Chain Docker的选项。经验为：在启动firewalld之后，iptables被激活，此时没有docker chain，">
 <meta property="og:type" content="article">
-<meta property="og:title" content="git删除tag">
-<meta property="og:url" content="http://liubing.com/2016/11/23/git删除tag/index.html">
+<meta property="og:title" content="docker容器启动iptables报错">
+<meta property="og:url" content="http://liubing.com/2017/03/28/docker容器启动iptables报错/index.html">
 <meta property="og:site_name" content="Bad Seeds">
-<meta property="og:description" content="同事在git上误打了tag，并且只删除了本地的tag，没有删除origin上的tag。管理员账户登录了git仓库的web页面，找到了这个tag但还是没有办法删掉。ok！只有命令行开搞！  
-配置ssh config
-删除tag
-主要命令ssh-agent
-eval `ssh-agent`
-ssh-add $git_rsa
-git tag -d $tag_name
-git push origin :">
-<meta property="og:image" content="http://obksgg9lx.bkt.clouddn.com/ssh-config.png">
-<meta property="og:image" content="http://obksgg9lx.bkt.clouddn.com/delete-tag.png">
-<meta property="og:updated_time" content="2016-11-23T07:22:02.000Z">
+<meta property="og:description" content="错误信息1docker0: iptables: No chain/target/match by that name
+重启docker1service docker restart
+列出iptables的所有规则1iptables -L
+可以看到iptables里面多出了Chain Docker的选项。经验为：在启动firewalld之后，iptables被激活，此时没有docker chain，">
+<meta property="og:updated_time" content="2017-03-28T12:24:24.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="git删除tag">
-<meta name="twitter:description" content="同事在git上误打了tag，并且只删除了本地的tag，没有删除origin上的tag。管理员账户登录了git仓库的web页面，找到了这个tag但还是没有办法删掉。ok！只有命令行开搞！  
-配置ssh config
-删除tag
-主要命令ssh-agent
-eval `ssh-agent`
-ssh-add $git_rsa
-git tag -d $tag_name
-git push origin :">
-<meta name="twitter:image" content="http://obksgg9lx.bkt.clouddn.com/ssh-config.png">
+<meta name="twitter:title" content="docker容器启动iptables报错">
+<meta name="twitter:description" content="错误信息1docker0: iptables: No chain/target/match by that name
+重启docker1service docker restart
+列出iptables的所有规则1iptables -L
+可以看到iptables里面多出了Chain Docker的选项。经验为：在启动firewalld之后，iptables被激活，此时没有docker chain，">
   
     <link rel="alternative" href="/atom.xml" title="Bad Seeds" type="application/atom+xml">
   
@@ -200,11 +185,11 @@ git push origin :">
 	</div>
 </nav>
 
-      <div class="body-wrap"><article id="post-git删除tag" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-docker容器启动iptables报错" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/11/23/git删除tag/" class="article-date">
-  	<time datetime="2016-11-23T07:07:14.000Z" itemprop="datePublished">2016-11-23</time>
+      <a href="/2017/03/28/docker容器启动iptables报错/" class="article-date">
+  	<time datetime="2017-03-28T12:22:32.000Z" itemprop="datePublished">2017-03-28</time>
 </a>
     </div>
   
@@ -217,7 +202,7 @@ git push origin :">
         
   
     <h1 class="article-title" itemprop="name">
-      git删除tag
+      docker容器启动iptables报错
     </h1>
   
 
@@ -226,7 +211,7 @@ git push origin :">
       <div class="article-info article-info-post">
         
 	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git/">git</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/docker/">docker</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iptables/">iptables</a></li></ul>
 	</div>
 
         
@@ -237,15 +222,11 @@ git push origin :">
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>同事在git上误打了tag，并且只删除了本地的tag，没有删除origin上的tag。管理员账户登录了git仓库的web页面，找到了这个tag但还是没有办法删掉。<br>ok！只有命令行开搞！  </p>
-<h4 id="配置ssh-config"><a href="#配置ssh-config" class="headerlink" title="配置ssh config"></a>配置ssh config</h4><p><img src="http://obksgg9lx.bkt.clouddn.com/ssh-config.png" alt="webapi"></p>
-<h4 id="删除tag"><a href="#删除tag" class="headerlink" title="删除tag"></a>删除tag</h4><p><img src="http://obksgg9lx.bkt.clouddn.com/delete-tag.png" alt="webapi"></p>
-<h4 id="主要命令"><a href="#主要命令" class="headerlink" title="主要命令"></a>主要命令</h4><pre><code>ssh-agent
-eval `ssh-agent`
-ssh-add $git_rsa
-git tag -d $tag_name
-git push origin :refs/tags/tag_name
-</code></pre>
+        <h3 id="错误信息"><a href="#错误信息" class="headerlink" title="错误信息"></a>错误信息</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker0: iptables: No chain/target/match by that name</span><br></pre></td></tr></table></figure>
+<h3 id="重启docker"><a href="#重启docker" class="headerlink" title="重启docker"></a>重启docker</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">service docker restart</span><br></pre></td></tr></table></figure>
+<h3 id="列出iptables的所有规则"><a href="#列出iptables的所有规则" class="headerlink" title="列出iptables的所有规则"></a>列出iptables的所有规则</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">iptables -L</span><br></pre></td></tr></table></figure>
+<p>可以看到iptables里面多出了Chain Docker的选项。<br>经验为：在启动firewalld之后，iptables被激活，此时没有docker chain，重启docker后被加入到iptable里面。</p>
+
       
     </div>
     
@@ -254,18 +235,9 @@ git push origin :refs/tags/tag_name
     
 <nav id="article-nav">
   
-    <a href="/2016/12/27/搭建gitbucket的docker环境/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          搭建gitbucket的docker环境
-        
-      </div>
-    </a>
   
-  
-    <a href="/2016/09/18/git撤销merge操作/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">git撤销merge操作</div>
+    <a href="/2017/03/28/java工程启动No-Route-to-host/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">java工程启动 No Route to host</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -300,7 +272,7 @@ git push origin :refs/tags/tag_name
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="git删除tag" data-title="git删除tag" data-url="http://liubing.com/2016/11/23/git删除tag/"></div>
+	<div class="ds-thread" data-thread-key="docker容器启动iptables报错" data-title="docker容器启动iptables报错" data-url="http://liubing.com/2017/03/28/docker容器启动iptables报错/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
