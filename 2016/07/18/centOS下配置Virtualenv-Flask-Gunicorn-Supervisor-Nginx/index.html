@@ -28,7 +28,7 @@ $ source bin/activate
 $ touch runserver.py
 $ vim runserver.py
 $ chmod a+x">
-<meta property="og:updated_time" content="2016-07-20T00:52:16.000Z">
+<meta property="og:updated_time" content="2017-07-07T08:48:51.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="centOS下配置Virtualenv+Flask+Gunicorn+Supervisor+Nginx">
 <meta name="twitter:description" content="在阿里云上部署flask环境。  
@@ -289,7 +289,7 @@ autorestart=true
 stdout_logfile=/home/$username/stooge/logs/gunicorn_supervisor.log
 </code></pre><p>这样的配置，通过[program:stooge]来告诉supervisord需要管理哪个进程。可以在client端(supervisorctl或web页面)显示，并对该进程start,restart,stop。</p>
 <h3 id="supervisorctl"><a href="#supervisorctl" class="headerlink" title="supervisorctl"></a>supervisorctl</h3><p>supervisorctl 是 supervisord 的一个命令行客户端工具，启动时需要指定配置文件。  </p>
-<pre><code>$ supervisorctl -c /etc/supervisord.conf
+<pre><code>$ supervisord -c /etc/supervisord.conf
 </code></pre><p>shell 命令  </p>
 <pre><code>$ supervisorctl status #查看程序状态
 $ supervisorctl stop stooge
