@@ -6,16 +6,19 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <title>supervisor管理服务器进程 | Bad Seeds</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description">
+  <meta name="description" content="在服务器上同时管理多个java进程和python进程，我使用supervisor。在/etc/supervisor/conf.d/路径下创建xxx.conf在xxx.conf下配置如下    
+12345678910111213141516171819202122232425262728293031[program:gzh]command=/root/python-gzh/venv/bin/gun">
 <meta property="og:type" content="article">
 <meta property="og:title" content="supervisor管理服务器进程">
 <meta property="og:url" content="http://liubing.com/2017/07/07/supervisor管理服务器进程/index.html">
 <meta property="og:site_name" content="Bad Seeds">
-<meta property="og:description">
-<meta property="og:updated_time" content="2017-07-07T08:57:57.000Z">
+<meta property="og:description" content="在服务器上同时管理多个java进程和python进程，我使用supervisor。在/etc/supervisor/conf.d/路径下创建xxx.conf在xxx.conf下配置如下    
+12345678910111213141516171819202122232425262728293031[program:gzh]command=/root/python-gzh/venv/bin/gun">
+<meta property="og:updated_time" content="2017-07-18T09:50:22.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="supervisor管理服务器进程">
-<meta name="twitter:description">
+<meta name="twitter:description" content="在服务器上同时管理多个java进程和python进程，我使用supervisor。在/etc/supervisor/conf.d/路径下创建xxx.conf在xxx.conf下配置如下    
+12345678910111213141516171819202122232425262728293031[program:gzh]command=/root/python-gzh/venv/bin/gun">
   
     <link rel="alternative" href="/atom.xml" title="Bad Seeds" type="application/atom+xml">
   
@@ -73,7 +76,7 @@
 						<li>Tags</li>
 						
 						
-						<li>About</li>
+						<li>Über</li>
 						
 					</ul>
 				</div>
@@ -110,7 +113,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/Gunicorn/" style="font-size: 10px;">Gunicorn</a> <a href="/tags/Network-request-failed/" style="font-size: 10px;">Network request failed</a> <a href="/tags/No-Route-to-host/" style="font-size: 10px;">No Route to host</a> <a href="/tags/Runtime-is-not-ready-for-debugging/" style="font-size: 10px;">Runtime is not ready for debugging</a> <a href="/tags/Supervisor/" style="font-size: 10px;">Supervisor</a> <a href="/tags/Virtualenv/" style="font-size: 10px;">Virtualenv</a> <a href="/tags/aliyun/" style="font-size: 10px;">aliyun</a> <a href="/tags/centOS/" style="font-size: 10px;">centOS</a> <a href="/tags/curl/" style="font-size: 10px;">curl</a> <a href="/tags/docker/" style="font-size: 20px;">docker</a> <a href="/tags/flask/" style="font-size: 20px;">flask</a> <a href="/tags/flask-ext-migrate/" style="font-size: 10px;">flask-ext-migrate</a> <a href="/tags/flask-migrate/" style="font-size: 10px;">flask-migrate</a> <a href="/tags/git/" style="font-size: 16.67px;">git</a> <a href="/tags/gitbucket/" style="font-size: 10px;">gitbucket</a> <a href="/tags/grep/" style="font-size: 10px;">grep</a> <a href="/tags/gunicorn/" style="font-size: 10px;">gunicorn</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/iptables/" style="font-size: 10px;">iptables</a> <a href="/tags/java/" style="font-size: 10px;">java</a> <a href="/tags/js/" style="font-size: 13.33px;">js</a> <a href="/tags/linux/" style="font-size: 13.33px;">linux</a> <a href="/tags/mac/" style="font-size: 10px;">mac</a> <a href="/tags/npmjs-org-443/" style="font-size: 10px;">npmjs.org:443</a> <a href="/tags/postgresql/" style="font-size: 10px;">postgresql</a> <a href="/tags/python/" style="font-size: 16.67px;">python</a> <a href="/tags/react-native/" style="font-size: 13.33px;">react native</a> <a href="/tags/redis/" style="font-size: 10px;">redis</a> <a href="/tags/restful/" style="font-size: 10px;">restful</a> <a href="/tags/sed/" style="font-size: 10px;">sed</a> <a href="/tags/shell/" style="font-size: 13.33px;">shell</a> <a href="/tags/vagrant/" style="font-size: 13.33px;">vagrant</a> <a href="/tags/web/" style="font-size: 10px;">web</a> <a href="/tags/web-py/" style="font-size: 10px;">web.py</a> <a href="/tags/win10/" style="font-size: 10px;">win10</a> <a href="/tags/七牛/" style="font-size: 10px;">七牛</a> <a href="/tags/上下文/" style="font-size: 10px;">上下文</a> <a href="/tags/作用域/" style="font-size: 10px;">作用域</a> <a href="/tags/磁盘扩容/" style="font-size: 10px;">磁盘扩容</a> <a href="/tags/跨平台/" style="font-size: 10px;">跨平台</a> <a href="/tags/闭包/" style="font-size: 10px;">闭包</a>
+						<a href="/tags/Gunicorn/" style="font-size: 10px;">Gunicorn</a> <a href="/tags/Network-request-failed/" style="font-size: 10px;">Network request failed</a> <a href="/tags/No-Route-to-host/" style="font-size: 10px;">No Route to host</a> <a href="/tags/Runtime-is-not-ready-for-debugging/" style="font-size: 10px;">Runtime is not ready for debugging</a> <a href="/tags/Supervisor/" style="font-size: 10px;">Supervisor</a> <a href="/tags/Virtualenv/" style="font-size: 10px;">Virtualenv</a> <a href="/tags/aliyun/" style="font-size: 10px;">aliyun</a> <a href="/tags/centOS/" style="font-size: 10px;">centOS</a> <a href="/tags/curl/" style="font-size: 10px;">curl</a> <a href="/tags/docker/" style="font-size: 20px;">docker</a> <a href="/tags/flask/" style="font-size: 20px;">flask</a> <a href="/tags/flask-ext-migrate/" style="font-size: 10px;">flask-ext-migrate</a> <a href="/tags/flask-migrate/" style="font-size: 10px;">flask-migrate</a> <a href="/tags/git/" style="font-size: 16.67px;">git</a> <a href="/tags/gitbucket/" style="font-size: 10px;">gitbucket</a> <a href="/tags/grep/" style="font-size: 10px;">grep</a> <a href="/tags/gunicorn/" style="font-size: 10px;">gunicorn</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/iptables/" style="font-size: 10px;">iptables</a> <a href="/tags/java/" style="font-size: 10px;">java</a> <a href="/tags/js/" style="font-size: 13.33px;">js</a> <a href="/tags/linux/" style="font-size: 13.33px;">linux</a> <a href="/tags/mac/" style="font-size: 10px;">mac</a> <a href="/tags/npmjs-org-443/" style="font-size: 10px;">npmjs.org:443</a> <a href="/tags/postgresql/" style="font-size: 10px;">postgresql</a> <a href="/tags/python/" style="font-size: 16.67px;">python</a> <a href="/tags/react-native/" style="font-size: 13.33px;">react native</a> <a href="/tags/redis/" style="font-size: 10px;">redis</a> <a href="/tags/restful/" style="font-size: 10px;">restful</a> <a href="/tags/sed/" style="font-size: 10px;">sed</a> <a href="/tags/shell/" style="font-size: 13.33px;">shell</a> <a href="/tags/sprintboot/" style="font-size: 10px;">sprintboot</a> <a href="/tags/supervisor/" style="font-size: 10px;">supervisor</a> <a href="/tags/vagrant/" style="font-size: 13.33px;">vagrant</a> <a href="/tags/web/" style="font-size: 10px;">web</a> <a href="/tags/web-py/" style="font-size: 13.33px;">web.py</a> <a href="/tags/win10/" style="font-size: 10px;">win10</a> <a href="/tags/七牛/" style="font-size: 10px;">七牛</a> <a href="/tags/上下文/" style="font-size: 10px;">上下文</a> <a href="/tags/作用域/" style="font-size: 10px;">作用域</a> <a href="/tags/磁盘扩容/" style="font-size: 10px;">磁盘扩容</a> <a href="/tags/跨平台/" style="font-size: 10px;">跨平台</a> <a href="/tags/闭包/" style="font-size: 10px;">闭包</a>
 					</div>
 				</section>
 				
@@ -201,6 +204,10 @@
       
       <div class="article-info article-info-post">
         
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/sprintboot/">sprintboot</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/supervisor/">supervisor</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/web-py/">web.py</a></li></ul>
+	</div>
+
         
 
         <div class="clearfix"></div>
@@ -209,7 +216,10 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <p>在服务器上同时管理多个java进程和python进程，我使用supervisor。<br>在/etc/supervisor/conf.d/路径下创建xxx.conf<br>在xxx.conf下配置如下    </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">[program:gzh]</span><br><span class="line">command=/root/python-gzh/venv/bin/gunicorn main:application -c /root/python-gzh/gunicorn.conf</span><br><span class="line">directory=/root/python-gzh</span><br><span class="line">user=root</span><br><span class="line">autostart=true</span><br><span class="line">autorestart=true</span><br><span class="line">stdout_logfile=/root/python-gzh/logs/gzh.log</span><br><span class="line"></span><br><span class="line">[program:provider]</span><br><span class="line">command=java -jar /root/springboot/platform-system-provider.jar --spring.profiles.active=prod</span><br><span class="line">directory=/root/springboot</span><br><span class="line">user=root</span><br><span class="line">autostart=true</span><br><span class="line">autorestart=true</span><br><span class="line">stdout_logfile=/root/springboot/logs/provider.log</span><br><span class="line"></span><br><span class="line">[program:webapi]</span><br><span class="line">command=java -jar /root/springboot/platform-mobile-client.jar --spring.profiles.active=prod</span><br><span class="line">directory=/root/springboot</span><br><span class="line">user=root</span><br><span class="line">autostart=true</span><br><span class="line">autorestart=true</span><br><span class="line">stdout_logfile=/root/springboot/logs/webapi.log</span><br><span class="line"></span><br><span class="line">[program:web]</span><br><span class="line">command=java -jar /root/springboot/platform-admin-web.jar --spring.profiles.active=prod</span><br><span class="line">directory=/root/springboot</span><br><span class="line">user=root</span><br><span class="line">autostart=true</span><br><span class="line">autorestart=true</span><br><span class="line">stdout_logfile=/root/springboot/logs/web.log</span><br></pre></td></tr></table></figure>
+<p>通过supervisorctl可以监控管理各种进程的状态了。</p>
+
       
     </div>
     
