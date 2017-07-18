@@ -4,17 +4,36 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>Tag: 上下文 | Bad Seeds</title>
+  <title>win10启动vagrant | Bad Seeds</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Bad Seeds">
-<meta property="og:url" content="http://liubing.com/tags/上下文/index.html">
+  <meta name="description" content="win10环境下vagrant启动会报错。    
+正常启动步骤：设置virtual box的adapter网卡打开Preferences -&amp;gt; Network -&amp;gt; Host-only Networks Tab    
+
+将默认的adapter网卡的ipv4的地址，改写成192.168.xx.1
+将mask改为255.255.255.0
+
+启动vagrant$ vagrant up">
+<meta property="og:type" content="article">
+<meta property="og:title" content="win10启动vagrant">
+<meta property="og:url" content="http://liubing.com/2017/07/18/win10启动vagrant/index.html">
 <meta property="og:site_name" content="Bad Seeds">
-<meta property="og:description">
+<meta property="og:description" content="win10环境下vagrant启动会报错。    
+正常启动步骤：设置virtual box的adapter网卡打开Preferences -&amp;gt; Network -&amp;gt; Host-only Networks Tab    
+
+将默认的adapter网卡的ipv4的地址，改写成192.168.xx.1
+将mask改为255.255.255.0
+
+启动vagrant$ vagrant up">
+<meta property="og:updated_time" content="2017-07-18T09:14:56.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Bad Seeds">
-<meta name="twitter:description">
+<meta name="twitter:title" content="win10启动vagrant">
+<meta name="twitter:description" content="win10环境下vagrant启动会报错。    
+正常启动步骤：设置virtual box的adapter网卡打开Preferences -&amp;gt; Network -&amp;gt; Host-only Networks Tab    
+
+将默认的adapter网卡的ipv4的地址，改写成192.168.xx.1
+将mask改为255.255.255.0
+
+启动vagrant$ vagrant up">
   
     <link rel="alternative" href="/atom.xml" title="Bad Seeds" type="application/atom+xml">
   
@@ -175,53 +194,132 @@
 	</div>
 </nav>
 
-      <div class="body-wrap">
+      <div class="body-wrap"><article id="post-win10启动vagrant" class="article article-type-post" itemscope itemprop="blogPost">
   
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2016" class="archive-year">2016</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/08/08/认识javascript/" class="archive-article-date">
-  	<time datetime="2016-08-08T09:08:33.000Z" itemprop="datePublished">8月 8</time>
+    <div class="article-meta">
+      <a href="/2017/07/18/win10启动vagrant/" class="article-date">
+  	<time datetime="2017-07-18T08:37:55.000Z" itemprop="datePublished">2017-07-18</time>
 </a>
-        </div>
-    	 
+    </div>
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/08/08/认识javascript/">认识javascript</a>
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      win10启动vagrant
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+      </header>
+      
+      <div class="article-info article-info-post">
+        
 	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js/">js</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/上下文/">上下文</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/作用域/">作用域</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/闭包/">闭包</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/vagrant/">vagrant</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/win10/">win10</a></li></ul>
 	</div>
 
-          
+        
 
-        </div>
         <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
+      </div>
+      
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>win10环境下vagrant启动会报错。    </p>
+<h2 id="正常启动步骤："><a href="#正常启动步骤：" class="headerlink" title="正常启动步骤："></a>正常启动步骤：</h2><h3 id="设置virtual-box的adapter网卡"><a href="#设置virtual-box的adapter网卡" class="headerlink" title="设置virtual box的adapter网卡"></a>设置virtual box的adapter网卡</h3><p>打开Preferences -&gt; Network -&gt; Host-only Networks Tab    </p>
+<ul>
+<li>将默认的adapter网卡的ipv4的地址，改写成192.168.xx.1</li>
+<li>将mask改为255.255.255.0</li>
+</ul>
+<h3 id="启动vagrant"><a href="#启动vagrant" class="headerlink" title="启动vagrant"></a>启动vagrant</h3><pre><code>$ vagrant up 
+</code></pre><p>如果启动时报错    </p>
+<pre><code>Bringing machine &apos;default&apos; up with &apos;virtualbox&apos; provider...
+There was an error while executing `VBoxManage`, a CLI used by Vagrant
+for controlling VirtualBox. The command and stderr is shown below.
+
+Command: [&quot;hostonlyif&quot;, &quot;create&quot;]
+
+Stderr: 0%...
+Progress state: E_FAIL
+VBoxManage.exe: error: Failed to create the host-only adapter
+VBoxManage.exe: error: Code E_FAIL (0x80004005) - Unspecified error (extended info not available)
+VBoxManage.exe: error: Context: &quot;int __cdecl handleCreate(struct HandlerArg ,int,int )&quot; at line 68 of file VBoxManageHostonly.cpp
+</code></pre><ol>
+<li>check下virtual box有没有创建一个新的adapter网卡。</li>
+<li>check该网卡的ipv4的地址是以192.168开头的。</li>
+<li>如果成功创建了，则再次vagrant up。就启动成功了。</li>
+</ol>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2017/07/07/web.py与gunicorn/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">web.py与gunicorn</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share_jia">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">Share to: &nbsp; </span>
+		<a class="jiathis_button_facebook"></a> 
+    <a class="jiathis_button_twitter"></a>
+    <a class="jiathis_button_plus"></a> 
+    <a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="win10启动vagrant" data-title="win10启动vagrant" data-url="http://liubing.com/2017/07/18/win10启动vagrant/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
 
 </div>
       <footer id="footer">
@@ -247,9 +345,9 @@
 		mathjax: true,
 		animate: true,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false
 	}
