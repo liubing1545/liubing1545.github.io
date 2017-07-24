@@ -6,22 +6,22 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <title>docker创建私有仓库 | Bad Seeds</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="拉取registry的镜像docker pull registry:2.1.1
-启动容器docker run -d -v /root/compose-docker-registry:/var/lib/registry -p 5000:5000 --restart=always --name registry2 --privileged registry:2.1.1
-打包镜像push到本地仓库doc">
+  <meta name="description" content="拉取registry的镜像1docker pull registry:2.1.1
+启动容器1docker run -d -v /root/compose-docker-registry:/var/lib/registry -p 5000:5000 --restart=always --name registry2 --privileged registry:2.1.1
+打包镜像push到本地仓库1">
 <meta property="og:type" content="article">
 <meta property="og:title" content="docker创建私有仓库">
 <meta property="og:url" content="http://liubing.com/2017/07/24/docker创建私有仓库/index.html">
 <meta property="og:site_name" content="Bad Seeds">
-<meta property="og:description" content="拉取registry的镜像docker pull registry:2.1.1
-启动容器docker run -d -v /root/compose-docker-registry:/var/lib/registry -p 5000:5000 --restart=always --name registry2 --privileged registry:2.1.1
-打包镜像push到本地仓库doc">
-<meta property="og:updated_time" content="2017-07-24T09:28:26.000Z">
+<meta property="og:description" content="拉取registry的镜像1docker pull registry:2.1.1
+启动容器1docker run -d -v /root/compose-docker-registry:/var/lib/registry -p 5000:5000 --restart=always --name registry2 --privileged registry:2.1.1
+打包镜像push到本地仓库1">
+<meta property="og:updated_time" content="2017-07-24T09:32:26.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="docker创建私有仓库">
-<meta name="twitter:description" content="拉取registry的镜像docker pull registry:2.1.1
-启动容器docker run -d -v /root/compose-docker-registry:/var/lib/registry -p 5000:5000 --restart=always --name registry2 --privileged registry:2.1.1
-打包镜像push到本地仓库doc">
+<meta name="twitter:description" content="拉取registry的镜像1docker pull registry:2.1.1
+启动容器1docker run -d -v /root/compose-docker-registry:/var/lib/registry -p 5000:5000 --restart=always --name registry2 --privileged registry:2.1.1
+打包镜像push到本地仓库1">
   
     <link rel="alternative" href="/atom.xml" title="Bad Seeds" type="application/atom+xml">
   
@@ -219,16 +219,12 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="拉取registry的镜像"><a href="#拉取registry的镜像" class="headerlink" title="拉取registry的镜像"></a>拉取registry的镜像</h2><pre><code>docker pull registry:2.1.1
-</code></pre><h2 id="启动容器"><a href="#启动容器" class="headerlink" title="启动容器"></a>启动容器</h2><pre><code>docker run -d -v /root/compose-docker-registry:/var/lib/registry -p 5000:5000 --restart=always --name registry2 --privileged registry:2.1.1
-</code></pre><h2 id="打包镜像push到本地仓库"><a href="#打包镜像push到本地仓库" class="headerlink" title="打包镜像push到本地仓库"></a>打包镜像push到本地仓库</h2><pre><code>docker tag postgres $registry-address:5000/postgres
-docker push $registry-address:5000/postgres
-</code></pre><h2 id="list仓库中的镜像"><a href="#list仓库中的镜像" class="headerlink" title="list仓库中的镜像"></a>list仓库中的镜像</h2><p>在client端执行</p>
-<pre><code>curl -XGET http://$registry-address:5000/v2/_catalog    
-</code></pre><h2 id="可能问题"><a href="#可能问题" class="headerlink" title="可能问题"></a>可能问题</h2><h4 id="docker-received-unexpected-HTTP-status-501-Not-Implemented"><a href="#docker-received-unexpected-HTTP-status-501-Not-Implemented" class="headerlink" title="docker received unexpected HTTP status:501 Not Implemented"></a>docker received unexpected HTTP status:501 Not Implemented</h4><p>这个问题是client端配置了docker的http-proxy，没有将docker的私有仓库registry所在ip设为例外导致的。</p>
-<h4 id="server-gave-HTTP-response-to-HTTPS-client"><a href="#server-gave-HTTP-response-to-HTTPS-client" class="headerlink" title="server gave HTTP response to HTTPS client"></a>server gave HTTP response to HTTPS client</h4><p>registry默认的是https协议，因此需要在client端配置insecure-registries。<br>我的docker版本是1.12.1，配置文件是/etc/docker/daemon.json    </p>
-<pre><code>{&quot;insecure-registries&quot;:[&quot;$registry-address:5000&quot;]}
-</code></pre>
+        <h2 id="拉取registry的镜像"><a href="#拉取registry的镜像" class="headerlink" title="拉取registry的镜像"></a>拉取registry的镜像</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">docker</span> <span class="selector-tag">pull</span> <span class="selector-tag">registry</span><span class="selector-pseudo">:2.1.1</span></span><br></pre></td></tr></table></figure>
+<h2 id="启动容器"><a href="#启动容器" class="headerlink" title="启动容器"></a>启动容器</h2><figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -d -v <span class="regexp">/root/</span>compose-docker-<span class="string">registry:</span><span class="regexp">/var/</span>lib/registry -p <span class="number">5000</span>:<span class="number">5000</span> --restart=always --name registry2 --privileged <span class="string">registry:</span><span class="number">2.1</span><span class="number">.1</span></span><br></pre></td></tr></table></figure>
+<h2 id="打包镜像push到本地仓库"><a href="#打包镜像push到本地仓库" class="headerlink" title="打包镜像push到本地仓库"></a>打包镜像push到本地仓库</h2><figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">docker <span class="keyword">tag</span> <span class="title">postgres</span> $registry-address:<span class="number">5000</span>/postgres</span><br><span class="line">docker push $registry-address:<span class="number">5000</span>/postgres</span><br><span class="line">```    </span><br><span class="line"><span class="comment">## list仓库中的镜像</span></span><br><span class="line">在client端执行</span><br></pre></td></tr></table></figure>
+<p>curl -XGET <a href="http://$registry-address:5000/v2/_catalog" target="_blank" rel="external">http://$registry-address:5000/v2/_catalog</a><br><figure class="highlight tcl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">## 可能问题</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#### docker received unexpected HTTP status:501 Not Implemented</span></span><br><span class="line">这个问题是client端配置了docker的<span class="keyword">http</span>-proxy，没有将docker的私有仓库<span class="keyword">registry</span>所在ip设为例外导致的。</span><br><span class="line"><span class="comment">#### server gave HTTP response to HTTPS client</span></span><br><span class="line"><span class="keyword">registry</span>默认的是https协议，因此需要在client端配置insecure-registries。    </span><br><span class="line">我的docker版本是<span class="number">1.12</span><span class="number">.1</span>，配置文件是/etc/docker/daemon.json</span><br></pre></td></tr></table></figure></p>
+<p>{“insecure-registries”:[“$registry-address:5000”]}<br>```</p>
+
       
     </div>
     
