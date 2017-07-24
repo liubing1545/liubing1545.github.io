@@ -72,7 +72,7 @@
 						<li>Tags</li>
 						
 						
-						<li>About</li>
+						<li>Über</li>
 						
 					</ul>
 				</div>
@@ -203,15 +203,10 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h4 id="创建目录"><a href="#创建目录" class="headerlink" title="创建目录"></a>创建目录</h4><pre><code>mkdir /etc/systemd/system/docker.service.d
-</code></pre><h4 id="创建http-proxy-conf文件"><a href="#创建http-proxy-conf文件" class="headerlink" title="创建http-proxy.conf文件"></a>创建http-proxy.conf文件</h4><pre><code>touch /etc/systemd/system/docker.service.d/http-proxy.conf
-</code></pre><p>在http-proxy.conf文件中记入</p>
-<pre><code>[Service]
-Environment=&quot;HTTP_PROXY=http://username:passwd@hostname:port/&quot; &quot;NO_PROXY=localhost,127.0.0.1&quot;
-</code></pre><h4 id="reload配置及重启docker服务"><a href="#reload配置及重启docker服务" class="headerlink" title="reload配置及重启docker服务"></a>reload配置及重启docker服务</h4><pre><code>systemctl daemon-reload
-systemctl show docker --property Environment
-systemctl restart docker.service
-</code></pre>
+        <h4 id="创建目录"><a href="#创建目录" class="headerlink" title="创建目录"></a>创建目录</h4><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir /etc/systemd/system/docker<span class="selector-class">.service</span><span class="selector-class">.d</span></span><br></pre></td></tr></table></figure>
+<h4 id="创建http-proxy-conf文件"><a href="#创建http-proxy-conf文件" class="headerlink" title="创建http-proxy.conf文件"></a>创建http-proxy.conf文件</h4><figure class="highlight perl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">touch /etc/systemd/<span class="keyword">system</span>/docker.service.d/http-proxy.conf</span><br><span class="line"><span class="string">``</span><span class="string">`    </span><br><span class="line"></span><br><span class="line">在http-proxy.conf文件中记入</span><br><span class="line">`</span><span class="string">``</span>    </span><br><span class="line">[Service]</span><br><span class="line">Environment=<span class="string">"HTTP_PROXY=http://username:passwd@hostname:port/"</span> <span class="string">"NO_PROXY=localhost,127.0.0.1"</span></span><br></pre></td></tr></table></figure>
+<h4 id="reload配置及重启docker服务"><a href="#reload配置及重启docker服务" class="headerlink" title="reload配置及重启docker服务"></a>reload配置及重启docker服务</h4><figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">systemctl daemon-reload</span><br><span class="line">systemctl show docker --<span class="keyword">property</span><span class="title"> </span>Environment</span><br><span class="line">systemctl restart docker.service</span><br></pre></td></tr></table></figure>
+
       
     </div>
     
