@@ -8,23 +8,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="创建目录1mkdir /etc/systemd/system/docker.service.d
 创建http-proxy.conf文件1touch /etc/systemd/system/docker.service.d/http-proxy.conf
-在http-proxy.conf文件中记入
-12[Service]Environment=&quot;HTTP_PROXY=http://username:">
+在http-proxy.conf文件中记入12[Service]Environment=&quot;HTTP_PROXY=http://username:p">
 <meta property="og:type" content="article">
 <meta property="og:title" content="docker设置http代理">
 <meta property="og:url" content="http://liubing.com/2017/07/24/docker设置http代理/index.html">
 <meta property="og:site_name" content="Bad Seeds">
 <meta property="og:description" content="创建目录1mkdir /etc/systemd/system/docker.service.d
 创建http-proxy.conf文件1touch /etc/systemd/system/docker.service.d/http-proxy.conf
-在http-proxy.conf文件中记入
-12[Service]Environment=&quot;HTTP_PROXY=http://username:">
-<meta property="og:updated_time" content="2017-07-25T02:49:35.000Z">
+在http-proxy.conf文件中记入12[Service]Environment=&quot;HTTP_PROXY=http://username:p">
+<meta property="og:updated_time" content="2017-07-25T02:50:12.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="docker设置http代理">
 <meta name="twitter:description" content="创建目录1mkdir /etc/systemd/system/docker.service.d
 创建http-proxy.conf文件1touch /etc/systemd/system/docker.service.d/http-proxy.conf
-在http-proxy.conf文件中记入
-12[Service]Environment=&quot;HTTP_PROXY=http://username:">
+在http-proxy.conf文件中记入12[Service]Environment=&quot;HTTP_PROXY=http://username:p">
   
     <link rel="alternative" href="/atom.xml" title="Bad Seeds" type="application/atom+xml">
   
@@ -224,8 +221,7 @@
       
         <h4 id="创建目录"><a href="#创建目录" class="headerlink" title="创建目录"></a>创建目录</h4><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir /etc/systemd/system/docker<span class="selector-class">.service</span><span class="selector-class">.d</span></span><br></pre></td></tr></table></figure>
 <h4 id="创建http-proxy-conf文件"><a href="#创建http-proxy-conf文件" class="headerlink" title="创建http-proxy.conf文件"></a>创建http-proxy.conf文件</h4><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">touch /etc/systemd/system/docker<span class="selector-class">.service</span><span class="selector-class">.d</span>/http-proxy.conf</span><br></pre></td></tr></table></figure>
-<p>在http-proxy.conf文件中记入</p>
-<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">[Service]</span></span><br><span class="line"><span class="attr">Environment</span>=<span class="string">"HTTP_PROXY=http://username:passwd@hostname:port/"</span> <span class="string">"NO_PROXY=localhost,127.0.0.1"</span></span><br></pre></td></tr></table></figure>
+<h4 id="在http-proxy-conf文件中记入"><a href="#在http-proxy-conf文件中记入" class="headerlink" title="在http-proxy.conf文件中记入"></a>在http-proxy.conf文件中记入</h4><figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">[Service]</span></span><br><span class="line"><span class="attr">Environment</span>=<span class="string">"HTTP_PROXY=http://username:passwd@hostname:port/"</span> <span class="string">"NO_PROXY=localhost,127.0.0.1"</span></span><br></pre></td></tr></table></figure>
 <h4 id="reload配置及重启docker服务"><a href="#reload配置及重启docker服务" class="headerlink" title="reload配置及重启docker服务"></a>reload配置及重启docker服务</h4><figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">systemctl daemon-reload</span><br><span class="line">systemctl show docker --<span class="keyword">property</span><span class="title"> </span>Environment</span><br><span class="line">systemctl restart docker.service</span><br></pre></td></tr></table></figure>
 
       
