@@ -4,17 +4,21 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>Archives: 2016/11 | Bad Seeds</title>
+  <title>docker-compose的使用 | Bad Seeds</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Bad Seeds">
-<meta property="og:url" content="http://liubing.com/archives/2016/11/index.html">
+  <meta name="description" content="docker compose是一个用来定义和运行复杂应用的docker工具。使用compose，你可以在一个文件中定义一个多容器应用，然后使用一条命令来启动应用。    
+下载docker-compose1curl -L https://github.com/docker/compose/releases/download/1.3.1/docker-compose-`uname -s`-`unam">
+<meta property="og:type" content="article">
+<meta property="og:title" content="docker-compose的使用">
+<meta property="og:url" content="http://liubing.com/2017/07/27/docker-compose的使用/index.html">
 <meta property="og:site_name" content="Bad Seeds">
-<meta property="og:description">
+<meta property="og:description" content="docker compose是一个用来定义和运行复杂应用的docker工具。使用compose，你可以在一个文件中定义一个多容器应用，然后使用一条命令来启动应用。    
+下载docker-compose1curl -L https://github.com/docker/compose/releases/download/1.3.1/docker-compose-`uname -s`-`unam">
+<meta property="og:updated_time" content="2017-07-27T05:44:46.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Bad Seeds">
-<meta name="twitter:description">
+<meta name="twitter:title" content="docker-compose的使用">
+<meta name="twitter:description" content="docker compose是一个用来定义和运行复杂应用的docker工具。使用compose，你可以在一个文件中定义一个多容器应用，然后使用一条命令来启动应用。    
+下载docker-compose1curl -L https://github.com/docker/compose/releases/download/1.3.1/docker-compose-`uname -s`-`unam">
   
     <link rel="alternative" href="/atom.xml" title="Bad Seeds" type="application/atom+xml">
   
@@ -175,53 +179,118 @@
 	</div>
 </nav>
 
-      <div class="body-wrap">
+      <div class="body-wrap"><article id="post-docker-compose的使用" class="article article-type-post" itemscope itemprop="blogPost">
   
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2016" class="archive-year">2016</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/11/23/git删除tag/" class="archive-article-date">
-  	<time datetime="2016-11-23T07:07:14.000Z" itemprop="datePublished">11月 23</time>
+    <div class="article-meta">
+      <a href="/2017/07/27/docker-compose的使用/" class="article-date">
+  	<time datetime="2017-07-27T04:09:33.000Z" itemprop="datePublished">2017-07-27</time>
 </a>
-        </div>
-    	 
+    </div>
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/11/23/git删除tag/">git删除tag</a>
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      docker-compose的使用
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+      </header>
+      
+      <div class="article-info article-info-post">
+        
 	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git/">git</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/docker/">docker</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/docker-compose/">docker-compose</a></li></ul>
 	</div>
 
-          
+        
 
-        </div>
         <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
+      </div>
+      
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>docker compose是一个用来定义和运行复杂应用的docker工具。使用compose，你可以在一个文件中定义一个多容器应用，然后使用一条命令来启动应用。    </p>
+<h2 id="下载docker-compose"><a href="#下载docker-compose" class="headerlink" title="下载docker-compose"></a>下载docker-compose</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -L https://github.com/docker/compose/releases/download/1.3.1/docker-compose-`uname -s`-`uname -m` &gt; /usr/local/bin/docker-compose</span><br></pre></td></tr></table></figure>
+<h2 id="创建应用目录"><a href="#创建应用目录" class="headerlink" title="创建应用目录"></a>创建应用目录</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mkdir compose-gitbucket</span><br><span class="line">touch docker-compose.yml</span><br></pre></td></tr></table></figure>
+<h2 id="docker-compose-yml配置文件"><a href="#docker-compose-yml配置文件" class="headerlink" title="docker-compose.yml配置文件"></a>docker-compose.yml配置文件</h2><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">gitbucket:</span></span><br><span class="line"><span class="attr">  image:</span> f99aq8ove/gitbucket</span><br><span class="line"><span class="attr">  volumes:</span></span><br><span class="line"><span class="bullet">    -</span> ./gitbucket:/gitbucket</span><br><span class="line"><span class="attr">  ports:</span></span><br><span class="line"><span class="bullet">    -</span> <span class="string">"8080:8080"</span></span><br><span class="line"><span class="bullet">    -</span> <span class="string">"29418:29418"</span></span><br><span class="line"><span class="attr">  restart:</span> always</span><br></pre></td></tr></table></figure>
+<h2 id="docker-compose命令"><a href="#docker-compose命令" class="headerlink" title="docker-compose命令"></a>docker-compose命令</h2><blockquote>
+<p>build 构建或重建服务<br>help 命令帮助<br>kill 杀掉容器<br>logs 显示容器的输出内容<br>port 打印绑定的开放端口<br>ps 显示容器<br>pull 拉取服务镜像<br>restart 重启服务<br>rm 删除停止的容器<br>run 运行一个一次性命令<br>scale 设置服务的容器数目<br>start 开启服务<br>stop 停止服务<br>up 创建并启动容器    </p>
+</blockquote>
+<p>一般up之后，又改写了yml配置文件，则需要rm掉旧的容器，再up。</p>
+<h2 id="后台启动"><a href="#后台启动" class="headerlink" title="后台启动"></a>后台启动</h2><p>在应用目录下启动</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker-compose up -d</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2017/07/24/docker设置http代理/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">docker设置http代理</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share_jia">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">Share to: &nbsp; </span>
+		<a class="jiathis_button_facebook"></a> 
+    <a class="jiathis_button_twitter"></a>
+    <a class="jiathis_button_plus"></a> 
+    <a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="docker-compose的使用" data-title="docker-compose的使用" data-url="http://liubing.com/2017/07/27/docker-compose的使用/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
 
 </div>
       <footer id="footer">
@@ -247,8 +316,8 @@
 		mathjax: true,
 		animate: true,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false
