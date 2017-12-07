@@ -4,15 +4,20 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>Tag: shell | Bad Seeds</title>
+  <title>centos7安装postgresql | Bad Seeds</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Bad Seeds">
-<meta property="og:url" content="http://liubing.com/tags/shell/index.html">
+  <meta name="description" content="安装启动postgresql123yum install postgresql-serverservice postgresql initdbservice postgresql start 修改管理员密码123su - postgrespsql$ ALTER USER postgres WITH PASSWORD &">
+<meta name="keywords" content="centos7,postgresql">
+<meta property="og:type" content="article">
+<meta property="og:title" content="centos7安装postgresql">
+<meta property="og:url" content="http://liubing.com/2017/12/07/centos7安装postgresql/index.html">
 <meta property="og:site_name" content="Bad Seeds">
+<meta property="og:description" content="安装启动postgresql123yum install postgresql-serverservice postgresql initdbservice postgresql start 修改管理员密码123su - postgrespsql$ ALTER USER postgres WITH PASSWORD &apos;postgres&apos;; 配置远程访问修改/var/lib/pgsql/data/p">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2017-12-07T08:27:49.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Bad Seeds">
+<meta name="twitter:title" content="centos7安装postgresql">
+<meta name="twitter:description" content="安装启动postgresql123yum install postgresql-serverservice postgresql initdbservice postgresql start 修改管理员密码123su - postgrespsql$ ALTER USER postgres WITH PASSWORD &apos;postgres&apos;; 配置远程访问修改/var/lib/pgsql/data/p">
   
     <link rel="alternative" href="/atom.xml" title="Bad Seeds" type="application/atom+xml">
   
@@ -173,84 +178,114 @@
 	</div>
 </nav>
 
-      <div class="body-wrap">
+      <div class="body-wrap"><article id="post-centos7安装postgresql" class="article article-type-post" itemscope itemprop="blogPost">
   
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2016" class="archive-year">2016</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/06/24/shell反向删除文件/" class="archive-article-date">
-  	<time datetime="2016-06-24T09:12:07.000Z" itemprop="datePublished">6月 24</time>
+    <div class="article-meta">
+      <a href="/2017/12/07/centos7安装postgresql/" class="article-date">
+  	<time datetime="2017-12-07T08:13:46.000Z" itemprop="datePublished">2017-12-07</time>
 </a>
-        </div>
-    	 
+    </div>
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/06/24/shell反向删除文件/">shell反向删除文件</a>
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      centos7安装postgresql
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+      </header>
+      
+      <div class="article-info article-info-post">
+        
 	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/">linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/shell/">shell</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/centos7/">centos7</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/postgresql/">postgresql</a></li></ul>
 	</div>
 
-          
+        
 
-        </div>
         <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
+      </div>
+      
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/06/17/flask-exthook-ExtDeprecationWarning警告的消除/" class="archive-article-date">
-  	<time datetime="2016-06-17T01:12:32.000Z" itemprop="datePublished">6月 17</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/06/17/flask-exthook-ExtDeprecationWarning警告的消除/">flask.exthook.ExtDeprecationWarning警告的消除</a>
-    </h1>
-  
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="安装启动postgresql"><a href="#安装启动postgresql" class="headerlink" title="安装启动postgresql"></a>安装启动postgresql</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">yum install postgresql-server</span><br><span class="line">service postgresql initdb</span><br><span class="line">service postgresql start</span><br></pre></td></tr></table></figure>
+<h2 id="修改管理员密码"><a href="#修改管理员密码" class="headerlink" title="修改管理员密码"></a>修改管理员密码</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">su - postgres</span><br><span class="line">psql</span><br><span class="line"><span class="meta">$</span><span class="bash"> ALTER USER postgres WITH PASSWORD <span class="string">'postgres'</span>;</span></span><br></pre></td></tr></table></figure>
+<h2 id="配置远程访问"><a href="#配置远程访问" class="headerlink" title="配置远程访问"></a>配置远程访问</h2><p>修改<strong>/var/lib/pgsql/data/postgresql.conf</strong><br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">listen_addresses = '*'</span><br></pre></td></tr></table></figure></p>
+<p>修改客户端认证配置文件<strong>/var/lib/pgsql/data/pg_hba.conf</strong>,添加</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">host  all  all   10.0.0.0/8  md5</span><br></pre></td></tr></table></figure>
+<h2 id="重启服务"><a href="#重启服务" class="headerlink" title="重启服务"></a>重启服务</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">service postgresql restart</span><br></pre></td></tr></table></figure>
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/flask/">flask</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/flask-ext-migrate/">flask-ext-migrate</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/shell/">shell</a></li></ul>
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2017/11/20/配置gitbucket的webhook触发jenkins自动构建/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">配置gitbucket的webhook触发jenkins自动构建</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share_jia">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">Share to: &nbsp; </span>
+		<a class="jiathis_button_facebook"></a> 
+    <a class="jiathis_button_twitter"></a>
+    <a class="jiathis_button_plus"></a> 
+    <a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
 	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
 
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
 
-    
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="centos7安装postgresql" data-title="centos7安装postgresql" data-url="http://liubing.com/2017/12/07/centos7安装postgresql/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
 
 </div>
       <footer id="footer">
@@ -276,9 +311,9 @@
 		mathjax: true,
 		animate: true,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false
 	}
