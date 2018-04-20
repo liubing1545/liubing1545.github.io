@@ -1,38 +1,43 @@
-1. checkout
+---
+title: git删除所有提交历史记录
+date: 2018-04-20 10:53:25
+tags: [git]
+---
+## checkout
 
    ```shell
    git checkout --orphan latest_branch
    ```
 
-2. 添加所有文件
+## 添加所有文件
 
    ```shell
    git add -A
    ```
    ​
 
-3. 提交变更
+## 提交变更
 
    ```shell
    git commit -am "something about message"
    ```
    ​
 
-4. 删除分支
+## 删除分支
 
    ```shell
    git branch -D master
    ```
    ​
 
-5. 重命名当前branch为目标名
+## 重命名当前branch为目标名
 
    ```shell
    git branch -m master
    ```
 
    ​
-6. 强制push
+## 强制push
 
    ```shell
    git push -f origin master
