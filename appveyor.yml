@@ -3,18 +3,12 @@ clone_depth: 5
 environment:
   access_token:
     secure: uixyT438x6NPdyaQK1I533vP+zgagSjRxSmMFRjh4fesF3FixWid4UwHrhldxB9y
+  nodejs_version: "6"
 
 install:
   - node --version
   - npm --version
-  - npm install -g npm
-  - npm --version
-  - npm update –g
-  - npm install n –g
-  - n stable
-  - npm --version
   - npm install
-  - npm install hexo
   - npm install hexo-cli -g
 
 
