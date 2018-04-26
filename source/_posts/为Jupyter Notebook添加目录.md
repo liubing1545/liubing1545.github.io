@@ -1,9 +1,9 @@
 ---
 title: 为Jupyter Notebook添加目录
 date: 2018-04-24 11:45:11
-tags: [jupyter notebook, python, ai, keras]为
+tags: [jupyter notebook, python, ai, keras]
 ---
- Jupyter Notebook生成目录，需要安装插件Jupyter notebook extensions：
+ 为Jupyter Notebook生成目录，需要安装插件Jupyter notebook extensions：
 
 ```shell
 $ conda install -c conda-forge jupyter_contrib_nbextensions
