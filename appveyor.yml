@@ -8,6 +8,7 @@ install:
   - node --version
   - npm --version
   - npm install -g npm
+  - npm --version
   - npm update –g
   - npm install n –g
   - n stable
