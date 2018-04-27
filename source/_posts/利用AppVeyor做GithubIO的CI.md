@@ -61,4 +61,9 @@ on_success:
 在Appveyor Settings的build里默认是MSBUILD，因为是appveyor.yml中配置的脚本来build的，因此这里改成SCRIPT。
 ![appveyor-setting3](http://obksgg9lx.bkt.clouddn.com/appveyor-setting3.png)
 
+## 整体逻辑
+本地在hexo的分支下写md文档，提交至github上，触发AppVeyor的webhook，AppVeyor会git clone下hexo的最新代码，并且build成目标文件，将目标文件push至master分支。则完成了整体刷新页面，持续部署的工作了。
+可以在线监控build的状况：
+![appveyor-build-log](http://obksgg9lx.bkt.clouddn.com/appveyor-build-log.png)
+
 
