@@ -54,10 +54,9 @@ on_success:
 ![github-webhook](http://obksgg9lx.bkt.clouddn.com/github-webhook.png)
 
 #### 设置Appveyor的settings
-
-![appveyor-setting1](http://obksgg9lx.bkt.clouddn.com/appveyor-setting1-.png)
+![appveyor-setting1](http://obksgg9lx.bkt.clouddn.com/appveyor-setting1-.jpg)
 在Appveyor Settings的Environment里设置以下四个变量。STATIC_SITE_REPO就是github Repo的地址，TARGET_BRANCH是Repo的目标branch（这里是master，相当于提交编译后的html等文件至master），GIT_USER_EMAIL和GIT_USER_NAME就是你GitHub账号的信息。
-![appveyor-setting2](http://obksgg9lx.bkt.clouddn.com/appveyor-setting2-.png)
+![appveyor-setting2](http://obksgg9lx.bkt.clouddn.com/appveyor-setting2-.jpg)
 在Appveyor Settings的build里默认是MSBUILD，因为是appveyor.yml中配置的脚本来build的，因此这里改成SCRIPT。
 ![appveyor-setting3](http://obksgg9lx.bkt.clouddn.com/appveyor-setting3.png)
 
