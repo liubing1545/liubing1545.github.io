@@ -19,8 +19,8 @@ def fetch_coroutine(url):
     #为了返回值，python2中需要生成一个特殊的异常；在python3.3以后直接用return
     raise gen.Return(response.body)
 ```
-* **@gen.coroutine**和**yield**搭配使用，代表的是协成。
-* **yield**之后挂起耗时操作，耗时操作完成时从挂起的位置接着往下执行。
+* @gen.coroutine 和 yield 搭配使用，代表的是协成。
+* yield之后挂起耗时操作，耗时操作完成时从挂起的位置接着往下执行。
 * Tornado的协成是由python的generators来支持的。
 
 ## 回调
