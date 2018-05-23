@@ -17,7 +17,7 @@ greenlet是一种协程。gevent的调度器在I/O等待期间使用一个事件
 gevent通过使用wait函数来设法尽可能透明化地处理事件循环。wait函数将启动一个事件循环，直到所有的greenlets结束。    
 greenlet由gevent.spawn(func, para)来创建，func是需要执行的函数，para是func的参数。一旦声明的函数执行完成，它的值就会包含在greenlet的value域中。    
 
-## 猴子补丁
+### 猴子补丁
 Monkey Patch就是在运行时对已有的代码进行修改，达到hot patch的目的。
 
 ## 例子
