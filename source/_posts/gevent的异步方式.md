@@ -51,4 +51,4 @@ GET: http://www.douban.com
 200 bytes received from https://www.sina.com.
 ```
 ## 其他
-在部署的时候，用一个支持gevent的WSGI服务器，立刻就获得了数倍的性能提升。
+在部署web app的时候，用一个支持gevent的WSGI服务器，立刻就获得了数倍的性能提升。
