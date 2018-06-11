@@ -1,7 +1,7 @@
 ---
 title: npm Error! ENOENT no such file or directory .dezalgo.DELETE'
 date: 2018-06-11 11:04:46
-tags: [npm, postgresql]
+tags: [npm, dezalgo]
 ---
 ## 这是npm5.6.0的bug
 更新升级
