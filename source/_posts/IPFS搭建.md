@@ -62,7 +62,7 @@ ipfs bootstrap add /ip4/启动节点的ip地址/tcp/4001/ipfs/启动节点的id�
 一定需要保证所有服务器的4001端口和5001端口开放input的安全组。
 
 ```shell
-ipfs deamon & //启动，后台运行
+ipfs daemon & //启动，后台运行
 ipfs bootstrap list  //查看ipfs bootstrap列表
 ```
 
