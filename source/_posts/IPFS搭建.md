@@ -59,7 +59,7 @@ ipfs id //查看该节点生成的hash
 ipfs bootstrap add /ip4/启动节点的ip地址/tcp/4001/ipfs/启动节点的id的hash
 ```
 
-一定需要保证所有服务器的4001端口和5001端口开放input的安全组。
+启动。
 
 ```shell
 ipfs daemon & //启动，后台运行
@@ -79,3 +79,10 @@ ipfs add xxx.png //上传到私链上，会返回hash码
 ipfs get hash码 // 下载
 ```
 
+## 默认端口
+
+一定需要保证所有服务器的4001端口、5001端口、8080端口开放input的安全组。
+
+* 4001-与其他节点通信
+* 5001-API server
+* 8080-Gateway server
