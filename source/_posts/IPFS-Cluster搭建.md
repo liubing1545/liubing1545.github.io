@@ -21,6 +21,8 @@ wget https://dist.ipfs.io/ipfs-cluster-ctl/v0.12.1/ipfs-cluster-ctl_v0.12.1_linu
 wget https://dist.ipfs.io/ipfs-cluster-service/v0.12.1/ipfs-cluster-service_v0.12.1_linux-amd64.tar.gz
 ```
 
+
+
 ## 安装ipfs-cluster-service
 
 ```shell
@@ -29,17 +31,33 @@ cd ipfs-cluster-service
 ./ipfs-cluster-service init //初始化
 ```
 
-初始化之后会生成两个文件 **.ipfs-cluster/service.json**, **.ipfs-cluster/identity.json**
+初始化之后会生成两个文件 
 
-## 查看secret
+> .ipfs-cluster/service.json
+>
+> > 含有secret和监听端口，需要把secret配置到其他节点的service.json里，保证一样。
 
-secret在service.json里，需要将它配入其他节点的service.json里，保证一样。
+> .ipfs-cluster/identity.json
+>
+> > 含有cluster的节点id
 
-启动
+
+
+## 启动
+
+主节点
 
 ```shell
 ./ipfs-cluster-service daemon &
 ```
+
+其他节点启动--bootstrap添加主节点
+
+```shell
+./ipfs-cluster-service daemon --bootstrap /ip4/$主节点ip/tcp/9096/ipfs/$cluster id
+```
+
+
 
 ## 安装ipfs-cluster-ctl
 
@@ -50,40 +68,6 @@ cd ipfs-cluster-ctl
 ```
 
 
-
-## 初始化
-
-在下载好的binary文件夹里执行以下命令后，会在根目录生成一个.ipfs的文件夹存储节点数据。
-
-```shell
-ipfs.exe init //初始化ipfs
-ipfs bootstrap rm -all //删除默认的bootstrap设置
-```
-
-将集群中之前生成好的swarm.key文件拷贝进**~.ipfs**文件夹下
-
-
-
-### 启动
-
-添加启动节点地址到当前节点的bootstrap列表中
-
-```shell
-ipfs bootstrap add /ip4/启动节点的ip地址/tcp/4001/ipfs/启动节点的id的hash
-```
-
-一定需要保证所有服务器的4001端口和5001端口开放input的安全组。
-
-```shell
-ipfs daemon & //启动，后台运行
-ipfs bootstrap list  //查看ipfs bootstrap列表
-```
-
-在各个节点查看别的节点信息
-
-```shell
-ipfs swarm peers
-```
 
 ## 默认端口
 
