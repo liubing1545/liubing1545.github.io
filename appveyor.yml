@@ -5,7 +5,7 @@ environment:
     secure: uixyT438x6NPdyaQK1I533vP+zgagSjRxSmMFRjh4fesF3FixWid4UwHrhldxB9y
 
 install:
-  - ps: Install-Product node 6
+  - ps: Install-Product node
   - node --version
   - npm --version
   - npm install
