@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>anaconda安装tensorflow</title>
+    <title>测试一下</title>
     <url>/2021/07/02/%E6%B5%8B%E8%AF%95%E4%B8%80%E4%B8%8B/</url>
-    <content><![CDATA[<h2 id="下载anaconda"><a href="#下载anaconda" class="headerlink" title="下载anaconda"></a>下载anaconda</h2><p>测试一下</p>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="下载anaconda"><a href="#下载anaconda" class="headerlink" title="下载anaconda"></a>下载anaconda</h2><p>测试一下</p>
 ]]></content>
+      <categories>
+        <category>大数据</category>
+        <category>AI</category>
+      </categories>
       <tags>
         <tag>anaconda</tag>
         <tag>conda</tag>
@@ -1003,7 +1007,7 @@ bind = &#39;127.0.0.1:8000&#39;
   <entry>
     <title>Write failed: Broken pipe</title>
     <url>/2017/07/05/Write-failed-Broken-pipe/</url>
-    <content><![CDATA[<h3 id="Write-failed-Broken-pipe"><a href="#Write-failed-Broken-pipe" class="headerlink" title="Write failed: Broken pipe"></a>Write failed: Broken pipe</h3><p>ssh远程连接阿里云centos服务器时，隔几分钟不操作，就会报错：    </p>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="Write-failed-Broken-pipe"><a href="#Write-failed-Broken-pipe" class="headerlink" title="Write failed: Broken pipe"></a>Write failed: Broken pipe</h3><p>ssh远程连接阿里云centos服务器时，隔几分钟不操作，就会报错：    </p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Write failed: Broken pipe   </span><br></pre></td></tr></table></figure>
 
 <p>解决方法：<br>在/etc/ssh/sshd_config文件中，添加如下配置：　    </p>
@@ -1017,7 +1021,7 @@ bind = &#39;127.0.0.1:8000&#39;
   <entry>
     <title>docker容器启动iptables报错</title>
     <url>/2017/03/28/docker%E5%AE%B9%E5%99%A8%E5%90%AF%E5%8A%A8iptables%E6%8A%A5%E9%94%99/</url>
-    <content><![CDATA[<h3 id="错误信息"><a href="#错误信息" class="headerlink" title="错误信息"></a>错误信息</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">docker0: iptables: No chain/target/match by that name</span><br></pre></td></tr></table></figure>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="错误信息"><a href="#错误信息" class="headerlink" title="错误信息"></a>错误信息</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">docker0: iptables: No chain/target/match by that name</span><br></pre></td></tr></table></figure>
 <h3 id="重启docker"><a href="#重启docker" class="headerlink" title="重启docker"></a>重启docker</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">service docker restart</span><br></pre></td></tr></table></figure>
 <h3 id="列出iptables的所有规则"><a href="#列出iptables的所有规则" class="headerlink" title="列出iptables的所有规则"></a>列出iptables的所有规则</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">iptables -L</span><br></pre></td></tr></table></figure>
 <p>可以看到iptables里面多出了Chain Docker的选项。<br>经验为：在启动firewalld之后，iptables被激活，此时没有docker chain，重启docker后被加入到iptable里面。</p>
@@ -1030,7 +1034,7 @@ bind = &#39;127.0.0.1:8000&#39;
   <entry>
     <title>java工程启动 No Route to host</title>
     <url>/2017/03/28/java%E5%B7%A5%E7%A8%8B%E5%90%AF%E5%8A%A8No-Route-to-host/</url>
-    <content><![CDATA[<ol>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><ol>
 <li>检查宿主机防火墙是否开启    <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">firewall-cmd --state #查看默认防火墙状态（关闭后显示not running，开启后显示running）    </span><br><span class="line">systemctl stop firewalld.service #停止firewall    </span><br><span class="line">systemctl disable firewalld.service #禁止firewall开机启动    </span><br></pre></td></tr></table></figure></li>
 <li>确认project工程连接的postgresql服务是映射到宿主机的ip及port，而不是postgresql docker自身的ip及port</li>
 <li>确认postgresql服务docker的pg_hba.conf文件，是否设置接收任意的ip发来的请求<br>pg_hba.conf:    <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">host    all             all             0.0.0.0/0               md5    </span><br></pre></td></tr></table></figure></li>
@@ -1049,7 +1053,7 @@ bind = &#39;127.0.0.1:8000&#39;
   <entry>
     <title>docker部署web环境</title>
     <url>/2017/03/28/docker%E9%83%A8%E7%BD%B2/</url>
-    <content><![CDATA[<h3 id="postgresql"><a href="#postgresql" class="headerlink" title="postgresql"></a>postgresql</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">1. docker pull sameersbn/postgresql</span><br><span class="line">2. docker run --name=postgresql -itd --restart always \</span><br><span class="line">--publish 5432:5432 \</span><br><span class="line">--volume /opt/postgresql/data:/var/lib/postgresql \</span><br><span class="line">--env &#x27;DB_USER=mymebyo_adm01&#x27; --env &#x27;DB_PASS=mymebyo_adm01&#x27; --env &#x27;DB_NAME=mymebyo&#x27; \</span><br><span class="line">sameersbn/postgresql    </span><br></pre></td></tr></table></figure>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="postgresql"><a href="#postgresql" class="headerlink" title="postgresql"></a>postgresql</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">1. docker pull sameersbn/postgresql</span><br><span class="line">2. docker run --name=postgresql -itd --restart always \</span><br><span class="line">--publish 5432:5432 \</span><br><span class="line">--volume /opt/postgresql/data:/var/lib/postgresql \</span><br><span class="line">--env &#x27;DB_USER=mymebyo_adm01&#x27; --env &#x27;DB_PASS=mymebyo_adm01&#x27; --env &#x27;DB_NAME=mymebyo&#x27; \</span><br><span class="line">sameersbn/postgresql    </span><br></pre></td></tr></table></figure>
 <h3 id="redis"><a href="#redis" class="headerlink" title="redis"></a>redis</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">1. docker pull redis</span><br><span class="line">2. docker run --name=redis -p 6379:6379 -v /opt/redis/data:/data -d redis redis-server --appendonly yes</span><br></pre></td></tr></table></figure>
 <p><strong>redis-server –appendonly yes</strong> :在容器执行redis-server启动命令，并打开redis持久化配置</p>
 <h3 id="java-web"><a href="#java-web" class="headerlink" title="java web"></a>java web</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">1. docker pull java</span><br><span class="line">2. docker run -it --volume /var/www:/var/www --publish 8082:8080 --link postgresql:mebyo --link redis:redis java /bin/bash</span><br><span class="line">3. java -jar mebyo-1.0.0.jar</span><br></pre></td></tr></table></figure>]]></content>

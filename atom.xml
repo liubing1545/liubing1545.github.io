@@ -6,7 +6,7 @@
   <link href="https://liubing1545.github.io/atom.xml" rel="self"/>
   
   <link href="https://liubing1545.github.io/"/>
-  <updated>2021-07-17T02:53:26.883Z</updated>
+  <updated>2021-07-17T09:30:20.950Z</updated>
   <id>https://liubing1545.github.io/</id>
   
   <author>
@@ -17,22 +17,26 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>anaconda安装tensorflow</title>
+    <title>测试一下</title>
     <link href="https://liubing1545.github.io/2021/07/02/%E6%B5%8B%E8%AF%95%E4%B8%80%E4%B8%8B/"/>
     <id>https://liubing1545.github.io/2021/07/02/%E6%B5%8B%E8%AF%95%E4%B8%80%E4%B8%8B/</id>
     <published>2021-07-02T03:30:25.000Z</published>
-    <updated>2021-07-17T02:53:26.883Z</updated>
+    <updated>2021-07-17T09:30:20.950Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h2 id=&quot;下载anaconda&quot;&gt;&lt;a href=&quot;#下载anaconda&quot; class=&quot;headerlink&quot;</summary>
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;</summary>
         
       
     
     
+    
+    <category term="大数据" scheme="https://liubing1545.github.io/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE/"/>
+    
+    <category term="AI" scheme="https://liubing1545.github.io/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE/AI/"/>
     
     
     <category term="anaconda" scheme="https://liubing1545.github.io/tags/anaconda/"/>
