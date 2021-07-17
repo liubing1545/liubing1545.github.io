@@ -1,0 +1,545 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>白兔之家</title>
+  
+  
+  <link href="https://liubing1545.github.io/atom.xml" rel="self"/>
+  
+  <link href="https://liubing1545.github.io/"/>
+  <updated>2021-07-17T02:53:26.883Z</updated>
+  <id>https://liubing1545.github.io/</id>
+  
+  <author>
+    <name>小白兔</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>anaconda安装tensorflow</title>
+    <link href="https://liubing1545.github.io/2021/07/02/%E6%B5%8B%E8%AF%95%E4%B8%80%E4%B8%8B/"/>
+    <id>https://liubing1545.github.io/2021/07/02/%E6%B5%8B%E8%AF%95%E4%B8%80%E4%B8%8B/</id>
+    <published>2021-07-02T03:30:25.000Z</published>
+    <updated>2021-07-17T02:53:26.883Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;下载anaconda&quot;&gt;&lt;a href=&quot;#下载anaconda&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="anaconda" scheme="https://liubing1545.github.io/tags/anaconda/"/>
+    
+    <category term="conda" scheme="https://liubing1545.github.io/tags/conda/"/>
+    
+    <category term="tensorflow" scheme="https://liubing1545.github.io/tags/tensorflow/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>MultiHash和Base58</title>
+    <link href="https://liubing1545.github.io/2020/05/23/MultiHash%E5%92%8CBase58/"/>
+    <id>https://liubing1545.github.io/2020/05/23/MultiHash%E5%92%8CBase58/</id>
+    <published>2020-05-23T03:42:10.000Z</published>
+    <updated>2021-07-17T02:53:26.869Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;MultiHash和Base58&quot;&gt;&lt;a href=&quot;#MultiHash和Base58&quot; class=&quot;headerlink&quot; title=&quot;MultiHash和Base58&quot;&gt;&lt;/a&gt;MultiHash和Base58&lt;/h2&gt;&lt;h3</summary>
+        
+      
+    
+    
+    
+    
+    <category term="ipfs" scheme="https://liubing1545.github.io/tags/ipfs/"/>
+    
+    <category term="MultiHash" scheme="https://liubing1545.github.io/tags/MultiHash/"/>
+    
+    <category term="Base58" scheme="https://liubing1545.github.io/tags/Base58/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>ServiceWorker尝试</title>
+    <link href="https://liubing1545.github.io/2020/05/22/ServiceWorker%E5%B0%9D%E8%AF%95/"/>
+    <id>https://liubing1545.github.io/2020/05/22/ServiceWorker%E5%B0%9D%E8%AF%95/</id>
+    <published>2020-05-22T07:51:10.000Z</published>
+    <updated>2021-07-17T02:53:26.870Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;ServiceWorker尝试&quot;&gt;&lt;a href=&quot;#ServiceWorker尝试&quot; class=&quot;headerlink&quot; title=&quot;ServiceWorker尝试&quot;&gt;&lt;/a&gt;ServiceWorker尝试&lt;/h2&gt;&lt;h3</summary>
+        
+      
+    
+    
+    
+    
+    <category term="node" scheme="https://liubing1545.github.io/tags/node/"/>
+    
+    <category term="Service Worker" scheme="https://liubing1545.github.io/tags/Service-Worker/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>nvm降级node安装sqlite3</title>
+    <link href="https://liubing1545.github.io/2020/05/22/nvm%E9%99%8D%E7%BA%A7node%E5%AE%89%E8%A3%85sqlite3/"/>
+    <id>https://liubing1545.github.io/2020/05/22/nvm%E9%99%8D%E7%BA%A7node%E5%AE%89%E8%A3%85sqlite3/</id>
+    <published>2020-05-22T07:51:10.000Z</published>
+    <updated>2021-07-17T02:53:26.877Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;nvm降级node安装sqlite3&quot;&gt;&lt;a href=&quot;#nvm降级node安装sqlite3&quot; class=&quot;headerlink&quot; title=&quot;nvm降级node安装sqlite3&quot;&gt;&lt;/a&gt;nvm降级node安装sqlite3&lt;/h2&gt;&lt;h3</summary>
+        
+      
+    
+    
+    
+    
+    <category term="node" scheme="https://liubing1545.github.io/tags/node/"/>
+    
+    <category term="npm" scheme="https://liubing1545.github.io/tags/npm/"/>
+    
+    <category term="nvm" scheme="https://liubing1545.github.io/tags/nvm/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Service Worker</title>
+    <link href="https://liubing1545.github.io/2020/04/28/Service%20Worker/"/>
+    <id>https://liubing1545.github.io/2020/04/28/Service%20Worker/</id>
+    <published>2020-04-28T13:09:10.000Z</published>
+    <updated>2021-07-17T02:53:26.870Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;Service-Worker&quot;&gt;&lt;a href=&quot;#Service-Worker&quot; class=&quot;headerlink&quot; title=&quot;Service Worker&quot;&gt;&lt;/a&gt;Service Worker&lt;/h2&gt;&lt;h3 id=&quot;概述&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    
+    <category term="Service Worker" scheme="https://liubing1545.github.io/tags/Service-Worker/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>如何搭建一个简单的区块链</title>
+    <link href="https://liubing1545.github.io/2020/04/20/%E5%A6%82%E4%BD%95%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E7%AE%80%E5%8D%95%E7%9A%84%E5%8C%BA%E5%9D%97%E9%93%BE/"/>
+    <id>https://liubing1545.github.io/2020/04/20/%E5%A6%82%E4%BD%95%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E7%AE%80%E5%8D%95%E7%9A%84%E5%8C%BA%E5%9D%97%E9%93%BE/</id>
+    <published>2020-04-20T01:35:10.000Z</published>
+    <updated>2021-07-17T02:53:26.882Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;如何搭建一个简单的区块链&quot;&gt;&lt;a href=&quot;#如何搭建一个简单的区块链&quot; class=&quot;headerlink&quot; title=&quot;如何搭建一个简单的区块链&quot;&gt;&lt;/a&gt;如何搭建一个简单的区块链&lt;/h2&gt;&lt;h3 id=&quot;bitcoin&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    
+    <category term="blockchain" scheme="https://liubing1545.github.io/tags/blockchain/"/>
+    
+    <category term="ruby" scheme="https://liubing1545.github.io/tags/ruby/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>IPFS-Cluster客户端构建</title>
+    <link href="https://liubing1545.github.io/2020/03/25/IPFS-Cluster%E5%AE%A2%E6%88%B7%E7%AB%AF%E6%9E%84%E5%BB%BA/"/>
+    <id>https://liubing1545.github.io/2020/03/25/IPFS-Cluster%E5%AE%A2%E6%88%B7%E7%AB%AF%E6%9E%84%E5%BB%BA/</id>
+    <published>2020-03-25T12:42:10.000Z</published>
+    <updated>2021-07-17T02:53:26.868Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;IPFS-Cluster客户端构建&quot;&gt;&lt;a href=&quot;#IPFS-Cluster客户端构建&quot; class=&quot;headerlink&quot; title=&quot;IPFS-Cluster客户端构建&quot;&gt;&lt;/a&gt;IPFS-Cluster客户端构建&lt;/h2&gt;&lt;h2</summary>
+        
+      
+    
+    
+    
+    
+    <category term="react" scheme="https://liubing1545.github.io/tags/react/"/>
+    
+    <category term="node" scheme="https://liubing1545.github.io/tags/node/"/>
+    
+    <category term="electron" scheme="https://liubing1545.github.io/tags/electron/"/>
+    
+    <category term="blockchain" scheme="https://liubing1545.github.io/tags/blockchain/"/>
+    
+    <category term="ipfs" scheme="https://liubing1545.github.io/tags/ipfs/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>IPFS-Cluster搭建(ubuntu)</title>
+    <link href="https://liubing1545.github.io/2020/03/14/IPFS-Cluster%E6%90%AD%E5%BB%BA(ubuntu)/"/>
+    <id>https://liubing1545.github.io/2020/03/14/IPFS-Cluster%E6%90%AD%E5%BB%BA(ubuntu)/</id>
+    <published>2020-03-14T08:16:10.000Z</published>
+    <updated>2021-07-17T02:53:26.869Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;IPFS-Cluster搭建-ubuntu&quot;&gt;&lt;a href=&quot;#IPFS-Cluster搭建-ubuntu&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="blockchain" scheme="https://liubing1545.github.io/tags/blockchain/"/>
+    
+    <category term="ipfs" scheme="https://liubing1545.github.io/tags/ipfs/"/>
+    
+    <category term="git" scheme="https://liubing1545.github.io/tags/git/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>IPFS-Cluster搭建</title>
+    <link href="https://liubing1545.github.io/2020/03/14/IPFS-Cluster%E6%90%AD%E5%BB%BA/"/>
+    <id>https://liubing1545.github.io/2020/03/14/IPFS-Cluster%E6%90%AD%E5%BB%BA/</id>
+    <published>2020-03-14T08:16:10.000Z</published>
+    <updated>2021-07-17T02:53:26.869Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;IPFS-Cluster搭建&quot;&gt;&lt;a href=&quot;#IPFS-Cluster搭建&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="blockchain" scheme="https://liubing1545.github.io/tags/blockchain/"/>
+    
+    <category term="ipfs" scheme="https://liubing1545.github.io/tags/ipfs/"/>
+    
+    <category term="git" scheme="https://liubing1545.github.io/tags/git/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>IPFS搭建(windows节点)</title>
+    <link href="https://liubing1545.github.io/2020/03/13/IPFS%E6%90%AD%E5%BB%BA(windows%E8%8A%82%E7%82%B9)/"/>
+    <id>https://liubing1545.github.io/2020/03/13/IPFS%E6%90%AD%E5%BB%BA(windows%E8%8A%82%E7%82%B9)/</id>
+    <published>2020-03-13T12:15:10.000Z</published>
+    <updated>2021-07-17T02:53:26.869Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;IPFS搭建-windows节点&quot;&gt;&lt;a href=&quot;#IPFS搭建-windows节点&quot; class=&quot;headerlink&quot; title=&quot;IPFS搭建(windows节点)&quot;&gt;&lt;/a&gt;IPFS搭建(windows节点)&lt;/h2&gt;&lt;h2 id=&quot;下载&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    
+    <category term="blockchain" scheme="https://liubing1545.github.io/tags/blockchain/"/>
+    
+    <category term="ipfs" scheme="https://liubing1545.github.io/tags/ipfs/"/>
+    
+    <category term="git" scheme="https://liubing1545.github.io/tags/git/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>IPFS搭建</title>
+    <link href="https://liubing1545.github.io/2020/03/06/IPFS%E6%90%AD%E5%BB%BA/"/>
+    <id>https://liubing1545.github.io/2020/03/06/IPFS%E6%90%AD%E5%BB%BA/</id>
+    <published>2020-03-06T06:30:11.000Z</published>
+    <updated>2021-07-17T02:53:26.869Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;IPFS搭建&quot;&gt;&lt;a href=&quot;#IPFS搭建&quot; class=&quot;headerlink&quot; title=&quot;IPFS搭建&quot;&gt;&lt;/a&gt;IPFS搭建&lt;/h2&gt;&lt;h2 id=&quot;下载工具&quot;&gt;&lt;a href=&quot;#下载工具&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="blockchain" scheme="https://liubing1545.github.io/tags/blockchain/"/>
+    
+    <category term="ipfs" scheme="https://liubing1545.github.io/tags/ipfs/"/>
+    
+    <category term="git" scheme="https://liubing1545.github.io/tags/git/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Peergos安装记</title>
+    <link href="https://liubing1545.github.io/2020/03/02/Peergos%E5%AE%89%E8%A3%85/"/>
+    <id>https://liubing1545.github.io/2020/03/02/Peergos%E5%AE%89%E8%A3%85/</id>
+    <published>2020-03-02T06:30:11.000Z</published>
+    <updated>2021-07-17T02:53:26.869Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;Peergos安装记&quot;&gt;&lt;a href=&quot;#Peergos安装记&quot; class=&quot;headerlink&quot; title=&quot;Peergos安装记&quot;&gt;&lt;/a&gt;Peergos安装记&lt;/h2&gt;&lt;h2 id=&quot;环境准备&quot;&gt;&lt;a href=&quot;#环境准备&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="ipfs" scheme="https://liubing1545.github.io/tags/ipfs/"/>
+    
+    <category term="git" scheme="https://liubing1545.github.io/tags/git/"/>
+    
+    <category term="peergos" scheme="https://liubing1545.github.io/tags/peergos/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>gitignore更新后，删除未来不需要管控的程序</title>
+    <link href="https://liubing1545.github.io/2019/07/22/gitignore%E6%9B%B4%E6%96%B0%E5%90%8E%EF%BC%8C%E5%88%A0%E9%99%A4%E6%9C%AA%E6%9D%A5%E4%B8%8D%E9%9C%80%E8%A6%81%E7%AE%A1%E6%8E%A7%E7%9A%84%E7%A8%8B%E5%BA%8F/"/>
+    <id>https://liubing1545.github.io/2019/07/22/gitignore%E6%9B%B4%E6%96%B0%E5%90%8E%EF%BC%8C%E5%88%A0%E9%99%A4%E6%9C%AA%E6%9D%A5%E4%B8%8D%E9%9C%80%E8%A6%81%E7%AE%A1%E6%8E%A7%E7%9A%84%E7%A8%8B%E5%BA%8F/</id>
+    <published>2019-07-22T06:30:11.000Z</published>
+    <updated>2021-07-17T02:53:26.873Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;提交更新后的gitignore文件，删除本地缓存再提交&quot;&gt;&lt;a href=&quot;#提交更新后的gitignore文件，删除本地缓存再提交&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="git" scheme="https://liubing1545.github.io/tags/git/"/>
+    
+    <category term="gitignore" scheme="https://liubing1545.github.io/tags/gitignore/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>hadoop+spark分布式环境搭建</title>
+    <link href="https://liubing1545.github.io/2019/05/27/hadoop+spark%E5%88%86%E5%B8%83%E5%BC%8F%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/"/>
+    <id>https://liubing1545.github.io/2019/05/27/hadoop+spark%E5%88%86%E5%B8%83%E5%BC%8F%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/</id>
+    <published>2019-05-27T10:50:11.000Z</published>
+    <updated>2021-07-17T02:53:26.875Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;Hadoop整体框架&quot;&gt;&lt;a href=&quot;#Hadoop整体框架&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="hadoop" scheme="https://liubing1545.github.io/tags/hadoop/"/>
+    
+    <category term="大数据" scheme="https://liubing1545.github.io/tags/%E5%A4%A7%E6%95%B0%E6%8D%AE/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>aws爬梯子</title>
+    <link href="https://liubing1545.github.io/2019/01/17/aws%E7%88%AC%E6%A2%AF%E5%AD%90/"/>
+    <id>https://liubing1545.github.io/2019/01/17/aws%E7%88%AC%E6%A2%AF%E5%AD%90/</id>
+    <published>2019-01-17T06:30:11.000Z</published>
+    <updated>2021-07-17T02:53:26.871Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;ubuntu下亲测有效&quot;&gt;&lt;a href=&quot;#ubuntu下亲测有效&quot; class=&quot;headerlink&quot; title=&quot;ubuntu下亲测有效&quot;&gt;&lt;/a&gt;ubuntu下亲测有效&lt;/h2&gt;&lt;figure class=&quot;highlight</summary>
+        
+      
+    
+    
+    
+    
+    <category term="aws" scheme="https://liubing1545.github.io/tags/aws/"/>
+    
+    <category term="梯子" scheme="https://liubing1545.github.io/tags/%E6%A2%AF%E5%AD%90/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>区块链挖矿</title>
+    <link href="https://liubing1545.github.io/2018/10/20/%E5%8C%BA%E5%9D%97%E9%93%BE%E6%8C%96%E7%9F%BF/"/>
+    <id>https://liubing1545.github.io/2018/10/20/%E5%8C%BA%E5%9D%97%E9%93%BE%E6%8C%96%E7%9F%BF/</id>
+    <published>2018-10-20T08:30:11.000Z</published>
+    <updated>2021-07-17T02:53:26.882Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;本地私链创世区块&quot;&gt;&lt;a href=&quot;#本地私链创世区块&quot; class=&quot;headerlink&quot; title=&quot;本地私链创世区块&quot;&gt;&lt;/a&gt;本地私链创世区块&lt;/h2&gt;&lt;p&gt;在当前文件夹下创建genesis.json文件&lt;/p&gt;
+&lt;figure</summary>
+        
+      
+    
+    
+    
+    
+    <category term="区块链" scheme="https://liubing1545.github.io/tags/%E5%8C%BA%E5%9D%97%E9%93%BE/"/>
+    
+    <category term="智能合约" scheme="https://liubing1545.github.io/tags/%E6%99%BA%E8%83%BD%E5%90%88%E7%BA%A6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>区块链入门</title>
+    <link href="https://liubing1545.github.io/2018/10/13/%E5%8C%BA%E5%9D%97%E9%93%BE%E5%85%A5%E9%97%A8/"/>
+    <id>https://liubing1545.github.io/2018/10/13/%E5%8C%BA%E5%9D%97%E9%93%BE%E5%85%A5%E9%97%A8/</id>
+    <published>2018-10-13T07:19:11.000Z</published>
+    <updated>2021-07-17T02:53:26.882Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;区块链的特点&quot;&gt;&lt;a href=&quot;#区块链的特点&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="区块链" scheme="https://liubing1545.github.io/tags/%E5%8C%BA%E5%9D%97%E9%93%BE/"/>
+    
+    <category term="智能合约" scheme="https://liubing1545.github.io/tags/%E6%99%BA%E8%83%BD%E5%90%88%E7%BA%A6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>构建python的多并发分布式系统</title>
+    <link href="https://liubing1545.github.io/2018/06/27/%E6%9E%84%E5%BB%BApython%E7%9A%84%E5%A4%9A%E5%B9%B6%E5%8F%91%E5%88%86%E5%B8%83%E5%BC%8F%E7%B3%BB%E7%BB%9F/"/>
+    <id>https://liubing1545.github.io/2018/06/27/%E6%9E%84%E5%BB%BApython%E7%9A%84%E5%A4%9A%E5%B9%B6%E5%8F%91%E5%88%86%E5%B8%83%E5%BC%8F%E7%B3%BB%E7%BB%9F/</id>
+    <published>2018-06-27T02:29:46.000Z</published>
+    <updated>2021-07-17T02:53:26.883Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;IO密集型的应对&quot;&gt;&lt;a href=&quot;#IO密集型的应对&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="celery" scheme="https://liubing1545.github.io/tags/celery/"/>
+    
+    <category term="python" scheme="https://liubing1545.github.io/tags/python/"/>
+    
+    <category term="多并发" scheme="https://liubing1545.github.io/tags/%E5%A4%9A%E5%B9%B6%E5%8F%91/"/>
+    
+    <category term="multiprocessing" scheme="https://liubing1545.github.io/tags/multiprocessing/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>npm Error! ENOENT no such file or directory .dezalgo.DELETE&#39;</title>
+    <link href="https://liubing1545.github.io/2018/06/11/npm%20Error!%20ENOENT%20no%20such%20file%20or%20directory%20.dezalgo.DELETE&#39;/"/>
+    <id>https://liubing1545.github.io/2018/06/11/npm%20Error!%20ENOENT%20no%20such%20file%20or%20directory%20.dezalgo.DELETE&#39;/</id>
+    <published>2018-06-11T03:04:46.000Z</published>
+    <updated>2021-07-17T02:53:26.876Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;这是npm5-6-0的bug&quot;&gt;&lt;a href=&quot;#这是npm5-6-0的bug&quot; class=&quot;headerlink&quot; title=&quot;这是npm5.6.0的bug&quot;&gt;&lt;/a&gt;这是npm5.6.0的bug&lt;/h2&gt;&lt;p&gt;更新升级&lt;/p&gt;
+&lt;figure</summary>
+        
+      
+    
+    
+    
+    
+    <category term="npm" scheme="https://liubing1545.github.io/tags/npm/"/>
+    
+    <category term="dezalgo" scheme="https://liubing1545.github.io/tags/dezalgo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>multiprocessing的并行方式</title>
+    <link href="https://liubing1545.github.io/2018/05/24/multiprocessing%E7%9A%84%E5%B9%B6%E8%A1%8C%E6%96%B9%E5%BC%8F/"/>
+    <id>https://liubing1545.github.io/2018/05/24/multiprocessing%E7%9A%84%E5%B9%B6%E8%A1%8C%E6%96%B9%E5%BC%8F/</id>
+    <published>2018-05-24T02:35:11.000Z</published>
+    <updated>2021-07-17T02:53:26.876Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;介绍&quot;&gt;&lt;a href=&quot;#介绍&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="multiprocessing" scheme="https://liubing1545.github.io/tags/multiprocessing/"/>
+    
+    <category term="并行" scheme="https://liubing1545.github.io/tags/%E5%B9%B6%E8%A1%8C/"/>
+    
+  </entry>
+  
+</feed>

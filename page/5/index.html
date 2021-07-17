@@ -1,0 +1,1162 @@
+<!DOCTYPE html>
+
+
+<html lang="zh-CN">
+  
+
+    <head>
+      <meta charset="utf-8" />
+        
+      <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1"
+      />
+      <title> 白兔之家</title>
+  <meta name="generator" content="hexo-theme-ayer">
+      
+      <link rel="shortcut icon" href="/favicon.ico" />
+       
+<link rel="stylesheet" href="/dist/main.css">
+
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/Shen-Yu/cdn/css/remixicon.min.css"
+      />
+      
+<link rel="stylesheet" href="/css/custom.css">
+ 
+      <script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script>
+       
+ 
+
+      <!-- mermaid -->
+      
+    <link rel="alternate" href="/atom.xml" title="白兔之家" type="application/atom+xml">
+</head>
+  </html>
+</html>
+
+
+<body>
+  <div id="app">
+    
+      
+    <main class="content on">
+      
+<section class="cover">
+    
+  <div class="cover-frame">
+    <div class="bg-box">
+      <img src="/images/cover.jpg" alt="image frame" />
+    </div>
+    <div class="cover-inner text-center text-white">
+      <h1><a href="/">白兔之家</a></h1>
+      <div id="subtitle-box">
+        
+        <span id="subtitle"></span>
+        
+      </div>
+      <div>
+        
+      </div>
+    </div>
+  </div>
+  <div class="cover-learn-more">
+    <a href="javascript:void(0)" class="anchor"><i class="ri-arrow-down-line"></i></a>
+  </div>
+</section>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js"></script>
+
+
+<!-- Subtitle -->
+
+  <script>
+    try {
+      var typed = new Typed("#subtitle", {
+        strings: ['爱神', '神也会爱你', '阿门'],
+        startDelay: 0,
+        typeSpeed: 200,
+        loop: true,
+        backSpeed: 100,
+        showCursor: true
+      });
+    } catch (err) {
+      console.log(err)
+    }
+  </script>
+  
+<div id="main">
+  <section class="outer">
+  
+  
+  
+
+<div class="notice" style="margin-top:50px">
+    <i class="ri-heart-fill"></i>
+    <div class="notice-content" id="broad"></div>
+</div>
+<script type="text/javascript">
+    fetch('https://v1.hitokoto.cn')
+        .then(response => response.json())
+        .then(data => {
+            document.getElementById("broad").innerHTML = data.hitokoto;
+        })
+        .catch(console.error)
+</script>
+
+<style>
+    .notice {
+        padding: 20px;
+        border: 1px dashed #e6e6e6;
+        color: #969696;
+        position: relative;
+        display: inline-block;
+        width: 100%;
+        background: #fbfbfb50;
+        border-radius: 10px;
+    }
+
+    .notice i {
+        float: left;
+        color: #999;
+        font-size: 16px;
+        padding-right: 10px;
+        vertical-align: middle;
+        margin-top: -2px;
+    }
+
+    .notice-content {
+        display: initial;
+        vertical-align: middle;
+    }
+</style>
+  
+  <article class="articles">
+    
+    
+    
+    
+    <article
+  id="post-Write-failed-Broken-pipe"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2017/07/05/Write-failed-Broken-pipe/"
+    >Write failed: Broken pipe</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2017/07/05/Write-failed-Broken-pipe/" class="article-date">
+  <time datetime="2017-07-05T02:52:07.000Z" itemprop="datePublished">2017-07-05</time>
+</a>    
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h3 id="Write-failed-Broken-pipe"><a href="#Write-failed-Broken-pipe" class="headerlink" title="Write failed: Broken pipe"></a>Write failed: Broken pipe</h3><p>ssh远程连接阿里云centos服务器时，隔几分钟不操作，就会报错：    </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Write failed: Broken pipe   </span><br></pre></td></tr></table></figure>
+
+<p>解决方法：<br>在/etc/ssh/sshd_config文件中，添加如下配置：　    </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ClientAliveInterval 60   </span><br></pre></td></tr></table></figure>
+<p>重启一下就生效了。</p>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/aliyun/" rel="tag">aliyun</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+ 
+    
+</article>
+
+    
+    <article
+  id="post-docker容器启动iptables报错"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2017/03/28/docker%E5%AE%B9%E5%99%A8%E5%90%AF%E5%8A%A8iptables%E6%8A%A5%E9%94%99/"
+    >docker容器启动iptables报错</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2017/03/28/docker%E5%AE%B9%E5%99%A8%E5%90%AF%E5%8A%A8iptables%E6%8A%A5%E9%94%99/" class="article-date">
+  <time datetime="2017-03-28T12:22:32.000Z" itemprop="datePublished">2017-03-28</time>
+</a>    
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h3 id="错误信息"><a href="#错误信息" class="headerlink" title="错误信息"></a>错误信息</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker0: iptables: No chain/target/match by that name</span><br></pre></td></tr></table></figure>
+<h3 id="重启docker"><a href="#重启docker" class="headerlink" title="重启docker"></a>重启docker</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">service docker restart</span><br></pre></td></tr></table></figure>
+<h3 id="列出iptables的所有规则"><a href="#列出iptables的所有规则" class="headerlink" title="列出iptables的所有规则"></a>列出iptables的所有规则</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">iptables -L</span><br></pre></td></tr></table></figure>
+<p>可以看到iptables里面多出了Chain Docker的选项。<br>经验为：在启动firewalld之后，iptables被激活，此时没有docker chain，重启docker后被加入到iptable里面。</p>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/docker/" rel="tag">docker</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iptables/" rel="tag">iptables</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+ 
+    
+</article>
+
+    
+    <article
+  id="post-java工程启动No-Route-to-host"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2017/03/28/java%E5%B7%A5%E7%A8%8B%E5%90%AF%E5%8A%A8No-Route-to-host/"
+    >java工程启动 No Route to host</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2017/03/28/java%E5%B7%A5%E7%A8%8B%E5%90%AF%E5%8A%A8No-Route-to-host/" class="article-date">
+  <time datetime="2017-03-28T12:17:35.000Z" itemprop="datePublished">2017-03-28</time>
+</a>    
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <ol>
+<li>检查宿主机防火墙是否开启    <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">firewall-cmd --state #查看默认防火墙状态（关闭后显示not running，开启后显示running）    </span><br><span class="line">systemctl stop firewalld.service #停止firewall    </span><br><span class="line">systemctl disable firewalld.service #禁止firewall开机启动    </span><br></pre></td></tr></table></figure></li>
+<li>确认project工程连接的postgresql服务是映射到宿主机的ip及port，而不是postgresql docker自身的ip及port</li>
+<li>确认postgresql服务docker的pg_hba.conf文件，是否设置接收任意的ip发来的请求<br>pg_hba.conf:    <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">host    all             all             0.0.0.0/0               md5    </span><br></pre></td></tr></table></figure></li>
+<li>确认postgresql服务docker的postgres.conf文件的监听端口<br>postgres.conf:    <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">listen_addresses = &#x27;*&#x27;      # what IP address(es) to listen on;    </span><br></pre></td></tr></table></figure></li>
+</ol>
+<p><strong>netstat -tunlp命令</strong>查看下监听状态是否正常    </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Active Internet connections (only servers)                                 </span><br><span class="line">Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name    </span><br><span class="line">tcp        0      0 0.0.0.0:5432            0.0.0.0:*               LISTEN      816/postgres         </span><br><span class="line">tcp6       0      0 :::5432                 :::*                    LISTEN      816/postgres</span><br></pre></td></tr></table></figure>
+<h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><p><a target="_blank" rel="noopener" href="http://stackoverflow.com/questions/25069832/docker-tomcat-and-postgresql-containers-in-same-host-no-route-to-host">stackoverflow解决方法</a></p>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/No-Route-to-host/" rel="tag">No Route to host</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/docker/" rel="tag">docker</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/" rel="tag">java</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+ 
+    
+</article>
+
+    
+    <article
+  id="post-docker部署"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2017/03/28/docker%E9%83%A8%E7%BD%B2/"
+    >docker部署web环境</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2017/03/28/docker%E9%83%A8%E7%BD%B2/" class="article-date">
+  <time datetime="2017-03-28T12:04:17.000Z" itemprop="datePublished">2017-03-28</time>
+</a>    
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h3 id="postgresql"><a href="#postgresql" class="headerlink" title="postgresql"></a>postgresql</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">1. docker pull sameersbn/postgresql</span><br><span class="line">2. docker run --name=postgresql -itd --restart always \</span><br><span class="line">--publish 5432:5432 \</span><br><span class="line">--volume /opt/postgresql/data:/var/lib/postgresql \</span><br><span class="line">--env &#x27;DB_USER=mymebyo_adm01&#x27; --env &#x27;DB_PASS=mymebyo_adm01&#x27; --env &#x27;DB_NAME=mymebyo&#x27; \</span><br><span class="line">sameersbn/postgresql    </span><br></pre></td></tr></table></figure>
+<h3 id="redis"><a href="#redis" class="headerlink" title="redis"></a>redis</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">1. docker pull redis</span><br><span class="line">2. docker run --name=redis -p 6379:6379 -v /opt/redis/data:/data -d redis redis-server --appendonly yes</span><br></pre></td></tr></table></figure>
+<p><strong>redis-server –appendonly yes</strong> :在容器执行redis-server启动命令，并打开redis持久化配置</p>
+<h3 id="java-web"><a href="#java-web" class="headerlink" title="java web"></a>java web</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1. docker pull java</span><br><span class="line">2. docker run -it --volume /var/www:/var/www --publish 8082:8080 --link postgresql:mebyo --link redis:redis java /bin/bash</span><br><span class="line">3. java -jar mebyo-1.0.0.jar</span><br></pre></td></tr></table></figure> 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/docker/" rel="tag">docker</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/postgresql/" rel="tag">postgresql</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/redis/" rel="tag">redis</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/web/" rel="tag">web</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+ 
+    
+</article>
+
+    
+    <article
+  id="post-YAMLException-can-not-read-a-block-mapping-entry-a-multiline-key-may-not-be-an-implicit-key-at-line-4-column-1"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2017/03/28/YAMLException-can-not-read-a-block-mapping-entry-a-multiline-key-may-not-be-an-implicit-key-at-line-4-column-1/"
+    >YAMLException: can not read a block mapping entry; a multiline key may not be an implicit key at line 4, column 1</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2017/03/28/YAMLException-can-not-read-a-block-mapping-entry-a-multiline-key-may-not-be-an-implicit-key-at-line-4-column-1/" class="article-date">
+  <time datetime="2017-03-28T11:35:15.000Z" itemprop="datePublished">2017-03-28</time>
+</a>    
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <p>在hexo generate时，报错:</p>
+<pre><code>YAMLException: can not read a block mapping entry; a multiline key may not be an implicit key at line 4, column 1
+</code></pre>
+<p>原因是在tags:hexo之间hexo之前要加一个空格！！！</p>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/" rel="tag">hexo</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+ 
+    
+</article>
+
+    
+    <article
+  id="post-linux虚拟机磁盘扩容"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2017/03/28/linux%E8%99%9A%E6%8B%9F%E6%9C%BA%E7%A3%81%E7%9B%98%E6%89%A9%E5%AE%B9/"
+    >linux虚拟机磁盘扩容</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2017/03/28/linux%E8%99%9A%E6%8B%9F%E6%9C%BA%E7%A3%81%E7%9B%98%E6%89%A9%E5%AE%B9/" class="article-date">
+  <time datetime="2017-03-28T10:04:05.000Z" itemprop="datePublished">2017-03-28</time>
+</a>    
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h3 id="问题点"><a href="#问题点" class="headerlink" title="问题点"></a>问题点</h3><p>安装了centos7的虚拟机，yum update时报错空间不足 <strong>No space left on device</strong>。</p>
+<h3 id="VBoxManage-modifyhd"><a href="#VBoxManage-modifyhd" class="headerlink" title="VBoxManage modifyhd"></a>VBoxManage modifyhd</h3><p>在宿主机上的安装virtualBox的根目录执行resize命令进行扩容:    </p>
+<pre><code>C:\Program Files\Oracle\VirtualBox&gt;VBoxManage modifyhd E:\dockerVM\dockerVM.vdi --resize 35000
+</code></pre>
+<h3 id="CentOS的LVM管理"><a href="#CentOS的LVM管理" class="headerlink" title="CentOS的LVM管理"></a>CentOS的LVM管理</h3><p>查看磁盘状况</p>
+<pre><code>$ fdisk -l /dev/sda
+</code></pre>
+<p>将空余磁盘创建为SDA3</p>
+<pre><code>$ fdisk /dev/sda
+n &#123;new partition&#125;
+p &#123;primary partition&#125;
+3 &#123;partition number&#125;
+
+t &#123;change partition id&#125;
+3 &#123;partition number&#125;
+8e &#123;linux LVM partition&#125;
+w
+</code></pre>
+<p>重启虚拟机</p>
+<pre><code>$reboot
+</code></pre>
+<p>查看当前Volume group</p>
+<pre><code>$ vgdisplay
+</code></pre>
+<p>创建/dev/sda3，根据VG Name:[centos]，扩展LVM的逻辑卷</p>
+<pre><code>$ lvscan
+$ pvcreate /dev/sda3
+$ vgextend /dev/centos/root /dev/sda3
+</code></pre>
+<p>调整逻辑卷文件系统的大小</p>
+<pre><code>$ xfs_growfs /dev/centos/root
+$df -h
+</code></pre>
+<p>OK了！</p>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/" rel="tag">linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%A3%81%E7%9B%98%E6%89%A9%E5%AE%B9/" rel="tag">磁盘扩容</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+ 
+    
+</article>
+
+    
+    <article
+  id="post-搭建gitbucket的docker环境"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2016/12/27/%E6%90%AD%E5%BB%BAgitbucket%E7%9A%84docker%E7%8E%AF%E5%A2%83/"
+    >搭建gitbucket的docker环境</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2016/12/27/%E6%90%AD%E5%BB%BAgitbucket%E7%9A%84docker%E7%8E%AF%E5%A2%83/" class="article-date">
+  <time datetime="2016-12-27T05:49:09.000Z" itemprop="datePublished">2016-12-27</time>
+</a>    
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <p>为了更方便简洁的部署各种服务器应用，我在社内环境安装了docker。<br>从社内直连github有时极不稳定。社内团队协同开发，搭建本地的git仓库，我选择搭建gitbucket。  </p>
+<pre><code>$ docker search gitbucket
+</code></pre>
+<p>虽然没有docker官方放出的gitbucket镜像，但从列表里选stars最多也算靠谱点儿吧。  </p>
+<pre><code>$ docker pull f99aq8ove/gitbucket
+</code></pre>
+<p>github也不网络稳定啊。。。下载两次都失败，寻找国内的镜像找到了daocloud。去daocloud官网去注册一下，然后配置docker加速器。  </p>
+<pre><code>$ curl -sSL https://get.daocloud.io/daotools/set_mirror.sh | sh -s http://5706b345.m.daocloud.io
+</code></pre>
+<p>该脚本可以将 –registry-mirror 加入到你的docker配置文件 /etc/default/docker 中。</p>
+<p>配置好了之后，再次docker pull。成功！<br>启动镜像。  </p>
+<pre><code>$ docker run -d -p 8080:8080 -p 29418:29418 -v $&#123;PWD&#125;/gitbucket-data:/gitbucket f99aq8ove/gitbucket
+</code></pre>
+<p>配置了映射端口8080是gitbucket的网页入口，映射端口29418是ssh的端口。<br>正常启动后，通过网页打开，显示正常。<br>创建用户组，创建新的repository。<br>在客户端local创建开发环境。  </p>
+<pre><code>$ mkdir xxxdir
+$ cd xxxdir
+$ touch README.md
+$ git add .
+$ git commit -m &quot;first commit&quot;
+$ git remote add origin [URL]
+$ git push origin master
+</code></pre>
+<p>在进行push的时候，失败了，报错如下。  </p>
+<pre><code>fatal: unable to access &#39;http://xxx.git/&#39;: The requested URL returned error: 503
+</code></pre>
+<p>查了一下，有可能是在gitbucket服务器之前，设置了http代理所导致的。设置git http操作的debug。  </p>
+<pre><code>$ export GIT_CURL_VERBOSE = 1
+</code></pre>
+<p>再次git push查看，的确有从http代理向gitbucket服务器发出的请求。但我不知道在哪里配置了http代理了。。。<br>使用git config命令查看配置文件  </p>
+<p>查看仓库级的config  </p>
+<pre><code>$ git config -local -l
+</code></pre>
+<p>查看全局级的config</p>
+<pre><code>$ git config -global -l
+</code></pre>
+<p>查看系统级的config</p>
+<pre><code>$ git config -system -l
+</code></pre>
+<p>查看当前生效的配置</p>
+<pre><code>$ git config -l
+</code></pre>
+<p>ok！将设置的http代理全部注释掉，git push成功啦！<br>社内gitbucket搭建成功！</p>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/docker/" rel="tag">docker</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git/" rel="tag">git</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/gitbucket/" rel="tag">gitbucket</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+ 
+    
+</article>
+
+    
+    <article
+  id="post-git删除tag"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2016/11/23/git%E5%88%A0%E9%99%A4tag/"
+    >git删除tag</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2016/11/23/git%E5%88%A0%E9%99%A4tag/" class="article-date">
+  <time datetime="2016-11-23T07:07:14.000Z" itemprop="datePublished">2016-11-23</time>
+</a>    
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <p>同事在git上误打了tag，并且只删除了本地的tag，没有删除origin上的tag。管理员账户登录了git仓库的web页面，找到了这个tag但还是没有办法删掉。<br>ok！只有命令行开搞！  </p>
+<h4 id="配置ssh-config"><a href="#配置ssh-config" class="headerlink" title="配置ssh config"></a>配置ssh config</h4><p><img src="http://obksgg9lx.bkt.clouddn.com/ssh-config.png" alt="webapi"></p>
+<h4 id="删除tag"><a href="#删除tag" class="headerlink" title="删除tag"></a>删除tag</h4><p><img src="http://obksgg9lx.bkt.clouddn.com/delete-tag.png" alt="webapi"></p>
+<h4 id="主要命令"><a href="#主要命令" class="headerlink" title="主要命令"></a>主要命令</h4><pre><code>ssh-agent
+eval `ssh-agent`
+ssh-add $git_rsa
+git tag -d $tag_name
+git push origin :refs/tags/tag_name
+</code></pre>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git/" rel="tag">git</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+ 
+    
+</article>
+
+    
+    <article
+  id="post-git撤销merge操作"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2016/09/18/git%E6%92%A4%E9%94%80merge%E6%93%8D%E4%BD%9C/"
+    >git撤销merge操作</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2016/09/18/git%E6%92%A4%E9%94%80merge%E6%93%8D%E4%BD%9C/" class="article-date">
+  <time datetime="2016-09-18T04:02:00.000Z" itemprop="datePublished">2016-09-18</time>
+</a>    
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <p>使用git偶尔会遇到merge错代码的情形，这时需要撤销merge的操作。    </p>
+<pre><code>$ git show bb46d15
+</code></pre>
+<p>commit id 是 bb46d15。<br>可以看到merge commit的parents次序。该次序从1开始，想保留哪个parent就指定它的序号。</p>
+<pre><code>$ git revert -m 2 bb46d15
+</code></pre>
+<p>2是想要保留的parent branch序号，其他的parent branch会撤销掉。<br>bb46d15是指定对具体的commit id进行操作。</p>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git/" rel="tag">git</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+ 
+    
+</article>
+
+    
+    <article
+  id="post-跨平台开发环境集中管理化之vagrant"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2016/08/12/%E8%B7%A8%E5%B9%B3%E5%8F%B0%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%9B%86%E4%B8%AD%E7%AE%A1%E7%90%86%E5%8C%96%E4%B9%8Bvagrant/"
+    >开发团队跨平台开发环境集中管理化之vagrant</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2016/08/12/%E8%B7%A8%E5%B9%B3%E5%8F%B0%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%9B%86%E4%B8%AD%E7%AE%A1%E7%90%86%E5%8C%96%E4%B9%8Bvagrant/" class="article-date">
+  <time datetime="2016-08-12T01:58:01.000Z" itemprop="datePublished">2016-08-12</time>
+</a>    
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <p><strong>vagrant</strong>是一款用来构建虚拟开发环境的工具，非常适合各类开发语言的web应用，因统一安装本地开发环境浪费的人力成本及时间成本，以及不可避免的“work on my machine”错误，将永久告别～  </p>
+<h2 id="安装virtualbox及vagrant"><a href="#安装virtualbox及vagrant" class="headerlink" title="安装virtualbox及vagrant"></a>安装virtualbox及vagrant</h2><p>vagrant对virtualbox支持的非常好。但不匹配的版本，加载box会发生或多或少的问题。    </p>
+<p>我的工作环境的软件版本是：<br>vagrant 1.6.3<br>virtualbox 4.2.12-84980</p>
+<h2 id="添加镜像"><a href="#添加镜像" class="headerlink" title="添加镜像"></a>添加镜像</h2><p>安装好后运行以下命令可以添加vagrant官方的box镜像。  </p>
+<pre><code>$ vagrant box add hashicorp/precise64
+</code></pre>
+<p>这是一个标准的64bit的ubuntu系统。<br>如果要下载其他系统的镜像，可以在这里下载:<a target="_blank" rel="noopener" href="https://atlas.hashicorp.com/boxes/search">https://atlas.hashicorp.com/boxes/search</a>   </p>
+<h2 id="初始化开发环境"><a href="#初始化开发环境" class="headerlink" title="初始化开发环境"></a>初始化开发环境</h2><p>切换到box文件所在目录，加载box文件及初始化 </p>
+<pre><code>$ cd ~/dev 
+$ vagrant box add test test.box 
+$ vagrant init test
+$ vagrant up
+</code></pre>
+<h2 id="ssh登录"><a href="#ssh登录" class="headerlink" title="ssh登录"></a>ssh登录</h2><p>mac下ssh登录，虚拟机目录 /vagrant 就是宿主机的 ~/dev  </p>
+<pre><code>$ vagrant ssh
+$ cd /vagrant
+</code></pre>
+<p><strong>windows用户注意:</strong> windows终端需要使用ssh客户端，比如putty等。</p>
+<h2 id="其他设置"><a href="#其他设置" class="headerlink" title="其他设置"></a>其他设置</h2><p>vagrant 初始化成功后，会在初始化的目录里生成一个 vagrantfile 的配置文件，可以修改配置文件进行个性化的定制。  </p>
+<p>vagrant 默认是使用端口映射的方式将虚拟机的端口映射本地从而实现类似 <a target="_blank" rel="noopener" href="http://localhost/">http://localhost:80</a> 这种访问方式。<br>相比之下，host-only模式显得非常方便。打开 vagrantfile，将下面的注释去掉，便可以访问192.168.33.10机器上的服务了。 </p>
+<pre><code>config.vm.network &quot;private_network&quot;, ip:&quot;192.168.33.10&quot;
+</code></pre>
+<h2 id="打包分发"><a href="#打包分发" class="headerlink" title="打包分发"></a>打包分发</h2><p>当配置好开发环境后，退出并关闭虚拟机。对开发环境进行打包。</p>
+<pre><code>$ vagrant package
+</code></pre>
+<p>打包后，就会在当前目录下生成一个 package.box 的文件。可以分发这个文件给其他开发者。</p>
+<h2 id="集成预安装"><a href="#集成预安装" class="headerlink" title="集成预安装"></a>集成预安装</h2><p>vagrant 还提供预安装定制，打开 vagrantfile, 可以放开这些在文件末尾处有被注释的代码：</p>
+<pre><code>config.vm.provision &quot;shell&quot;, inline: &lt;&lt;-SHELL
+    apt-get update
+    apt-get install -y apache2
+SHELL
+</code></pre>
+<p>可以把需要安装的软件应用全部写在里面，在初次 vagrant up 的时候，虚拟机会预先执行这些命令。  </p>
+<p>如果不是初次运行，但又修改了这些命令。则可以进行重载vagrant。  </p>
+<pre><code>$ vagrant reload --provision
+</code></pre>
+<p>也可以把这些配置写在shell脚本里面，让vagrant加载运行这些脚本。因此整个团队可以维护一个 vagrantfile 或者 shell 脚本，把这个文件放在github上，还可以监控它的版本，多么简单和容易啊！哈哈</p>
+<h2 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h2><pre><code>$ vagrant init  # 初始化
+$ vagrant up  # 启动
+$ vagrant halt  # 关闭
+$ vagrant reload  # 重启
+$ vagrant ssh  # ssh
+$ vagrant status  # 查看状态
+$ vagrant destroy  # 销毁
+</code></pre>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/vagrant/" rel="tag">vagrant</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%B7%A8%E5%B9%B3%E5%8F%B0/" rel="tag">跨平台</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+ 
+    
+</article>
+
+    
+  </article>
+  
+
+  
+  <nav class="page-nav">
+    
+    <a class="extend prev" rel="prev" href="/page/4/">上一页</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><span class="page-number current">5</span><a class="page-number" href="/page/6/">6</a><a class="page-number" href="/page/7/">7</a><a class="extend next" rel="next" href="/page/6/">下一页</a>
+  </nav>
+  
+</section>
+</div>
+
+      <footer class="footer">
+  <div class="outer">
+    <ul>
+      <li>
+        Copyrights &copy;
+        2015-2021
+        <i class="ri-heart-fill heart_icon"></i> 小白兔
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+        
+        
+        由 <a href="https://hexo.io" target="_blank">Hexo</a> 强力驱动
+        <span class="division">|</span>
+        主题 - <a href="https://github.com/Shen-Yu/hexo-theme-ayer" target="_blank">Ayer</a>
+        
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+        
+        <span>
+  <span><i class="ri-user-3-fill"></i>访问人数:<span id="busuanzi_value_site_uv"></span></span>
+  <span class="division">|</span>
+  <span><i class="ri-eye-fill"></i>浏览次数:<span id="busuanzi_value_page_pv"></span></span>
+</span>
+        
+      </li>
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      <li>
+        <!-- cnzz统计 -->
+        
+      </li>
+    </ul>
+  </div>
+</footer>
+      <div class="float_btns">
+        <div class="totop" id="totop">
+  <i class="ri-arrow-up-line"></i>
+</div>
+
+<div class="todark" id="todark">
+  <i class="ri-moon-line"></i>
+</div>
+
+      </div>
+    </main>
+    <aside class="sidebar on">
+      <button class="navbar-toggle"></button>
+<nav class="navbar">
+  
+  <div class="logo">
+    <a href="/"><img src="/images/ayer-side.svg" alt="白兔之家"></a>
+  </div>
+  
+  <ul class="nav nav-main">
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/">主页</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/archives">归档</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/categories">分类</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/tags">标签</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/tags/poem/">诗歌</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/tags/trip/">旅行</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/friends">友链</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/2019/about">关于我</a>
+    </li>
+    
+  </ul>
+</nav>
+<nav class="navbar navbar-bottom">
+  <ul class="nav">
+    <li class="nav-item">
+      
+      <a class="nav-item-link nav-item-search"  title="搜索">
+        <i class="ri-search-line"></i>
+      </a>
+      
+      
+      <a class="nav-item-link" target="_blank" href="/atom.xml" title="RSS Feed">
+        <i class="ri-rss-line"></i>
+      </a>
+      
+    </li>
+  </ul>
+</nav>
+<div class="search-form-wrap">
+  <div class="local-search local-search-plugin">
+  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
+  <div id="local-search-result" class="local-search-result"></div>
+</div>
+</div>
+    </aside>
+    <div id="mask"></div>
+
+<!-- #reward -->
+<div id="reward">
+  <span class="close"><i class="ri-close-line"></i></span>
+  <p class="reward-p"><i class="ri-cup-line"></i>请我喝杯咖啡吧~</p>
+  <div class="reward-box">
+    
+    <div class="reward-item">
+      <img class="reward-img" src="https://cdn.jsdelivr.net/gh/Shen-Yu/cdn/img/alipay.jpg">
+      <span class="reward-type">支付宝</span>
+    </div>
+    
+    
+    <div class="reward-item">
+      <img class="reward-img" src="https://cdn.jsdelivr.net/gh/Shen-Yu/cdn/img/wechat.jpg">
+      <span class="reward-type">微信</span>
+    </div>
+    
+  </div>
+</div>
+    
+<script src="/js/jquery-2.0.3.min.js"></script>
+ 
+<script src="/js/lazyload.min.js"></script>
+
+<!-- Tocbot -->
+
+<script src="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.js"></script>
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.css"
+/>
+<script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js"></script>
+
+<script src="/dist/main.js"></script>
+
+<!-- ImageViewer -->
+ <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css">
+<script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"></script>
+
+<script>
+    function viewer_init() {
+        let pswpElement = document.querySelectorAll('.pswp')[0];
+        let $imgArr = document.querySelectorAll(('.article-entry img:not(.reward-img)'))
+
+        $imgArr.forEach(($em, i) => {
+            $em.onclick = () => {
+                // slider展开状态
+                // todo: 这样不好，后面改成状态
+                if (document.querySelector('.left-col.show')) return
+                let items = []
+                $imgArr.forEach(($em2, i2) => {
+                    let img = $em2.getAttribute('data-idx', i2)
+                    let src = $em2.getAttribute('data-target') || $em2.getAttribute('src')
+                    let title = $em2.getAttribute('alt')
+                    // 获得原图尺寸
+                    const image = new Image()
+                    image.src = src
+                    items.push({
+                        src: src,
+                        w: image.width || $em2.width,
+                        h: image.height || $em2.height,
+                        title: title
+                    })
+                })
+                var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, {
+                    index: parseInt(i)
+                });
+                gallery.init()
+            }
+        })
+    }
+    viewer_init()
+</script> 
+<!-- MathJax -->
+
+<!-- Katex -->
+
+<!-- busuanzi  -->
+ 
+<script src="/js/busuanzi-2.3.pure.min.js"></script>
+ 
+<!-- ClickLove -->
+ 
+<script src="/js/clickLove.js"></script>
+ 
+<!-- ClickBoom1 -->
+
+<!-- ClickBoom2 -->
+
+<!-- CodeCopy -->
+ 
+<link rel="stylesheet" href="/css/clipboard.css">
+ <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+<script>
+  function wait(callback, seconds) {
+    var timelag = null;
+    timelag = window.setTimeout(callback, seconds);
+  }
+  !function (e, t, a) {
+    var initCopyCode = function(){
+      var copyHtml = '';
+      copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+      copyHtml += '<i class="ri-file-copy-2-line"></i><span>COPY</span>';
+      copyHtml += '</button>';
+      $(".highlight .code pre").before(copyHtml);
+      $(".article pre code").before(copyHtml);
+      var clipboard = new ClipboardJS('.btn-copy', {
+        target: function(trigger) {
+          return trigger.nextElementSibling;
+        }
+      });
+      clipboard.on('success', function(e) {
+        let $btn = $(e.trigger);
+        $btn.addClass('copied');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-checkbox-circle-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPIED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-checkbox-circle-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+      clipboard.on('error', function(e) {
+        e.clearSelection();
+        let $btn = $(e.trigger);
+        $btn.addClass('copy-failed');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-time-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPY FAILED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-time-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+    }
+    initCopyCode();
+  }(window, document);
+</script>
+ 
+<!-- CanvasBackground -->
+
+<script>
+  if (window.mermaid) {
+    mermaid.initialize({ theme: "forest" });
+  }
+</script>
+
+
+    
+  </div>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+
+</html>

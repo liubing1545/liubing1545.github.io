@@ -1,0 +1,1361 @@
+<!DOCTYPE html>
+
+
+<html lang="zh-CN">
+  
+
+    <head>
+      <meta charset="utf-8" />
+        
+      <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1"
+      />
+      <title> 白兔之家</title>
+  <meta name="generator" content="hexo-theme-ayer">
+      
+      <link rel="shortcut icon" href="/favicon.ico" />
+       
+<link rel="stylesheet" href="/dist/main.css">
+
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/Shen-Yu/cdn/css/remixicon.min.css"
+      />
+      
+<link rel="stylesheet" href="/css/custom.css">
+ 
+      <script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script>
+       
+ 
+
+      <!-- mermaid -->
+      
+    <link rel="alternate" href="/atom.xml" title="白兔之家" type="application/atom+xml">
+</head>
+  </html>
+</html>
+
+
+<body>
+  <div id="app">
+    
+      
+    <main class="content on">
+      
+<section class="cover">
+    
+  <div class="cover-frame">
+    <div class="bg-box">
+      <img src="/images/cover.jpg" alt="image frame" />
+    </div>
+    <div class="cover-inner text-center text-white">
+      <h1><a href="/">白兔之家</a></h1>
+      <div id="subtitle-box">
+        
+        <span id="subtitle"></span>
+        
+      </div>
+      <div>
+        
+      </div>
+    </div>
+  </div>
+  <div class="cover-learn-more">
+    <a href="javascript:void(0)" class="anchor"><i class="ri-arrow-down-line"></i></a>
+  </div>
+</section>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js"></script>
+
+
+<!-- Subtitle -->
+
+  <script>
+    try {
+      var typed = new Typed("#subtitle", {
+        strings: ['爱神', '神也会爱你', '阿门'],
+        startDelay: 0,
+        typeSpeed: 200,
+        loop: true,
+        backSpeed: 100,
+        showCursor: true
+      });
+    } catch (err) {
+      console.log(err)
+    }
+  </script>
+  
+<div id="main">
+  <section class="outer">
+  
+  
+  
+
+<div class="notice" style="margin-top:50px">
+    <i class="ri-heart-fill"></i>
+    <div class="notice-content" id="broad"></div>
+</div>
+<script type="text/javascript">
+    fetch('https://v1.hitokoto.cn')
+        .then(response => response.json())
+        .then(data => {
+            document.getElementById("broad").innerHTML = data.hitokoto;
+        })
+        .catch(console.error)
+</script>
+
+<style>
+    .notice {
+        padding: 20px;
+        border: 1px dashed #e6e6e6;
+        color: #969696;
+        position: relative;
+        display: inline-block;
+        width: 100%;
+        background: #fbfbfb50;
+        border-radius: 10px;
+    }
+
+    .notice i {
+        float: left;
+        color: #999;
+        font-size: 16px;
+        padding-right: 10px;
+        vertical-align: middle;
+        margin-top: -2px;
+    }
+
+    .notice-content {
+        display: initial;
+        vertical-align: middle;
+    }
+</style>
+  
+  <article class="articles">
+    
+    
+    
+    
+    <article
+  id="post-flask-migrate数据库迁移"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2016/08/11/flask-migrate%E6%95%B0%E6%8D%AE%E5%BA%93%E8%BF%81%E7%A7%BB/"
+    >flask-migrate数据库迁移</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2016/08/11/flask-migrate%E6%95%B0%E6%8D%AE%E5%BA%93%E8%BF%81%E7%A7%BB/" class="article-date">
+  <time datetime="2016-08-11T01:50:52.000Z" itemprop="datePublished">2016-08-11</time>
+</a>    
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <p>在迭代开发中，会阶段性的变更数据库模型，更新数据库。<br>变更时，为了不丢失数据库中的数据，可以使用数据库迁移工具。  </p>
+<p><strong>flask－migrate</strong>是对Alembic的轻量级封装，并且已经被集成到了flask-script中。  </p>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><pre><code>$ pip install flask-migrate
+</code></pre>
+<h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><pre><code>from flask_sqlalchemy import SQLAlchemy as SQLAlchemy
+from flask_script import Manager, Shell
+from flask_migrate import Migrate, MigrateCommand
+
+app = Flask(__name__)
+manager = Manager(app)
+db = SQLAlchemy(app)
+migrate = Migrate(app, db)
+
+manager.add_command(&quot;shell&quot;, Shell(make_context=make_shell_context))
+manager.add_command(&#39;db&#39;, MigrateCommand)
+
+if __name__ == &#39;__main__&#39;:
+    manager.run()
+    
+</code></pre>
+<h2 id="创建迁移仓库"><a href="#创建迁移仓库" class="headerlink" title="创建迁移仓库"></a>创建迁移仓库</h2><pre><code>$ python xxx.py db init
+</code></pre>
+<h2 id="创建迁移脚本"><a href="#创建迁移脚本" class="headerlink" title="创建迁移脚本"></a>创建迁移脚本</h2><pre><code>$ python xxx.py db migrate
+</code></pre>
+<h2 id="数据库迁移"><a href="#数据库迁移" class="headerlink" title="数据库迁移"></a>数据库迁移</h2><pre><code>$ python xxx.py db upgrade    
+</code></pre>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/flask/" rel="tag">flask</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/flask-migrate/" rel="tag">flask-migrate</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/" rel="tag">python</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+ 
+    
+</article>
+
+    
+    <article
+  id="post-认识javascript"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2016/08/08/%E8%AE%A4%E8%AF%86javascript/"
+    >认识javascript</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2016/08/08/%E8%AE%A4%E8%AF%86javascript/" class="article-date">
+  <time datetime="2016-08-08T09:08:33.000Z" itemprop="datePublished">2016-08-08</time>
+</a>    
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h2 id="javascript基础"><a href="#javascript基础" class="headerlink" title="javascript基础"></a>javascript基础</h2><h4 id="声明"><a href="#声明" class="headerlink" title="声明"></a>声明</h4><ul>
+<li>声明变量不用var时，该变量为全局变量</li>
+</ul>
+<h4 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h4><ul>
+<li>Number  </li>
+<li><em>整型常量</em>(10进制\8进制\16进制)<br>   十六进制以0x或0X开头, 例如: 0x8a<br> 八进制必须以0开头, 例如: 0123<br> 十进制的第一位不能是0(数字0除外), 例如: 123</li>
+<li><em>实型常量</em><br>12.32, 193.98, 5E7, 4e5等</li>
+<li>Boolean</li>
+<li>String  </li>
+<li>“abc”，’abc’<br>双引号会搜索引号内的内容是否含有变量，有则输出其值，没有则输出原有内容<br>单引号则不会检测内容，因此效率更高</li>
+<li>特殊字符，需要以反斜杠()后跟一个普通字符来表示<br>例如: \r, \n, \t, \b, &#39;</li>
+<li>null常量</li>
+<li>undefined常量</li>
+<li>特殊数值<br>NaN, Infinity(无穷大), isNaN(), isFinite()</li>
+</ul>
+<h4 id="逻辑运算符"><a href="#逻辑运算符" class="headerlink" title="逻辑运算符"></a>逻辑运算符</h4><ul>
+<li>&amp;&amp; 逻辑与</li>
+<li>|| 逻辑或</li>
+<li>! 逻辑非</li>
+</ul>
+<h2 id="定义一个类"><a href="#定义一个类" class="headerlink" title="定义一个类"></a>定义一个类</h2><pre><code>function Person(name) &#123;
+    this.name = name;
+&#125;
+</code></pre>
+<h2 id="一切都是对象"><a href="#一切都是对象" class="headerlink" title="一切都是对象"></a>一切都是对象</h2><p>类(函数)也是对象</p>
+<h2 id="创建对象"><a href="#创建对象" class="headerlink" title="创建对象"></a>创建对象</h2><pre><code>var p = new Person(&quot;张三&quot;)
+</code></pre>
+<h2 id="闭包closure"><a href="#闭包closure" class="headerlink" title="闭包closure"></a>闭包closure</h2><p>函数内部可以直接读取全局变量。  </p>
+<pre><code>    var n = 999;
+    
+    function f1() &#123;
+        alert(n);
+    &#125;
+    
+    f1(); // 999
+</code></pre>
+<p>函数外部无法读取函数内的局部变量。  </p>
+<pre><code>    function f1() &#123;
+        var n = 999;
+    &#125;
+    
+    alert(n); // error
+</code></pre>
+<p>利用闭包，从函数外部读取函数内的局部变量。</p>
+<pre><code>    function f1() &#123;
+        var n = 999;
+        
+        function f2() &#123;
+            alert(n);
+        &#125;
+        
+        return f2;
+    &#125;
+    
+    var result = f1();
+    result(); // 999
+</code></pre>
+<h2 id="作用域scope（上下文）"><a href="#作用域scope（上下文）" class="headerlink" title="作用域scope（上下文）"></a>作用域scope（上下文）</h2><p>上下文对象就是使用this指针，即被调用函数所处的环境。上下文对象在一个函数内部引用调用它的对象本身。  </p>
+<pre><code>var someuser = &#123;
+    name: &#39;byvoid&#39;,
+    func: function() &#123;
+        console.log(this.name);
+    &#125;
+&#125;;
+
+var foo = &#123;
+    name: &#39;foobar&#39;
+&#125;;
+
+someuser.func(); // byvoid
+
+foo.func = someuser.func;
+foo.func(); // foobar
+
+name = &#39;global&#39;;
+func = someuser.func;
+func(); // globar
+</code></pre>
+<h2 id="prototype"><a href="#prototype" class="headerlink" title="prototype"></a>prototype</h2><p>利用prototype可以扩展js类。  </p>
+<pre><code>Number.prototype.add = function(v) &#123;
+    return this + v;
+&#125;    
+
+var d = 6;
+d.add(8).add(9); // d = 6 + 8 + 9
+</code></pre>
+<p>扩展自定义的类。</p>
+<pre><code>function Person(name) &#123;
+    this.name = name;
+&#125;
+
+Person.prototype.sayHello = function() &#123;
+    alert(this.name);
+&#125;
+
+var p = new Person(&quot;zhangsan&quot;);
+p.sayHello();
+</code></pre>
+<h2 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h2><p>classB继承classA</p>
+<pre><code>function classA(name) &#123;
+    this.name = name;
+    this.sayHello = function() &#123;
+        alert(this.name);
+    &#125;
+&#125;
+</code></pre>
+<p>方法1</p>
+<pre><code>function classB(name) &#123;
+    this.tempMethod = classA;
+    this.tempMethod(name);
+&#125;
+</code></pre>
+<p>方法2</p>
+<pre><code>function classB(name) &#123;
+    classA.call(this, name);
+&#125;
+</code></pre>
+<p>方法3</p>
+<pre><code>function classB(name) &#123;
+    classA.apply(this, [name]);
+&#125;
+</code></pre>
+<p>调用classB</p>
+<pre><code>var b = new classB(&quot;lisa&quot;);
+b.sayHello();
+</code></pre>
+<h2 id="可变参数"><a href="#可变参数" class="headerlink" title="可变参数"></a>可变参数</h2><p>在js的世界里，内置属性arguments可以接收可辨参数。</p>
+<pre><code>function sum() &#123;
+    var s = 0;
+    for(var i = 0; i &lt; arguments.length; i++) &#123;
+        s+ = arguments[i];
+    &#125;
+    
+    return s;
+&#125;
+
+alert(sum(1,4,5));
+alert(sum(12,15,19,21,51));
+</code></pre>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js/" rel="tag">js</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E4%B8%8A%E4%B8%8B%E6%96%87/" rel="tag">上下文</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E4%BD%9C%E7%94%A8%E5%9F%9F/" rel="tag">作用域</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E9%97%AD%E5%8C%85/" rel="tag">闭包</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+ 
+    
+</article>
+
+    
+    <article
+  id="post-react-native与webapi交互"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2016/08/08/react-native%E4%B8%8Ewebapi%E4%BA%A4%E4%BA%92/"
+    >react native与webapi交互</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2016/08/08/react-native%E4%B8%8Ewebapi%E4%BA%A4%E4%BA%92/" class="article-date">
+  <time datetime="2016-08-08T03:56:15.000Z" itemprop="datePublished">2016-08-08</time>
+</a>    
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <p>react native坑太大了！！！<br>既然跳进去了，就想办法填坑呗～</p>
+<h2 id="webapi"><a href="#webapi" class="headerlink" title="webapi"></a>webapi</h2><h4 id="本地开启webAPI"><a href="#本地开启webAPI" class="headerlink" title="本地开启webAPI"></a>本地开启webAPI</h4><p><img src="http://obksgg9lx.bkt.clouddn.com/webapi.png" alt="webapi"></p>
+<h4 id="curl测试webAPI"><a href="#curl测试webAPI" class="headerlink" title="curl测试webAPI"></a>curl测试webAPI</h4><p><img src="http://obksgg9lx.bkt.clouddn.com/getToken.png" alt="test webapi"></p>
+<h2 id="react-native如何debug"><a href="#react-native如何debug" class="headerlink" title="react native如何debug"></a>react native如何debug</h2><h4 id="command-d"><a href="#command-d" class="headerlink" title="command + d"></a>command + d</h4><p>在ios的simulator上，command+d调出菜单，选择Debug JS Remotely</p>
+<p><img src="http://obksgg9lx.bkt.clouddn.com/debugJS.png" alt="debug">  </p>
+<h4 id="Runtime-is-not-ready-for-debugging"><a href="#Runtime-is-not-ready-for-debugging" class="headerlink" title="Runtime is not ready for debugging."></a>Runtime is not ready for debugging.</h4><p>如果报出该错，则需要下载chrome浏览器，mac自带的safari无法载入本地的reactJS文件。</p>
+<p><img src="http://obksgg9lx.bkt.clouddn.com/debugging.png" alt="error"></p>
+<h4 id="Network-request-failed"><a href="#Network-request-failed" class="headerlink" title="Network request failed."></a>Network request failed.</h4><p>如果报出该错，需要配置xcode里对于http请求的设置。  </p>
+<p><img src="http://obksgg9lx.bkt.clouddn.com/networkRequestFail.png" alt="error"></p>
+<p>这个错误搞的我烦躁了一个周末，根本没有头绪。<br>首先，要确认RCTWebSocketExecutor.m文件中host = @”localhost”;</p>
+<p><img src="http://obksgg9lx.bkt.clouddn.com/RCTWebSocketExecutor.png" alt="host"></p>
+<p>其次，要在plist的APP Transport Security Settings中添加Allow Arbitrary Loads为True。这个设置把request请求不仅仅局限于https安全模式，http也被允许了。</p>
+<p><img src="http://obksgg9lx.bkt.clouddn.com/plist.png" alt="plist"></p>
+<h4 id="chrome-debug"><a href="#chrome-debug" class="headerlink" title="chrome debug"></a>chrome debug</h4><p>测试一下，与本地webapi的交互，在chrome浏览器下可以打断点，查看变量了。</p>
+<p><img src="http://obksgg9lx.bkt.clouddn.com/chromeTool.png" alt="chrome"></p>
+<p>webapi的监听也收到了request。</p>
+<p><img src="http://obksgg9lx.bkt.clouddn.com/requestForWebAPI.png" alt="webapi listen"></p>
+<h2 id="退出debug模式"><a href="#退出debug模式" class="headerlink" title="退出debug模式"></a>退出debug模式</h2><h4 id="command-d-1"><a href="#command-d-1" class="headerlink" title="command + d"></a>command + d</h4><p>在ios的simulator上，command+d调出菜单，选择Stop Remote JS Debugging</p>
+<p><img src="http://obksgg9lx.bkt.clouddn.com/debugJSStop.png" alt="stop debug"></p>
+<p>参照<a target="_blank" rel="noopener" href="http://facebook.github.io/react-native/releases/0.31/docs/debugging.html#debugging">facebook debugging文档</a></p>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Network-request-failed/" rel="tag">Network request failed</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Runtime-is-not-ready-for-debugging/" rel="tag">Runtime is not ready for debugging</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/react-native/" rel="tag">react native</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+ 
+    
+</article>
+
+    
+    <article
+  id="post-curl测试restful服务"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2016/07/19/curl%E6%B5%8B%E8%AF%95restful%E6%9C%8D%E5%8A%A1/"
+    >curl测试restful服务</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2016/07/19/curl%E6%B5%8B%E8%AF%95restful%E6%9C%8D%E5%8A%A1/" class="article-date">
+  <time datetime="2016-07-19T08:00:06.000Z" itemprop="datePublished">2016-07-19</time>
+</a>    
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <p>利用curl，可以很方便的测试restful服务，发送HTTP GET，POST，PUT，DELETE请求。也可以改变HTTP header来指定特别条件。</p>
+<h3 id="curl参数"><a href="#curl参数" class="headerlink" title="curl参数"></a>curl参数</h3><blockquote>
+<p>-X/–request [GET|POST|PUT|DELETE|…]  <mark>指定http request方式</mark><br>-H/–header                             <mark>设定request请求的header</mark><br>-i/–include                            <mark>显示response响应的header</mark><br>-d/–data                               <mark>设定request的参数</mark><br>-v/–verbose                            <mark>输出更多的信息</mark><br>-u/–user                               <mark>使用者账号，密码</mark><br>-b/–cookie                             <mark>cookie</mark></p>
+</blockquote>
+<h3 id="GET"><a href="#GET" class="headerlink" title="GET"></a>GET</h3><pre><code>$ curl -i http://localhost:5000/rest/api/v1.0/tasks
+</code></pre>
+<h3 id="POST"><a href="#POST" class="headerlink" title="POST"></a>POST</h3><pre><code>$ curl -i -H &quot;Content-Type: application/json&quot; -X POST -d &#39;&#123;&quot;title&quot;:&quot;learn python&quot;&#125;&#39; http://localhost:5000/rest/api/v1.0/tasks  
+</code></pre>
+<h3 id="PUT"><a href="#PUT" class="headerlink" title="PUT"></a>PUT</h3><pre><code>$ curl -i -H &quot;Content-Type: application/json&quot; -X PUT -d &#39;&#123;&quot;title&quot;:&quot;learn nodejs&quot;&#125;&#39; http://localhost:5000/rest/api/v1.0/tasks/2
+</code></pre>
+<h3 id="DELETE"><a href="#DELETE" class="headerlink" title="DELETE"></a>DELETE</h3><pre><code>$ curl -i -X DELETE http://localhost:5000/rest/api/v1.0/tasks/1
+</code></pre>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/curl/" rel="tag">curl</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/restful/" rel="tag">restful</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+ 
+    
+</article>
+
+    
+    <article
+  id="post-centOS下配置Virtualenv-Flask-Gunicorn-Supervisor-Nginx"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2016/07/18/centOS%E4%B8%8B%E9%85%8D%E7%BD%AEVirtualenv-Flask-Gunicorn-Supervisor-Nginx/"
+    >centOS下配置Virtualenv+Flask+Gunicorn+Supervisor+Nginx</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2016/07/18/centOS%E4%B8%8B%E9%85%8D%E7%BD%AEVirtualenv-Flask-Gunicorn-Supervisor-Nginx/" class="article-date">
+  <time datetime="2016-07-18T08:59:19.000Z" itemprop="datePublished">2016-07-18</time>
+</a>    
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <p>在阿里云上部署flask环境。  </p>
+<h2 id="安装virtualenv并创建工程"><a href="#安装virtualenv并创建工程" class="headerlink" title="安装virtualenv并创建工程"></a>安装virtualenv并创建工程</h2><pre><code>$ pip install virtualenv
+$ virtualenv stooge
+$ cd stooge
+$ source bin/activate
+</code></pre>
+<h2 id="安装flask并创建一个服务"><a href="#安装flask并创建一个服务" class="headerlink" title="安装flask并创建一个服务"></a>安装flask并创建一个服务</h2><pre><code>$ pip install flask
+$ touch runserver.py
+$ vim runserver.py
+$ chmod a+x runserver.py
+    
+</code></pre>
+<h3 id="runserver-py"><a href="#runserver-py" class="headerlink" title="runserver.py"></a>runserver.py</h3><pre><code>from flask import Flask
+
+app = Flask(__name__)
+
+@app.route(&#39;/&#39;)
+def hello_world():
+    return &#39;Hello World!&#39;
+
+if __name__ == &#39;__main__&#39;:
+    app.run()
+</code></pre>
+<h2 id="安装Gunicorn"><a href="#安装Gunicorn" class="headerlink" title="安装Gunicorn"></a>安装Gunicorn</h2><p> Gunicorn是一个开源Python WSGI UNIX的HTTP服务器，默认是同步工作，支持Gevent，Eventlet异步。  </p>
+<pre><code>$ pip install gunicorn
+</code></pre>
+<h3 id="gunicorn-conf"><a href="#gunicorn-conf" class="headerlink" title="gunicorn.conf"></a>gunicorn.conf</h3><p>在项目stooge根目录下, 配置gevent workers数处理并发，及绑定本地的端口号。 </p>
+<pre><code>#worker process number
+workers = 3
+#bind local port
+bind = &#39;127.0.0.1:8000&#39;
+</code></pre>
+<h2 id="安装Supervisor"><a href="#安装Supervisor" class="headerlink" title="安装Supervisor"></a>安装Supervisor</h2><pre><code>$ sudo pip install supervisor
+</code></pre>
+<p>supervisor是用python实现的一款进程管理工具。supervisor会帮你把管理的应用程序转成daemon程序，而且可以方便的通过命令开启，关闭，重启等操作。而且它管理的进程一旦崩溃会自动重启，这样就可以保证程序在执行中断后自我修复。  </p>
+<h3 id="supervisor配置"><a href="#supervisor配置" class="headerlink" title="supervisor配置"></a>supervisor配置</h3><p>supervisor包括两部分：   </p>
+<ul>
+<li>supervisord  (server端)</li>
+<li>supervisorctl  (client端)</li>
+</ul>
+<p>重定向配置文件  </p>
+<pre><code>$ sudo echo_supervisord_conf &gt; /etc/supervisord.conf
+</code></pre>
+<p>虽然可以把所有的配置项都写到supervisord.conf文件里，但并不推荐这样做。而是通过include的方式把不同的程序组写到不同的配置文件里。  </p>
+<p>修改supervisord.conf的include section  </p>
+<pre><code>[include]
+files = /etc/supervisor/conf.d/*.conf
+</code></pre>
+<p>添加program配置  </p>
+<p>新建目录/etc/supervisor/conf.d，并创建stooge.conf</p>
+<pre><code>$ touch stooge.conf
+$ vim stooge.conf
+[program:stooge]
+command=/home/$username/stooge/bin/gunicorn runserver:app -c /home/$username/stooge/gunicorn.conf
+directory=/home/$username/stooge
+user=$username
+autostart=true
+autorestart=true
+stdout_logfile=/home/$username/stooge/logs/gunicorn_supervisor.log
+</code></pre>
+<p>这样的配置，通过[program:stooge]来告诉supervisord需要管理哪个进程。可以在client端(supervisorctl或web页面)显示，并对该进程start,restart,stop。</p>
+<h3 id="supervisorctl"><a href="#supervisorctl" class="headerlink" title="supervisorctl"></a>supervisorctl</h3><p>supervisorctl 是 supervisord 的一个命令行客户端工具，启动时需要指定配置文件。  </p>
+<pre><code>$ supervisord -c /etc/supervisord.conf
+</code></pre>
+<p>shell 命令  </p>
+<pre><code>$ supervisorctl status #查看程序状态
+$ supervisorctl stop stooge
+$ supervisorctl start stooge
+$ supervisorctl restart stooge
+$ supervisorctl reread #读取有更新的配置文件
+$ supervisorctl update #重启配置文件修改过的进程
+</code></pre>
+<p>在这里我们启动stooge  </p>
+<pre><code>$ supervisorctl start stooge
+</code></pre>
+<h2 id="安装nginx"><a href="#安装nginx" class="headerlink" title="安装nginx"></a>安装nginx</h2><pre><code>$ yum install nginx
+</code></pre>
+<p>centos7下的nginx1.6.3没有sites-available和sites-enabled子目录。但是有conf.d子目录。和配置supervisord一样，也是可以通过include的方式把不同的程序组写到不同的配置文件里。</p>
+<h3 id="nginx配置"><a href="#nginx配置" class="headerlink" title="nginx配置"></a>nginx配置</h3><p>确保/etc/nginx/nginx.conf中，http模块中引入conf.d子目录。  </p>
+<pre><code>include /etc/nginx/conf.d/*.conf
+</code></pre>
+<p>在/etc/nginx/conf.d下创建stooge.conf  </p>
+<pre><code>server &#123;
+    listen 80;
+    server_name xx.xx.xx.xx;
+    
+    root /home/$username/stooge/;
+    access_log /home/$username/stooge/access.log;
+    error_log /home/$username/stooge/error.log;
+    
+    location / &#123;
+        proxy_set_header X-Forword-For $proxy_add_x_forwarded_for;
+        proxy_set_header Host $http_host;
+        proxy_redirect off;
+        if (!-f $request_filename) &#123;
+            proxy_pass http://127.0.0.1:8000;
+            break;
+        &#125;
+    &#125;
+&#125;
+</code></pre>
+<p>重启nginx服务  </p>
+<pre><code>$sudo service nginx restart
+</code></pre>
+<h2 id="配置firewalld"><a href="#配置firewalld" class="headerlink" title="配置firewalld"></a>配置firewalld</h2><p>安装完nginx后，80端口是没有开放的，外网无法访问。<br>增加http,https到/etc/firewalld/zones/public.xml文件。  </p>
+<pre><code>&lt;service name=&quot;http&quot;/&gt;
+&lt;service name=&quot;https&quot;/&gt;
+</code></pre>
+<h2 id="访问helloworld服务"><a href="#访问helloworld服务" class="headerlink" title="访问helloworld服务"></a>访问helloworld服务</h2><p>外网访问ip，显示helloworld了！</p>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Gunicorn/" rel="tag">Gunicorn</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Supervisor/" rel="tag">Supervisor</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Virtualenv/" rel="tag">Virtualenv</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/centOS/" rel="tag">centOS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/flask/" rel="tag">flask</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+ 
+    
+</article>
+
+    
+    <article
+  id="post-react-native初体验"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2016/07/07/react-native%E5%88%9D%E4%BD%93%E9%AA%8C/"
+    >react native初体验</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2016/07/07/react-native%E5%88%9D%E4%BD%93%E9%AA%8C/" class="article-date">
+  <time datetime="2016-07-07T06:21:11.000Z" itemprop="datePublished">2016-07-07</time>
+</a>    
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <p>今天想体验一下react native</p>
+<pre><code>$ brew install node
+$ brew install watchman
+$ brew install flow
+$ sudo npm install -g react-native-cli
+</code></pre>
+<p>结果报错如下</p>
+<pre><code>$ network getaddrinfo ENOTFOUND registry.npmjs.org registry.npmjs.org:443
+</code></pre>
+<p>给npm设置proxy翻墙安装就成功了。</p>
+<pre><code>$ npm config set proxy http://address:8080
+</code></pre>
+<p>初始化一个project</p>
+<pre><code>$ react-native init HelloWorld
+</code></pre>
+<p>成功后，新new的project里，会建立好ios和android的初始工程。<br>运行IOS应用程序：</p>
+<pre><code>$ react-native run-ios
+</code></pre>
+<p>运行Android应用程序：</p>
+<pre><code>$ react-native run-android
+</code></pre>
+<p>IOS环境配置很快啊，只要网络没有问题，就很快可以run成功。<br>Android环境配了三天啊。。。各种坑，各种查资料，还好最后也run好了。</p>
+<p>开始实战吧。</p>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/npmjs-org-443/" rel="tag">npmjs.org:443</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/react-native/" rel="tag">react native</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+ 
+    
+</article>
+
+    
+    <article
+  id="post-js七牛上传实践"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2016/06/24/js%E4%B8%83%E7%89%9B%E4%B8%8A%E4%BC%A0%E5%AE%9E%E8%B7%B5/"
+    >js七牛上传实践</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2016/06/24/js%E4%B8%83%E7%89%9B%E4%B8%8A%E4%BC%A0%E5%AE%9E%E8%B7%B5/" class="article-date">
+  <time datetime="2016-06-24T09:22:14.000Z" itemprop="datePublished">2016-06-24</time>
+</a>    
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <ul>
+<li>七牛有免费的配额可以使用，在测试开发时，将图片，视频流等多种媒体文件可以上传到七牛上。  </li>
+<li>其次，七牛可以绕过搭载应用的server，手机端或者pc端可以直接上传下载媒体资源至七牛云。只是在上传时，需要先向应用server要求访问七牛的token，拿到这个token后直接与七牛交互。  </li>
+<li>最后，七牛云支持cdn加速，即使对成熟的应用来说，也是不错的选择。 </li>
+</ul>
+<p><img src="http://developer.qiniu.com/article/developer/img/upload-with-callback.png" alt="七牛"></p>
+<p>下面讲解flask作为业务服务器，进行七牛云存储的过程。  </p>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/flask/" rel="tag">flask</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js/" rel="tag">js</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E4%B8%83%E7%89%9B/" rel="tag">七牛</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+ 
+    
+</article>
+
+    
+    <article
+  id="post-shell反向删除文件"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2016/06/24/shell%E5%8F%8D%E5%90%91%E5%88%A0%E9%99%A4%E6%96%87%E4%BB%B6/"
+    >shell反向删除文件</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2016/06/24/shell%E5%8F%8D%E5%90%91%E5%88%A0%E9%99%A4%E6%96%87%E4%BB%B6/" class="article-date">
+  <time datetime="2016-06-24T09:12:07.000Z" itemprop="datePublished">2016-06-24</time>
+</a>    
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <p>除了filename文件外，全部rm掉。</p>
+<pre><code>$ shopt -s extglob
+$ rm -rf !(filename)
+</code></pre>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/" rel="tag">linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/shell/" rel="tag">shell</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+ 
+    
+</article>
+
+    
+    <article
+  id="post-flask-exthook-ExtDeprecationWarning警告的消除"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2016/06/17/flask-exthook-ExtDeprecationWarning%E8%AD%A6%E5%91%8A%E7%9A%84%E6%B6%88%E9%99%A4/"
+    >flask.exthook.ExtDeprecationWarning警告的消除</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2016/06/17/flask-exthook-ExtDeprecationWarning%E8%AD%A6%E5%91%8A%E7%9A%84%E6%B6%88%E9%99%A4/" class="article-date">
+  <time datetime="2016-06-17T01:12:32.000Z" itemprop="datePublished">2016-06-17</time>
+</a>    
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <p>flask升级到0.11版后，弃用了以 <strong>flask.ext.xxx</strong> 导入扩展模块的形式，改为 <strong>flask_xxx</strong>。<br>如果仍然沿用原来的形式，flask会报警告flask.exthook.ExtDeprecationWarning。  </p>
+<p>flask团队提供了<a target="_blank" rel="noopener" href="https://github.com/pallets/flask-ext-migrate">flask-ext-migrate</a>的转换工具。  </p>
+<p>pip安装：  </p>
+<pre><code>$ pip install flask-ext-migrate
+</code></pre>
+<p>转换：  </p>
+<pre><code>$ flask_ext_migrate xxx.py
+</code></pre>
+<p><mark>但目前pip上的版本上存在bug，最新的github上fix了这个问题。</mark><br>这个转换工具一次只能转换一个python文件。<br>随便写个shell批量处理吧。  </p>
+<pre><code>$ for f in `find . -name &quot;*.py&quot;`
+&gt; &#123;
+&gt; flask_ext_migrate $f
+&gt; &#125;
+</code></pre>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/flask/" rel="tag">flask</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/flask-ext-migrate/" rel="tag">flask-ext-migrate</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/shell/" rel="tag">shell</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+ 
+    
+</article>
+
+    
+    <article
+  id="post-mac下批量替换文本"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2016/06/08/mac%E4%B8%8B%E6%89%B9%E9%87%8F%E6%9B%BF%E6%8D%A2%E6%96%87%E6%9C%AC/"
+    >mac下批量替换文本</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2016/06/08/mac%E4%B8%8B%E6%89%B9%E9%87%8F%E6%9B%BF%E6%8D%A2%E6%96%87%E6%9C%AC/" class="article-date">
+  <time datetime="2016-06-08T04:02:39.000Z" itemprop="datePublished">2016-06-08</time>
+</a>    
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <p>在mac下使用sed与linux下稍微有一些不同。<br>-i 参数可以指定备份源文件名  </p>
+<pre><code>sed -i &quot;bk&quot; &quot;s/Cat/Dog/g&quot; example.txt
+</code></pre>
+<p>替换example.txt文件中的Cat-&gt;Dog时，会生成备份文件example.txtbk。也可以指定不生成备份文件，-i参数为“”。</p>
+<p>批量替换命令如下：  </p>
+<pre><code>sed -i &quot;&quot; &quot;s/Cat/Dog/g&quot; `grep Cat -rl ./`
+</code></pre>
+<p>用grep查找出当前文件夹下含有Cat的文件，然后替换成Dog。并且不指定备份文件。</p>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/grep/" rel="tag">grep</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mac/" rel="tag">mac</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/sed/" rel="tag">sed</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+ 
+    
+</article>
+
+    
+  </article>
+  
+
+  
+  <nav class="page-nav">
+    
+    <a class="extend prev" rel="prev" href="/page/5/">上一页</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><span class="page-number current">6</span><a class="page-number" href="/page/7/">7</a><a class="extend next" rel="next" href="/page/7/">下一页</a>
+  </nav>
+  
+</section>
+</div>
+
+      <footer class="footer">
+  <div class="outer">
+    <ul>
+      <li>
+        Copyrights &copy;
+        2015-2021
+        <i class="ri-heart-fill heart_icon"></i> 小白兔
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+        
+        
+        由 <a href="https://hexo.io" target="_blank">Hexo</a> 强力驱动
+        <span class="division">|</span>
+        主题 - <a href="https://github.com/Shen-Yu/hexo-theme-ayer" target="_blank">Ayer</a>
+        
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+        
+        <span>
+  <span><i class="ri-user-3-fill"></i>访问人数:<span id="busuanzi_value_site_uv"></span></span>
+  <span class="division">|</span>
+  <span><i class="ri-eye-fill"></i>浏览次数:<span id="busuanzi_value_page_pv"></span></span>
+</span>
+        
+      </li>
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      <li>
+        <!-- cnzz统计 -->
+        
+      </li>
+    </ul>
+  </div>
+</footer>
+      <div class="float_btns">
+        <div class="totop" id="totop">
+  <i class="ri-arrow-up-line"></i>
+</div>
+
+<div class="todark" id="todark">
+  <i class="ri-moon-line"></i>
+</div>
+
+      </div>
+    </main>
+    <aside class="sidebar on">
+      <button class="navbar-toggle"></button>
+<nav class="navbar">
+  
+  <div class="logo">
+    <a href="/"><img src="/images/ayer-side.svg" alt="白兔之家"></a>
+  </div>
+  
+  <ul class="nav nav-main">
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/">主页</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/archives">归档</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/categories">分类</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/tags">标签</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/tags/poem/">诗歌</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/tags/trip/">旅行</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/friends">友链</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/2019/about">关于我</a>
+    </li>
+    
+  </ul>
+</nav>
+<nav class="navbar navbar-bottom">
+  <ul class="nav">
+    <li class="nav-item">
+      
+      <a class="nav-item-link nav-item-search"  title="搜索">
+        <i class="ri-search-line"></i>
+      </a>
+      
+      
+      <a class="nav-item-link" target="_blank" href="/atom.xml" title="RSS Feed">
+        <i class="ri-rss-line"></i>
+      </a>
+      
+    </li>
+  </ul>
+</nav>
+<div class="search-form-wrap">
+  <div class="local-search local-search-plugin">
+  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
+  <div id="local-search-result" class="local-search-result"></div>
+</div>
+</div>
+    </aside>
+    <div id="mask"></div>
+
+<!-- #reward -->
+<div id="reward">
+  <span class="close"><i class="ri-close-line"></i></span>
+  <p class="reward-p"><i class="ri-cup-line"></i>请我喝杯咖啡吧~</p>
+  <div class="reward-box">
+    
+    <div class="reward-item">
+      <img class="reward-img" src="https://cdn.jsdelivr.net/gh/Shen-Yu/cdn/img/alipay.jpg">
+      <span class="reward-type">支付宝</span>
+    </div>
+    
+    
+    <div class="reward-item">
+      <img class="reward-img" src="https://cdn.jsdelivr.net/gh/Shen-Yu/cdn/img/wechat.jpg">
+      <span class="reward-type">微信</span>
+    </div>
+    
+  </div>
+</div>
+    
+<script src="/js/jquery-2.0.3.min.js"></script>
+ 
+<script src="/js/lazyload.min.js"></script>
+
+<!-- Tocbot -->
+
+<script src="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.js"></script>
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.css"
+/>
+<script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js"></script>
+
+<script src="/dist/main.js"></script>
+
+<!-- ImageViewer -->
+ <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css">
+<script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"></script>
+
+<script>
+    function viewer_init() {
+        let pswpElement = document.querySelectorAll('.pswp')[0];
+        let $imgArr = document.querySelectorAll(('.article-entry img:not(.reward-img)'))
+
+        $imgArr.forEach(($em, i) => {
+            $em.onclick = () => {
+                // slider展开状态
+                // todo: 这样不好，后面改成状态
+                if (document.querySelector('.left-col.show')) return
+                let items = []
+                $imgArr.forEach(($em2, i2) => {
+                    let img = $em2.getAttribute('data-idx', i2)
+                    let src = $em2.getAttribute('data-target') || $em2.getAttribute('src')
+                    let title = $em2.getAttribute('alt')
+                    // 获得原图尺寸
+                    const image = new Image()
+                    image.src = src
+                    items.push({
+                        src: src,
+                        w: image.width || $em2.width,
+                        h: image.height || $em2.height,
+                        title: title
+                    })
+                })
+                var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, {
+                    index: parseInt(i)
+                });
+                gallery.init()
+            }
+        })
+    }
+    viewer_init()
+</script> 
+<!-- MathJax -->
+
+<!-- Katex -->
+
+<!-- busuanzi  -->
+ 
+<script src="/js/busuanzi-2.3.pure.min.js"></script>
+ 
+<!-- ClickLove -->
+ 
+<script src="/js/clickLove.js"></script>
+ 
+<!-- ClickBoom1 -->
+
+<!-- ClickBoom2 -->
+
+<!-- CodeCopy -->
+ 
+<link rel="stylesheet" href="/css/clipboard.css">
+ <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+<script>
+  function wait(callback, seconds) {
+    var timelag = null;
+    timelag = window.setTimeout(callback, seconds);
+  }
+  !function (e, t, a) {
+    var initCopyCode = function(){
+      var copyHtml = '';
+      copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+      copyHtml += '<i class="ri-file-copy-2-line"></i><span>COPY</span>';
+      copyHtml += '</button>';
+      $(".highlight .code pre").before(copyHtml);
+      $(".article pre code").before(copyHtml);
+      var clipboard = new ClipboardJS('.btn-copy', {
+        target: function(trigger) {
+          return trigger.nextElementSibling;
+        }
+      });
+      clipboard.on('success', function(e) {
+        let $btn = $(e.trigger);
+        $btn.addClass('copied');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-checkbox-circle-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPIED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-checkbox-circle-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+      clipboard.on('error', function(e) {
+        e.clearSelection();
+        let $btn = $(e.trigger);
+        $btn.addClass('copy-failed');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-time-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPY FAILED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-time-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+    }
+    initCopyCode();
+  }(window, document);
+</script>
+ 
+<!-- CanvasBackground -->
+
+<script>
+  if (window.mermaid) {
+    mermaid.initialize({ theme: "forest" });
+  }
+</script>
+
+
+    
+  </div>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+
+</html>
